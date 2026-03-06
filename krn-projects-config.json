@@ -1,0 +1,903 @@
+{
+  "kdsBundleMap": {
+    "EcologyTunaProfileTab": {
+      "name": "服务Tab主态",
+      "business": "平台生态"
+    },
+    "EcologyTunaPLCGoods": {
+      "name": "服务号PLC线索收集半屏弹窗",
+      "business": "平台生态"
+    },
+    "EcologyKoiAnchor": {
+      "name": "粉丝团助力上热门主态",
+      "business": "平台生态"
+    },
+    "SocialSelectFriends": {
+      "name": "社交选择朋友",
+      "business": "社交私信"
+    },
+    "SocialIMSearchMessage": {
+      "name": "社交搜索私信",
+      "business": "社交私信"
+    },
+    "shot": {
+      "name": "跟拍",
+      "business": "短视频"
+    },
+    "KwaiPostDaka": {
+      "name": "打卡三期",
+      "business": "短视频"
+    },
+    "KwaiPostWeekly": {
+      "name": "周报",
+      "business": "短视频"
+    },
+    "KMusicRefactor": {
+      "name": "K歌",
+      "business": "短视频"
+    },
+    "KwaiPostIntimateAlbum": {
+      "name": "亲密关系-回忆相册-相册页",
+      "business": "短视频"
+    },
+    "KwaiPostIntimatePost": {
+      "name": "亲密关系-晒一晒-列表页",
+      "business": "短视频"
+    },
+    "KwaiPostLikeList": {
+      "name": "P页点赞落地页",
+      "business": "短视频",
+      "projectId": "580ae7a406"
+    },
+    "KwaiPostInteractStickerVideos": {
+      "name": "挑战贴纸—视频聚合页",
+      "business": "短视频",
+      "projectId": "ba84a8d45b"
+    },
+    "KwaiChallengeTopic": {
+      "name": "创作灵感—半屏话题页",
+      "business": "短视频",
+      "projectId": "b04829345d"
+    },
+    "SocialPymkGroup": {
+      "name": "可能感兴趣的人",
+      "business": "社交-客户端"
+    },
+    "SocialProfileStickGroup": {
+      "name": "他的公开群展示页，公开群展示管理页",
+      "business": "社交私信"
+    },
+    "SocialAggregateUserList": {
+      "name": "聚合用户列表页",
+      "business": "社交-客户端"
+    },
+    "SocialProfileIPDialog": {
+      "name": "ip属地弹框",
+      "business": "社交-客户端"
+    },
+    "SocialIntimateSearch": {
+      "name": "亲密关系好友搜索页",
+      "business": "社交-客户端"
+    },
+    "SocialSameFollow": {
+      "name": "共同关注页",
+      "business": "社交-客户端"
+    },
+    "SocialChooseFeedFromPhoto": {
+      "name": "从作品选择页",
+      "business": "社交-客户端"
+    },
+    "SocialMessageSearch": {
+      "name": "私信搜索页面",
+      "business": "社交-客户端"
+    },
+    "SocialIMSingleChatDetail": {
+      "name": "单聊详情页",
+      "business": "社交私信"
+    },
+    "SocialCommonFriends": {
+      "name": "共同关注好友列表页",
+      "business": "社交-客户端"
+    },
+    "IntimateRelationship": {
+      "name": "亲密关系",
+      "business": "短视频"
+    },
+    "SocialIntimationshipINTView": {
+      "name": "亲密关系(高版本)",
+      "business": "短视频"
+    },
+    "SocialIntimateList": {
+      "name": "亲密关系聚合显示",
+      "business": "短视频"
+    },
+    "SocialIMChatPet": {
+      "name": "社交私信聊天宠物",
+      "business": "短视频"
+    },
+    "SocialIntimateInteractTagsModal": {
+        "name": "亲密关系互动标识体系弹窗",
+        "business": "短视频"
+    },
+    "SocialRecoverySparkModal": {
+        "name": "重燃火花弹窗",
+        "business": "短视频"
+    },
+    "KwaiPostLowMutualFollowEncourage": {
+      "name": "低双关互关激励任务",
+      "business": "短视频",
+      "projectId": "a980ac9d4b"
+    },
+    "SocialProfileGroupManagement": {
+      "name": "P页群聊管理页面",
+      "business": "短视频,社交私信",
+      "projectId": "c0db9223ea"
+    },
+    "SocialLittleInteraction": {
+      "name": "互动较少",
+      "business": "社交-客户端"
+    },
+    "SocialResetAccount": {
+      "name": "账号重置",
+      "business": "社交-客户端"
+    },
+    "SocialNewFans": {
+      "name": "新增粉丝列表",
+      "business": "社交-客户端"
+    },
+    "SocialEmotionDetail": {
+      "name": "表情详情页",
+      "business": "社交私信"
+    },
+    "SocialMoment": {
+      "name": "说说详情页",
+      "business": "社交-客户端"
+    },
+    "SocialNewsPrivacy": {
+      "name": "动态隐私设置页",
+      "business": "社交-客户端"
+    },
+    "SocialShiftOutFriends": {
+      "name": "被移除朋友页面",
+      "business": "社交-客户端"
+    },
+    "SocialHalfNotifyList": {
+      "name": "点赞列表",
+      "business": "社交-客户端"
+    },
+    "SocialIMApproveInvitedMembers": {
+      "name": "群聊邀请页面",
+      "business": "社交私信"
+    },
+    "SocialIMInactiveMembers": {
+      "name": "社交IM不活跃会员",
+      "business": "社交私信"
+    },
+    "SocialIMMsgSend": {
+      "name": "社交IM消息发送",
+      "business": "社交私信"
+    },
+    "social-im-groupMembers": {
+      "name": "社交IM团体成员",
+      "business": "社交私信"
+    },
+    "SocialGroupCreateEdit": {
+      "name": "社交组创建编辑",
+      "business": "社交私信"
+    },
+    "SocialGroupManager": {
+      "name": "社交群组管理",
+      "business": "社交私信"
+    },
+    "SocialNotice": {
+      "name": "社交通知",
+      "business": "社交私信"
+    },
+    "SocialPhotoNowTimeViewPage": {
+      "name": "社交照片时间查看页",
+      "business": "社交私信"
+    },
+    "SocialGroupCreate": {
+      "name": "社交组创建",
+      "business": "社交私信"
+    },
+    "SocialIMGroupBatchApproval": {
+      "name": "社交IM群组批量审批",
+      "business": "社交私信"
+    },
+    "SocialIMGroupManagement": {
+      "name": "社交IM群组管理",
+      "business": "社交私信"
+    },
+    "SocialIMGroupShare": {
+      "name": "社交IM群组分享",
+      "business": "社交私信"
+    },
+    "social-im-group-profile": {
+      "name": "社交IM群组资料",
+      "business": "社交私信"
+    },
+    "SocialWhatDoingGuide": {
+      "name": "社交活动指南",
+      "business": "社交私信"
+    },
+    "SocialIMNotifyBoxAggregationPage": {
+      "name": "社交IM通知框聚合页",
+      "business": "社交私信"
+    },
+    "SocialGroupManagerSetting": {
+      "name": "社交组管理器设置",
+      "business": "社交私信"
+    },
+    "SocialGroupBlackList": {
+      "name": "社交群组黑名单",
+      "business": "社交私信"
+    },
+    "SocialIMOfficialAggregateSetting": {
+      "name": "社交IM官方聚合设置",
+      "business": "社交私信"
+    },
+    "SocialGroupApproval": {
+      "name": "社交群体认可",
+      "business": "社交私信"
+    },
+    "SocialGroupVerify": {
+      "name": "社交群组验证",
+      "business": "社交私信"
+    },
+    "social-im-groupedit": {
+      "name": "社交团体编辑",
+      "business": "社交私信"
+    },
+    "social-im-GroupModifyNickName": {
+      "name": "社交群内修改昵称",
+      "business": "社交私信"
+    },
+    "SocialSearchMessageInChat": {
+      "name": "社交搜索聊天消息",
+      "business": "社交私信"
+    },
+    "SocialIMCustomerServiceSetting": {
+      "name": "社交IM客户服务设置",
+      "business": "社交私信"
+    },
+    "SocialShareLikePhotoPage": {
+      "name": "社交分享喜欢照片页",
+      "business": "社交私信"
+    },
+    "GroupNotice": {
+      "name": "团体通知",
+      "business": "社交私信"
+    },
+    "GroupUpgrade": {
+      "name": "团体升级",
+      "business": "社交私信"
+    },
+    "SocialGroupJoinLimits": {
+      "name": "社交群组加入限制",
+      "business": "社交私信"
+    },
+    "SocialAutoShareDialog": {
+      "name": "发作品开播自动分享弹窗",
+      "business": "社交私信,短视频"
+    },
+    "SocialChatPrintAlertSheet": {
+      "name": "社交-聊天印记-续火花提醒弹窗",
+      "business": "社交私信,短视频"
+    },
+    "SocialInteractiveTagsDialog": {
+        "name": "社交-亲密关系和聊天印记入口弹窗",
+        "business": "社交私信,短视频"
+    },
+    "SocialGuestFansFollowList": {
+      "name": "客态粉丝列表",
+      "business": "社交-客户端"
+    },
+    "SocialPersonalAvatar": {
+      "name": "个人头像编辑页",
+      "business": "社交-客户端"
+    },
+    "social_poi": {
+      "name": "游玩推荐",
+      "business": "同城"
+    },
+    "SocialPoiPages": {
+      "name": "本地生活达人榜",
+      "business": "同城"
+    },
+    "ConsumePersonProtocols": {
+      "name": "隐私协议转krn",
+      "business": "消费"
+    },
+    "ConsumeAppDownloadCenter": {
+      "name": "侧边栏下载中心",
+      "business": "消费"
+    },
+    "mini-app-entry": {
+      "name": "小程序落地页",
+      "business": "小程序"
+    },
+    "mini-app-exploration": {
+      "name": "更多探店视频落地页",
+      "business": "小程序"
+    },
+    "Live": {
+      "name": "聊天室贡献榜榜",
+      "business": "直播"
+    },
+    "LiveRankList": {
+      "name": "直播间右上角榜单",
+      "business": "直播"
+    },
+    "live22wish": {
+      "name": "春节许愿直播间",
+      "business": "直播"
+    },
+    "takePat": {
+      "name": "拍一拍弹窗",
+      "business": "直播"
+    },
+    "followCard": {
+      "name": "直播间内关注引导弹窗卡片",
+      "business": "直播"
+    },
+    "LiveStayCard": {
+      "name": "退出直播间时拦截挽留",
+      "business": "直播"
+    },
+    "lineChatPreference": {
+      "name": "多人连线设置页",
+      "business": "直播"
+    },
+    "LivePkPanel": {
+      "name": "主播PK选择页面",
+      "business": "直播"
+    },
+    "LiveCPSPKSelling": {
+      "name": "PK电商导流cps计费",
+      "business": "直播"
+    },
+    "LiveWishCard": {
+      "name": "心愿单",
+      "business": "直播"
+    },
+    "liveIntro": {
+      "name": "GRPR直播间介绍入口",
+      "business": "直播"
+    },
+    "LiveRoomMembersStreamer": {
+      "name": "间内会员主播侧",
+      "business": "直播"
+    },
+    "LiveRoomMembersViewer": {
+      "name": "间内会员观众侧",
+      "business": "直播"
+    },
+    "LiveIncreaseFans": {
+      "name": "涨粉红包3.1",
+      "business": "直播"
+    },
+    "LiveBackFlow": {
+      "name": "金币回流",
+      "business": "直播"
+    },
+    "LiveHeartBeatEntry": {
+      "name": "心动服务：开播页",
+      "business": "直播"
+    },
+    "LiveHeartBeatAnchor": {
+      "name": "心动服务：主播端",
+      "business": "直播"
+    },
+    "LiveHeartBeatAudience": {
+      "name": "心动服务：观众端",
+      "business": "直播"
+    },
+    "LiveFeatRevenueBlindDateBenefitsModal": {
+      "name": "【相亲综艺】直播间弹窗",
+      "business": "直播"
+    },
+    "Live22LoveWish": {
+      "name": "姻缘直播间",
+      "business": "直播"
+    },
+    "LiveLegendaryShop": {
+      "name": "传说商店",
+      "business": "直播"
+    },
+    "LiveCoreAudianceManage": {
+      "name": "核心观众管理",
+      "business": "直播"
+    },
+    "LiveFindRoom": {
+      "name": "PK大带小查房去",
+      "business": "直播"
+    },
+    "LiveFeatConsumeContentCertification": {
+      "name": "主播服务内容范式认证体系",
+      "business": "直播",
+      "projectId": "e2180c11d9"
+    },
+    "LiveFeatConsumeQualityContentPromotion": {
+      "name": "主播服务主播优质内容推广",
+      "business": "直播",
+      "projectId": "50c7a84689"
+    },
+    "LiveBlindDateCnyEnroll": {
+      "name": "相亲cny报名+分享+报名管理",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateHelper": {
+      "name": "相亲助手页面",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateAudienceChatService": {
+      "name": "相亲观众接受服务弹窗评价弹窗",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateEditInfo": {
+      "name": "相亲资料录入页",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateEntrySetting": {
+      "name": "相亲功能切换面板",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateLiveChatList": {
+      "name": "主播端相亲连麦列表面板",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateSquareInfo": {
+      "name": "相亲广场页",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateShowInfo": {
+      "name": "相亲资料卡",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateChatLiveVerify": {
+      "name": "相亲视频连麦开播权限",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDatePurchasePlan": {
+      "name": "相亲购买套餐",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateMatcher": {
+      "name": "相亲撮合面板",
+      "business": "直播-相亲"
+    },
+    "LiveBlindDateOrderList": {
+      "name": "相亲订单列表页",
+      "business": "直播-相亲"
+    },
+    "LiveFeatRevenueRetainCapitalModal": {
+      "name": "相亲直播间引导留资弹窗",
+      "business": "直播-相亲"
+    },
+    "LiveRecruitBService": {
+      "name": "快招工商家B端",
+      "business": "招聘"
+    },
+    "LiveRecruitHostTools": {
+      "name": "主播开播工具",
+      "business": "招聘"
+    },
+    "RecruitQuestionnaire": {
+      "name": "C端调查问卷",
+      "business": "招聘"
+    },
+    "LiveRecruitPlcGuest": {
+      "name": "PLC 简历收集观众端",
+      "business": "招聘"
+    },
+    "LiveRecruitShareInvite": {
+      "name": "招聘分享回流",
+      "business": "招聘"
+    },
+    "LiveRecruitResumeEdit": {
+      "name": "简历编辑页",
+      "business": "招聘"
+    },
+    "LiveRecruitPlcHost": {
+      "name": "PLC 简历收集主播端",
+      "business": "招聘"
+    },
+    "LiveRecruitModals": {
+      "name": "PLC 简历收集主播端",
+      "business": "招聘"
+    },
+    "LiveRecruitGuest": {
+      "name": "直播间简历收集观众端",
+      "business": "招聘"
+    },
+    "LiveRecruitHost": {
+      "name": "直播间简历收集主播端",
+      "business": "招聘"
+    },
+    "LiveQuestionare": {
+      "name": "nps 调查问卷",
+      "business": "招聘"
+    },
+    "RecruitCenter": {
+      "name": "简历中心广场",
+      "business": "招聘"
+    },
+    "RecruitResumeCenter": {
+      "name": "个人简历页",
+      "business": "招聘"
+    },
+    "LiveRecruitQuestionnaire": {
+      "name": "nps问卷调查",
+      "business": "招聘npx"
+    },
+    "LiveQuestionnaire": {
+      "name": "问卷调查",
+      "business": "招聘"
+    },
+    "RecruitPayment": {
+      "name": "支付能力",
+      "business": "招聘"
+    },
+    "LiveRecruitRank": {
+      "name": "rank",
+      "business": "招聘"
+    },
+    "LiveRecruitJobManage": {
+      "name": "招聘职位管理",
+      "business": "招聘"
+    },
+    "LiveFeatRevenueShenManShowModal": {
+      "name": "沈曼首秀预约弹窗",
+      "business": "直播"
+    },
+    "LiveFeatConsumeZtBookModal": {
+      "name": "中台预约弹窗",
+      "business": "直播"
+    },
+    "FangLeaveInfo":{
+        "name":"房产留资页",
+        "business":"主战-房产"
+    },
+    "FangHome":{
+        "name":"理想家中心场",
+        "business":"主战-房产"
+    },
+    "FangBuildingDetail":{
+        "name":"房源详情页",
+        "business":"主战-房产"
+    },
+    "FangPLCBuildingChoice":{
+        "name":"房源PLC选择页",
+        "business":"主战-房产"
+    },
+    "FangMultiPage":{
+        "name":"手机号修改和更多主播",
+        "business":"主战-房产"
+    },
+    "FangRecommendAgentBuilding":{
+        "name":"主播推荐好房",
+        "business":"主战-房产"
+    },
+    "IdeatPages":{
+        "name":"城市选择",
+        "business":"主战-房产"
+    },
+    "ESFangLeaveInfo":{
+        "name":"二手房留资页",
+        "business":"主战-房产"
+    },
+    "ESFangDetail":{
+        "name":"二手房详情页",
+        "business":"主战-房产"
+    },
+    "FangBuildingSearch":{
+        "name":"房源搜索页",
+        "business":"主战-房产"
+    },
+    "FangTopAgents":{
+        "name":"房产精选主播",
+        "business":"主战-房产"
+    },
+    "FangTopVideos":{
+        "name":"房产精选视频",
+        "business":"主战-房产"
+    },
+    "FangRegisterBuyer":{
+        "name":"购房信息页",
+        "business":"主战-房产"
+    },
+    "KJNExcite": {
+      "name": "激励电商",
+      "business": "商业化-联盟-互动"
+    },
+    "CommercialCouponCenter": {
+      "name": "领券中心",
+      "business": "商业化-联盟-互动"
+    },
+    "CommercialEarnDetail": {
+      "name": "收益明细",
+      "business": "商业化-联盟-互动"
+    },
+    "CommercialGoodsPage": {
+      "name": "电商中间页",
+      "business": "商业化-联盟-互动"
+    },
+    "CommercialGoodsPageV1": {
+      "name": "电商中间页改版",
+      "business": "商业化-联盟-互动"
+    },
+    "LiveFeatRevenueBookLive": {
+      "name": "直播活动预约能力",
+      "business": "直播"
+    },
+    "LiveFeatRevenueGiftBattle": {
+      "name": "礼物大作战",
+      "business": "直播",
+      "projectId": "d155999545"
+    },
+    "LiveFeatRevenueGiftBattleV2": {
+      "name": "礼物大作战V2",
+      "business": "直播",
+      "projectId": "58b3a1623d"
+    },
+    "LiveFeatRevenueLeee": {
+      "name": "主播端红包发送面板",
+      "business": "直播",
+      "projectId": "711830c7e6"
+    },
+    "LiveFeatRevenueUserLevelRights": {
+      "name": "新版间内会员等级权益",
+      "business": "直播",
+      "projectId": "847c8c8be6"
+    },
+    "LiveFeatRevenueDIYStartup": {
+      "name": "DIY灯牌冷启活动",
+      "business": "直播"
+    },
+    "LiveConsumeTrafficStrategy": {
+      "name": "主播流量感知",
+      "business": "直播",
+      "projectId": "84673ca614"
+    },
+    "LiveFeatConsumeGuessAnimales": {
+      "name": "十二生肖",
+      "business": "直播",
+      "projectId": "5c93d4be7b"
+    },
+    "LiveFeatRevenueTicketSendGuide": {
+      "name": "人气票送出链路用户教育",
+      "business": "直播",
+      "projectId": "b338de46ea"
+    },
+    "LiveFeatRevenueActivityCenter": {
+      "name": "活动中心",
+      "business": "直播",
+      "projectId": "49d00406e4"
+    },
+    "LiveFeatRevenueLittlePlayAuthoriModal": {
+      "name": "小玩法面板授权弹窗",
+      "business": "直播",
+      "projectId": "77c879e2c6"
+    },
+    "LiveFeatConsumeMinorPayPrompt": {
+      "name": "未成年消费限制弹窗",
+      "business": "直播",
+      "projectId": "a3984ad05a"
+    },
+    "LiveFeatRevenueChatInviteSettings": {
+      "name": "pk设置页",
+      "business": "直播",
+      "projectId": "7de643bb2d"
+    },
+    "KwaiPostAnnualMemories2023": {
+      "name": "2023年度回顾",
+      "business": "未知(雷达触发)",
+      "projectId": "d7d1817831"
+    },
+    "Eve2023Live": {
+      "name": "23cny-除夕-KRN",
+      "business": "未知(雷达触发)",
+      "projectId": "c1ae2e7859"
+    },
+    "LiveFeatRevenuePkHistoryRecord": {
+      "name": "PK历史记录页改版",
+      "business": "直播",
+      "projectId": "e209011842"
+    },
+    "LiveFeatRevenueAudienceRedparcel": {
+      "name": "观众红包优化",
+      "business": "直播",
+      "projectId": "d0d159cb12"
+    },
+    "LiveFeatConsumeInteractProgram": {
+      "name": "互动节目单",
+      "business": "直播",
+      "projectId": "1ac4c36475"
+    },
+    "LiveFeatRevenueGuardManage": {
+      "name": "守护管理",
+      "business": "直播",
+      "projectId": "c78b3a08d2"
+    },
+    "LiveFeatRevenueTaskSystem": {
+      "name": "付费用户任务体系页面",
+      "business": "直播",
+      "projectId": "91468207db"
+    },
+    "LiveAtmosphereGiftsDialog": {
+      "name": "氛围礼物",
+      "business": "直播",
+      "projectId": "a1a20c6dc3"
+    },
+    "LiveRevenueFansgroupFamilyTogether": {
+      "name": "家人出征：入团送礼面板",
+      "business": "直播",
+      "projectId": "853625b173"
+    },
+    "LiveRevenueFansgroupHonor":{
+        "name":"粉丝团-荣誉殿堂",
+        "business": "直播",
+        "projectId": "968764e54e"
+    },
+    "LiveFeatRevenueGiftGroupSystemPage": {
+      "name": "中秋套系礼物-礼物故事页",
+      "business": "直播",
+      "projectId": "d872210549"
+    },
+    "LiveFeatRevenueFansgroupLimitedSkin": {
+      "name": "钻粉皮肤活动",
+      "business": "直播",
+      "projectId": "9694de421a"
+    },
+     "KwaiPostNewGoldCoinFeedback": {
+      "name": "金币反馈改版",
+      "business": "短视频"
+    },
+    "LiveFeatRevenueFansGroupDouble11": {
+      "name": "钻粉双十一折扣活动",
+      "business": "直播",
+      "projectId": "1047a71515"
+    },
+    "KwaiPushEncourageTask": {
+        "name": "金币任务Push触达",
+        "business": "短视频"
+    },
+    "KwaiPostAdditionalAuthorStatement": {
+        "name": "作者声明补打页",
+        "business": "短视频"
+    },
+    "SocialGroupWelcomeMessage": {
+        "name": "入群欢迎语设置",
+        "business": "短视频"
+    },
+    "LiveFeatRevenueTaskCard": {
+      "name": "任务卡片发快币",
+      "business": "直播",
+      "projectId": "089e8a317a"
+    },
+    "LiveFeatConsumeDanmuWeekStarList": {
+      "name": "弹幕周星榜",
+      "business": "直播",
+      "projectId": "1ee312a29c"
+    },
+    "SocialIMEmotionReactionDetail": {
+        "name": "私信表态面板",
+        "business": "短视频"
+    },
+    "KwaiPostBilingualCaptions": {
+        "name": "双语字幕预览",
+        "business": "短视频"
+    },
+    "LiveFeatRevenueCloudLive": {
+      "name": "云开播任务页",
+      "business": "直播",
+      "projectId": "5be45ce140"
+    },
+     "LiveFeatOrderTool": {
+      "name": "主粉号令器",
+      "business": "直播",
+      "projectId": "7251ec37ba"
+    },
+    "LiveFeatRevenueTicketSendInterceptPopup": {
+      "name": "人气票赠送拦截弹窗",
+      "business": "直播",
+      "projectId": "3765582b03"
+    },
+    "LiveRevenueCloudMirrorCenter": {
+        "name": "云玩法开播",
+        "business": "直播",
+        "projectId": "5374b6cc78"
+    },
+    "LiveRevenueCloudMirrorControl": {
+        "name": "云玩法控制页",
+        "business": "直播",
+        "projectId": "3811b48dcb"
+    },
+    "LiveRevenueCloudMirrorLink":{
+         "name": "云玩法设置页",
+        "business": "直播",
+        "projectId": "7826392db4"
+    },
+    "LiveFeatGroupLiveTool":{
+         "name": "团播工具",
+        "business": "直播",
+        "projectId": "b01c660c52"
+    },
+    "LiveFeat520Invitation":{
+        "name": "520真爱邀请函弹窗",
+        "business": "直播",
+        "projectId": "7e64b456e8"
+    },
+    "LiveFeatVideoFeedback":{
+        "name": "音视频反馈面板",
+        "business": "直播",
+        "projectId": "673a334d14"
+    },
+    "LiveFeatRevenueMultiInteractCounterSettingPanel":{
+        "name": "多人连线计数器开关面板",
+        "business": "直播",
+        "projectId": "ae4d5dc440"
+    },
+    "LiveFeatMultiInteractRank":{
+        "name": "连线pk场景公用贡献榜",
+        "business": "直播",
+        "projectId": "3310189624"
+    },
+    "LiveFeatCompetScheduleTab": {
+      "name": "赛程Tab",
+      "business": "直播",
+      "projectId": "45e55e927b"
+    },
+    "LiveFeatRechargeSendModal": {
+      "name": "余额不足充值后送礼提示弹窗",
+      "business": "直播",
+      "projectId": "6e99b984e6"
+    },
+    "LiveFeatGiftRestock": {
+      "name": "礼物大补货落地页",
+      "business": "直播",
+      "projectId": "4234d1d029"
+    },
+    "LiveFeatMedalWall":{
+        "name": "P页勋章注释页",
+        "business": "直播",
+        "projectId": "3d8781adee"
+    },
+    "LiveFeatSendGiftTo":{
+        "name": "跨房送礼用户选择面板",
+        "business": "直播",
+        "projectId": "096a7825c9"
+    },
+    "LiveFeatVerticalCategoryLiveIncome":{
+        "name": "结束页垂类收入详情页",
+        "business": "直播",
+        "projectId": "a13056ba0a"
+    },
+    "LiveAudienceLittlePlayCard": {
+        "name": "弹幕玩法挂件",
+        "business": "直播",
+        "projectId": "aaca5aa1d1"
+    },
+    "liveFeatRevenueAceBattle": {
+        "name": "王牌大作战",
+        "business": "直播",
+        "projectId": "a25c149e6e"
+    },
+    "LiveFeatFansGroupLeee": {
+        "name": "超粉团群聊红包",
+        "business": "直播",
+        "projectId": "2dca4317b8"
+    },
+    "LiveFeatRevenuePkPubg": {
+        "name": "pk吃鸡大逃杀",
+        "business": "直播",
+        "projectId": "d68cee26e8"
+    },
+    "LiveFeatMultiinteractPanel": {
+        "name": "连线pk面板",
+        "business": "直播",
+        "projectId": "e36a6c9675"
+    }
+  }
+}

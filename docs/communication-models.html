@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沟通表达类思维模型 - 第二号</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #ffffff; --bg-secondary: #f8fafc; --bg-tertiary: #f1f5f9;
+            --accent: #3b82f6; --accent-light: #60a5fa; --accent-dark: #2563eb; --accent-subtle: #eff6ff;
+            --text-primary: #0f172a; --text-secondary: #475569; --text-muted: #94a3b8;
+            --border: #e2e8f0; --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        .header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 600; }
+        .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+        .back-link { font-size: 14px; color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+        .back-link:hover { color: var(--accent); }
+        .hero { padding: 120px 0 40px; text-align: center; border-bottom: 1px solid var(--border); }
+        .hero-icon { font-size: 48px; margin-bottom: 16px; }
+        .hero-title { font-size: 36px; font-weight: 700; margin-bottom: 12px; }
+        .hero-desc { font-size: 16px; color: var(--text-secondary); max-width: 560px; margin: 0 auto; }
+        .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--border); }
+        .hero-stat { text-align: center; }
+        .hero-stat-value { font-size: 28px; font-weight: 700; color: var(--accent); }
+        .hero-stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+        .nav-cats { display: flex; justify-content: center; gap: 8px; padding: 24px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+        .nav-cat { padding: 8px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 100px; font-size: 13px; color: var(--text-secondary); text-decoration: none; font-weight: 500; }
+        .nav-cat:hover, .nav-cat.active { background: var(--accent); border-color: var(--accent); color: white; }
+        .section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+        .section:last-child { border-bottom: none; }
+        .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+        .section-number { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); font-weight: 600; }
+        .section-title { font-size: 22px; font-weight: 700; }
+        .model-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 20px; transition: all 0.2s; }
+        .model-card:hover { border-color: var(--accent-light); box-shadow: var(--shadow-md); }
+        .model-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+        .model-title-wrap { display: flex; align-items: center; gap: 12px; }
+        .model-icon { font-size: 28px; }
+        .model-title { font-size: 20px; font-weight: 700; }
+        .model-source { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+        .model-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+        .model-tag { padding: 4px 10px; background: var(--bg-tertiary); border-radius: 100px; font-size: 11px; color: var(--text-secondary); font-weight: 500; }
+        .model-section { margin-bottom: 20px; }
+        .model-section-title { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+        .model-def { background: var(--bg-primary); border: 1px solid var(--border); border-radius: 8px; padding: 16px; font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+        .insights-list { list-style: none; }
+        .insights-list li { background: var(--bg-primary); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; font-size: 14px; color: var(--text-secondary); border-left: 3px solid var(--accent); }
+        .connections { display: flex; flex-wrap: wrap; gap: 8px; }
+        .connection { padding: 6px 12px; background: var(--accent-subtle); border-radius: 100px; font-size: 12px; color: var(--accent); font-weight: 500; }
+        .simple-list { list-style: none; }
+        .simple-list li { padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text-secondary); }
+        .simple-list li:last-child { border-bottom: none; }
+        .simple-list li strong { color: var(--text-primary); }
+        @media (max-width: 768px) { .hero-title { font-size: 28px; } .model-header { flex-direction: column; gap: 12px; } }
+    </style>
+</head>
+<body>
+    <header class="header"><div class="container"><div class="header-inner"><a href="second-number-homepage.html" class="logo"><div class="logo-icon">🤖</div><span>第二号</span></a><a href="second-number-homepage.html" class="back-link">← 返回主页</a></div></div></header>
+    <main>
+        <section class="hero"><div class="container"><div class="hero-icon">💬</div><h1 class="hero-title">沟通表达类思维模型</h1><p class="hero-desc">高效沟通、深度表达、建立连接。8个模型帮助你更清晰、更有说服力地表达想法。</p><div class="hero-stats"><div class="hero-stat"><div class="hero-stat-value">8</div><div class="hero-stat-label">思维模型</div></div><div class="hero-stat"><div class="hero-stat-value">4</div><div class="hero-stat-label">表达场景</div></div></div></div></section>
+        <div class="nav-cats"><a href="decision-models.html" class="nav-cat">🎯 决策类</a><a href="product-models.html" class="nav-cat">🚀 产品类</a><a href="cognition-models.html" class="nav-cat">🧠 认知类</a><a href="communication-models.html" class="nav-cat active">💬 沟通类</a></div>
+        <section class="section"><div class="container"><div class="section-header"><span class="section-number">01</span><h2 class="section-title">核心沟通模型</h2></div>
+            <div class="model-card"><div class="model-header"><div class="model-title-wrap"><span class="model-icon">📐</span><div><div class="model-title">SCQA模型</div><div class="model-source">芭芭拉·明托 / 《金字塔原理》</div></div></div><div class="model-tags"><span class="model-tag">沟通</span><span class="model-tag">写作</span></div></div><div class="model-section"><div class="model-section-title">定义</div><div class="model-def">结构化表达的框架：Situation（情境）→Complication（冲突）→Question（问题）→Answer（答案）。金字塔原理的核心，用于写作、演讲和汇报。</div></div><div class="model-section"><div class="model-section-title">核心洞察</div><ul class="insights-list"><li>PRD写作：SCQA是背景部分的黄金结构</li><li>汇报演讲：先建立共识（S），再提出挑战（C）</li></ul></div></div>
+            <div class="model-card"><div class="model-header"><div class="model-title-wrap"><span class="model-icon">📖</span><div><div class="model-title">故事五要素</div><div class="model-source">罗伯特·麦基 / 《故事》</div></div></div><div class="model-tags"><span class="model-tag">沟通</span><span class="model-tag">表达</span></div></div><div class="model-section"><div class="model-section-title">定义</div><div class="model-def">完整故事的五个基本要素：冲突（渴望+障碍）、行动、结局、情感、展示。好的故事能打动人心，是沟通、演讲和写作的强力工具。</div></div><div class="model-section"><div class="model-section-title">核心洞察</div><ul class="insights-list"><li>产品叙事：用故事五要素包装产品价值</li><li>演讲汇报：故事比数据更能打动听众</li></ul></div></div>
+            <div class="model-card"><div class="model-header"><div class="model-title-wrap"><span class="model-icon">🪟</span><div><div class="model-title">乔哈里视窗</div><div class="model-source">乔瑟夫·鲁夫特 / 哈灵顿·英格拉姆</div></div></div><div class="model-tags"><span class="model-tag">沟通</span><span class="model-tag">心理学</span></div></div><div class="model-section"><div class="model-section-title">定义</div><div class="model-def">认知自我的四个象限：开放区（自知他知）、盲区（他知我不知）、隐藏区（我知他不知）、未知区（皆不知）。通过反馈减少盲区，通过分享减少隐藏区。</div></div><div class="model-section"><div class="model-section-title">核心洞察</div><ul class="insights-list"><li>产品需求沟通：减少盲区，确保理解一致</li><li>个人成长：通过反馈不断扩展开放区</li></ul></div></div>
+            <div class="model-card"><div class="model-header"><div class="model-title-wrap"><span class="model-icon">🌱</span><div><div class="model-title">GROW教练模型</div><div class="model-source">约翰·惠特默</div></div></div><div class="model-tags"><span class="model-tag">管理</span><span class="model-tag">沟通</span></div></div><div class="model-section"><div class="model-section-title">定义</div><div class="model-def">目标导向的辅导框架：Goal（目标）→Reality（现状）→Options（选择）→Will（行动意愿）。帮助被辅导者明确目标、认清现状、探索方案、制定行动计划。</div></div><div class="model-section"><div class="model-section-title">核心洞察</div><ul class="insights-list"><li>团队管理：用GROW模型做一对一沟通</li><li>自我教练：面对职业选择时用GROW梳理</li></ul></div></div>
+        </div></section>
+        <section class="section" style="background: var(--bg-secondary);"><div class="container"><div class="section-header"><span class="section-number">02</span><h2 class="section-title">更多沟通模型</h2></div><ul class="simple-list"><li><strong>英雄之旅模型</strong> — 神话和故事的通用结构：普通世界→冒险召唤→遇见导师→跨越门槛→核心磨难→携万能药归来</li><li><strong>冰山模型</strong> — 表面行为只是冰山一角，深层是感受、观点、期待、渴望和自我</li><li><strong>情绪ABC模型</strong> — 情绪产生的机制：A（诱发事件）→B（信念）→C（情绪后果）</li><li><strong>六顶思考帽</strong> — 白帽（事实）、红帽（情感）、黑帽（风险）、黄帽（收益）、绿帽（创意）、蓝帽（控制）</li><li><strong>类比思维</strong> — 通过比较两个不同事物的相似性来理解和解释新概念</li></ul></div></section>
+    </main>
+</body>
+</html>

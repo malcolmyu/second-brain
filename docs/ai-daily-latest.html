@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 日报 - 2026-03-27</title>
+    <title>AI 日报 - 近一周精选</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,117 +13,2116 @@
             --text: #1f2937;
             --text-secondary: #6b7280;
             --border: #e5e7eb;
-            --shadow: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-        header { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 48px 0; margin-bottom: 32px; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
-        .subtitle { font-size: 14px; opacity: 0.8; }
-        .stats { text-align: right; }
-        .stats-value { font-size: 36px; font-weight: 700; color: #60a5fa; }
-        .stats-label { font-size: 12px; opacity: 0.7; }
-        .section { margin-bottom: 40px; }
-        .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--border); }
-        .section-title { font-size: 20px; font-weight: 600; }
-        .section-count { margin-left: auto; background: var(--bg); padding: 4px 12px; border-radius: 20px; font-size: 13px; color: var(--text-secondary); }
-        .news-list { display: flex; flex-direction: column; gap: 16px; }
-        .news-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: all 0.2s; box-shadow: var(--shadow); }
-        .news-card:hover { box-shadow: var(--shadow-hover); border-color: var(--accent); }
-        .news-meta { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
-        .news-source { font-weight: 500; color: var(--accent); }
-        .news-title { font-size: 18px; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
-        .news-summary { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
-        .news-link { display: inline-flex; align-items: center; gap: 4px; color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
-        .news-link:hover { text-decoration: underline; }
-        .back-link { display: inline-flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; margin-bottom: 16px; opacity: 0.8; }
-        .back-link:hover { opacity: 1; }
-        @media (max-width: 640px) { .header-content { flex-direction: column; align-items: flex-start; gap: 16px; } .stats { text-align: left; } }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 48px 0;
+            margin-bottom: 32px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            h1 {
+                color: #f9fafb;
+            }
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .stats {
+            text-align: right;
+        }
+
+        .stats-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+
+        .stats-label {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .section-count {
+            margin-left: auto;
+            background: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .news-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .news-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.2s ease;
+        }
+
+        .news-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .news-card:hover .news-title {
+            color: var(--accent);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .news-card {
+                background: #1f2937;
+                border-color: #374151;
+            }
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .news-source {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .news-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .news-summary {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state-text {
+            font-size: 16px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式断点 */
+        @media (max-width: 640px) {
+            .header-content {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .stats {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .stats-value {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 18px;
+            }
+
+            .news-card {
+                padding: 16px;
+            }
+
+            .news-title {
+                font-size: 15px;
+            }
+
+            .news-summary {
+                font-size: 13px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #111827;
+                --card: #1f2937;
+                --text: #f9fafb;
+                --text-secondary: #9ca3af;
+                --border: #374151;
+                --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+            }
+
+            header {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            }
+
+            .news-card {
+                background: var(--card);
+                border-color: var(--border);
+            }
+
+            .news-title {
+                color: var(--text);
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            header {
+                background: none;
+                color: var(--text);
+            }
+
+            .stats-value {
+                color: var(--text);
+            }
+
+            .news-card {
+                box-shadow: none;
+                border: 1px solid var(--border);
+            }
+
+            .news-link {
+                background: none;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="index.html" class="back-link">← 返回首页</a>
             <div class="header-content">
                 <div>
-                    <h1>📰 AI 日报</h1>
-                    <div class="subtitle">2026年3月27日 · 周五</div>
+                    <h1>🤖 AI 日报</h1>
+                    <p class="subtitle">
+                        2026-03-27
+                         - 近一周精选
+                    </p>
                 </div>
                 <div class="stats">
-                    <div class="stats-value">5</div>
-                    <div class="stats-label">篇精选</div>
+                    <div class="stats-value">13</div>
+                    <div class="stats-label">条资讯</div>
                 </div>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <div class="section">
-            <div class="section-header">
-                <h2 class="section-title">🔥 今日热点</h2>
-                <span class="section-count">5 条</span>
+        
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">综合资讯</h2>
+                            <span class="section-count">4 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="https://baoyu.io/translations/2026-03-26/what-i-learned-from-two-weeks-inside-china-s-ai-ecosystem" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">宝玉</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-25</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">在中国 AI 生态圈摸底了两周，我学到了什么</h3>
+                                        <p class="news-summary">一位西方 VC 深入中国 AI 生态圈的第一手观察：创始人特质、硬件壁垒、软件泡沫与那个被忽视的不对称性</p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247659871&idx=1&sn=34565e9adc9a8e9e417056cf3d013115" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">WeChat 2</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-25</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">谷歌迎来“DeepSeek时刻”！TurboQuant引爆AI圈、全球开发者疯狂复现：6倍无损压缩，内存股集体暴跌</h3>
+                                        <p class="news-summary"><p><span>AI前线</span> <span>2026-03-26 13:15</span> <span style="display: inline-block;">浙江</span></p>
+
+
+
+
+
+
+  
+  <p><img src="https://wechat2rss.bestblogs.dev/img-proxy/?k=6e2de68d&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2FlYDricib2fsm7nLmBzJcwvcz4u1HkfzickDSyM62mpRoSIlLkxv8FcSLDZ6LVIibOwgdyENq5Kppn9Gu3qGSFsBJibjeWmf3ia8OJjnx9GBENNHu8%2F0%3Fwx_fmt%3Djpeg" /></p>
+  <p>即使你对生成式 AI 模型的内部运作了解不多，也大概率知道它们极其吃内存。</p>
+  <p style="text-align: center;"><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=e16c137b&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2FlYDricib2fsm6zbku2T9iaanaffosaH2ppjIicvYBLBXzEXCdXtDHN2Ysia4gesrQAkTkh9RhFetoOoENdiahRwYtdsXfHr7JoC1gogicLAT3UCe5Q%2F640%3Fwx_fmt%3Djpeg" style="width: 578px; height: 296px;" /></p><div><p><span>整理 | 华卫	</span></p><p><span>即使你对生成式 AI 模型的内部运作了解不多，也大概率知道它们极其吃内存。正因如此，如今想买一根普通内存条都免不了被狠狠加价。</span></p><p><span>最近，谷歌研究院发布了 TurboQuant 压缩算法，能够在提升运行速度并保持准确性不变的前提下，降低大语言模型（LLM）的内存占用。如果 TurboQuant 成功落地，可将 AI 运行时的 “工作内存”，也就是键值缓存（KV cache）压缩至少 6 倍，并在 H100 显卡上实现最高 8 倍的速度提升，从而大幅降低 AI 运行成本。</span></p><p><span>Cloudflare 的 CEO Matthew Prince 等人甚至称，这是谷歌的 “DeepSeek 时刻”。此前，中国 AI 模型 DeepSeek 实现这样的效率飞跃：该模型在性能保持竞争力的情况下，训练成本仅为对手的零头，且使用的芯片性能较差。</span></p><p><img alt="图片" class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=372614c9&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FlYDricib2fsm5TS1781sic1gHTFJJ7IzbBEyicZzUTHNX1UlHZYSicOCqTeyibiapStXibibes3B5IBiahibMFjSeicWj0yqsFofINAH8ukRYqy8HKiaXgpM%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><p><span>而 TurboQuant 最关键的亮点是：精度零损失。无需微调，无需训练数据。直接接入任意 Transformer 模型，即可让键值缓存压缩至原体积的一小部分，同时输出结果完全一致。如果这一效果能在实际生产环境中成立，将一夜之间改变长上下文推理的成本格局。</span></p><p><span>此外，TurboQuant 发布短短数小时内，内存类股票应声下跌：美光科技跌 3%，西部数据跌 4.7%，闪迪跌 5.7%。原因是投资者开始重新估算，AI 行业未来实际需要的物理内存可能会大幅减少。</span></p><div label="edit by 135editor"><div><div><div><p><span><strong><span><span style="font-weight: normal;">  极致无损压缩 AI 效率，</span></span></strong></span></p><p><strong style="background-color: initial; color: rgb(66, 133, 244);"><span><span style="font-weight: normal;">还革新了向量检索</span></span></strong></p></div></div></div></div><p><span>在博客中，谷歌研究院将这项技术描述为一种在不影响性能的前提下缩减 AI 运行内存的全新方法。研究人员表示，该压缩技术采用一种矢量量化方式，解决 AI 处理中的缓存瓶颈问题，本质上能让 AI 在占用更少空间、保持精度的同时记住更多信息。</span></p><p><span>TurboQuant 的优化目标是缩减键值缓存的体积，谷歌将其比作一张 “数字备忘单”，用于存储关键信息，避免重复计算。这张备忘单必不可少，因为正如我们常说的，大语言模型本身并不 “懂” 任何东西，它们只是通过向量模拟出理解的效果，向量会映射分词后文本的语义信息。两个向量相近，就代表它们在概念上相似。高维向量可能包含成百上千个嵌入维度，能够描述图像像素、大型数据集等复杂信息，但同时也会占用大量内存，让键值缓存体积暴涨，成为性能瓶颈。</span></p><p><span>为了让模型更小、更高效，开发者通常会使用量化技术以更低精度运行模型，缺点则是生成效果会变差，分词预测的质量下降。而谷歌的早期测试结果显示，使用 TurboQuant 后，部分场景下性能提升 8 倍、内存占用减少 6 倍，且精度毫无损失。</span></p><p><img alt="图片" class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=b2ac0e7e&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FlYDricib2fsm6TEdSMuzcnt7HOt0bU1FpGhkxOYH190VROdhjBtE8kqgSF7LibsReMox8msiafoueTB74dYJoMBTtCSIHWdYftKHibTN3ddAHxwY%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><p><span>谷歌表示，他们在 Gemma 和 Mistral 两款开源模型上，用一系列长上下文基准测试了这套新压缩算法。结果显示，TurboQuant 在所有测试中下游任务表现完美，同时将键值缓存内存占用降低 6 倍。该算法无需额外训练，就能将缓存量化至仅 3 比特，可直接应用于现有模型。在英伟达 H100 加速器上，使用 4 比特 TurboQuant 计算注意力分数，速度比 32 比特未量化键值快 8 倍。</span></p><p><img alt="图片" class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=872f9af5&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm7YCAj84ArjDZaQicwnH4w0ibicDqw2yqicdjKbs6PlmU8CKa2EGzQyX9vRbYeLjsRQC3arotXPdO3yTfSL25icKkerAzjic3n4rFgmw%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><p><span>不过值得注意的是，TurboQuant 目前尚未大规模部署，现阶段仍只是实验室层面的突破。如果正式落地，TurboQuant 有望降低 AI 模型的运行成本，减少内存消耗。研发这类技术的公司也可能利用释放出的内存运行更复杂的模型。未来大概率会两种方向并存，而移动端 AI 受益可能最为明显。受限于手机硬件条件，TurboQuant 这类压缩技术可以在不上传数据至云端的前提下，提升本地 AI 的生成质量。</span></p><p><span>除大语言模型推理外，TurboQuant 也适用于向量检索场景，在检索增强生成（RAG）与相似度搜索中，高维向量同样面临内存压力。使用 TurboQuant 后，索引构建时间几乎降至零（1536 维向量仅需 0.0013 秒，而乘积量化需 239.75 秒）；在 GloVe 数据集上的召回率也优于乘积量化与 RabbiQ 基准模型。</span></p><div label="edit by 135editor"><div><div><div><p><span><strong><span><span style="font-weight: normal;">技术逻辑大公开：</span></span></strong></span></p><p><strong style="background-color: initial; color: rgb(66, 133, 244);"><span><span style="font-weight: normal;">应用到 AI 模型只需两步</span></span></strong></p></div></div></div></div><p><span>将 TurboQuant 应用到 AI 模型分为两个阶段，背后是两项关键技术：量化方法 PolarQuant 以及名为 QJL 的训练与优化方法。</span></p><p><span>为实现高质量压缩，谷歌设计了一套名为 PolarQuant 的系统，以一种截然不同的思路解决内存开销问题。AI 模型中的向量通常采用标准 XYZ 坐标编码，而 PolarQuant 会将向量转换为笛卡尔坐标系下的极坐标。在这个环形网格中，向量被简化为两项信息：半径（核心数据强度）和方向（数据的语义含义）。</span></p><p><span>谷歌用一个很形象的现实例子来解释：传统编码就像是 “向东走 3 个街区，再向北走 4 个街区”；而用极坐标则可以简化为 “沿 37 度方向走 5 个街区”。这样不仅占用空间更少，还省去了系统开销巨大的数据归一化步骤。PolarQuant 承担了主要的压缩工作，尽管效果显著，但会产生残留误差。</span></p><p><span>第二步则用于修复瑕疵。对此，谷歌提出用量化约翰逊 - 林登斯特劳斯变换（QJL）进行平滑处理，在压缩复杂高维数据的同时，保留数据点之间关键的距离与关联信息。该技术会为模型添加一层 1 比特误差校正层，将每个向量压缩至单个比特（+1 或 - 1），本质上构建了一套高速简写形式，且不会产生任何内存开销。同时为保证精度，QJL 采用一种特殊估算器，对高精度查询与低精度简化数据进行合理平衡，使模型能够精准计算注意力分数，这也是神经网络判断数据重要性的核心机制。</span></p><p><span>二者组合起来的效果就是，PolarQuant 实现极致压缩，QJL 以近乎可忽略的成本修正误差。据悉，谷歌计划在下个月的 ICLR 2026 会议上展示他们的研究成果，并展示这两种优化方法。</span></p><div label="edit by 135editor"><div><div><div><p><span><strong><span><span style="font-weight: normal;">代码未公布，</span></span></strong></span></p><p><strong style="background-color: initial; color: rgb(66, 133, 244);"><span><span style="font-weight: normal;">开发者单靠论文复现可用版</span></span></strong></p></div></div></div></div><p><span>尽管谷歌尚未发布任何官方代码或集成库，独立开发者们已经仅凭论文就开始构建可运行的实现版本。</span></p><p><span>有开发者在 PyTorch 中自定义了 Triton 内核，在 RTX 4090 显卡上对 Gemma 3 4B 模型进行测试，结果显示：在 2 比特精度下，模型输出与未压缩基准版逐字符完全一致。仅用 2 比特存储每个数值，量化后的模型就能与全精度版本实现逐字节完全相同的回复，这表明 TurboQuant 的理论保证在较小模型上切实有效。</span></p><p><span>另有开发者通过 MLX 框架在苹果芯片上运行 35B 参数模型并搭载 TurboQuant，在各量化等级下的 “大海捞针” 测试中均取得 6 项满分。在 llama.cpp 社区，已有三名开发者着手开发 C 语言与 CUDA 版本，其中一人表示 18 项测试全部通过，压缩比也与论文数据完全吻合。</span></p><p><span>一项研究论文在官方发布前就以如此速度被广泛复现，实属罕见。覆盖 Triton、MLX、llama.cpp 等平台的实现案例，既体现了 TurboQuant 数学设计的清晰性，也反映出 KV 缓存优化作为部署瓶颈的迫切需求。</span></p><p><span>不过，复现该算法并非易事。一名早期开发者表示，QJL 误差校正模块很难准确实现，简单粗暴的实现方式只会输出乱码。如果不能正确实现 QJL 对内积估算的偏差校正，量化误差会不断累积，导致输出结果完全不可用。目前谷歌仍未发布 TurboQuant 官方代码，vLLM、llama.cpp、Ollama 等主流推理框架也均未集成该技术。</span></p><div label="edit by 135editor"><div><div><div><p><span><strong><span><span style="font-weight: normal;">内存股全跌了，</span></span></strong></span></p><p><strong style="background-color: initial; color: rgb(66, 133, 244);"><span><span style="font-weight: normal;">英伟达也在推同款算法</span></span></strong></p></div></div></div></div><p><span>市场反应十分迅速。内存类股票纷纷下跌，美光科技股价下跌 3%，西部数据下跌 4.7%，闪迪下跌 5.7%。A 股市场存储芯片股也集体下挫，其中，兆易创新、佰维存储、恒烁股份跌超 5%，江波龙、朗科科技、北京君正、太极实业、中电港跌超 4%，普冉股份、同有科技、万润科技、科翔股份、精智达、云汉芯城、联芸科技跌超 3%。</span></p><p><span>而在多位分析师看来，这种波动有些反应过度。富国银行分析师 Andrew Rocha 指出，TurboQuant 直接冲击了 AI 系统的内存成本曲线。他表示，如果该技术被广泛采用，很快就会引发一个问题：整个行业实际需要的内存容量究竟有多大。但 Rocha 与其他分析师也同时提醒，AI 内存的需求整体依然强劲，而且压缩算法已存在多年，并未从根本上改变硬件采购规模。</span></p><p><span>不过，市场的担忧并非毫无根据。AI 基础设施支出正以惊人速度增长：仅 Meta 一家，近期就与 Nebius 达成协议，投入高达 270 亿美元用于专属算力；谷歌、微软、亚马逊也共同计划在 2026 年前投入数千亿美元用于数据中心资本支出。一项能将内存需求降低 6 倍的技术，并不会让支出同步减少 6 倍，因为内存只是数据中心成本的一部分。但它会改变成本结构比例，而在如此大规模的投入下，即便只是小幅效率提升，带来的影响也会快速放大。</span></p><p><span>TurboQuant 并非唯一一篇将在 ICLR 2026 发表的 KV 缓存压缩方法。据了解，英伟达推出的 KVTC 可实现 20 倍压缩，且精度损失不到 1 个百分点。该算法在 15 亿至 700 亿参数的模型上完成了测试，覆盖范围比 TurboQuant 约 80 亿参数上限的基准测试更广。KVTC 采用了截然不同的底层思路，使用基于主成分分析（PCA）的去相关方法与熵编码，部分思路借鉴自 JPEG 压缩。与 TurboQuant 与数据无关的设计不同，KVTC 需要针对每个模型执行一次性校准步骤，离线计算 PCA 对齐矩阵。作为回报，它在 8000 token 的长提示词下，可将首 token 延迟最高降低 8 倍：在 H100 上从约 3 秒缩短至 380 毫秒。</span></p><p><span>英伟达研究员 Adrian Lancucki 表示，“高效的 KV 缓存管理正变得至关重要，闲置缓存必须迅速从 GPU 显存移出，为其他用户腾出空间，并在对话恢复时快速加载。这些基础设施成本如今已体现在商用定价中，例如‘提示词缓存’，并会收取额外费用。”</span></p><p><span>两种相互竞争的压缩标准在同一场会议同期亮相，标志着 KV 缓存优化正从纯研究课题，逐渐成熟为生产级基础设施层。</span></p><p><span><span style="font-size: 14px; color: rgb(136, 136, 136); font-weight: bold;">参考链接：</span></span></p><p><span><span style="font-size: 14px; color: rgb(136, 136, 136);"><a href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/" target="_blank">https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/</a></span></span></p><p><span><span style="font-size: 14px; color: rgb(136, 136, 136);"><a href="https://winbuzzer.com/2026/03/26/googles-turboquant-reduces-ai-llm-cache-memory-xcxwbn/" target="_blank">https://winbuzzer.com/2026/03/26/googles-turboquant-reduces-ai-llm-cache-memory-xcxwbn/</a></span></span></p><p><span><span style="font-size: 14px; color: rgb(136, 136, 136);"><a href="https://thenextweb.com/news/google-turboquant-ai-compression-memory-stocks" target="_blank">https://thenextweb.com/news/google-turboquant-ai-compression-memory-stocks</a></span></span></p><div><p><span><div><div><div><p><span><span>声明：本文为 AI 前线整理，不代表平台观点，未经许可禁止转载。</span></span></p><p style="text-align: center;"><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=a2c59810&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm4JcRj9J4yGJbvdRPegjhwruwJwiav4UXsRbGYPFmg0srfSZiabpuSurJ7GAe5YoCXLzmKUtu74XcN5w7xtfGqoaic0xYsnU7sB4g%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" /></p><div><div><p><span>会议推荐</span></p></div></div><div><div><div><div><div><div><p><span>OpenClaw 出圈，“养虾”潮狂热，开年 Agentic AI 这把火烧得不可谓不旺。在这一热潮下，自托管 Agent 形态迅速普及：多入口对话、持久记忆、Skills 工具链带来强大生产力。但这背后也暴露了工程化落地的真实难题——权限边界与隔离运行、Skills 供应链安全、可观测与可追溯、记忆分层与跨场景污染、以及如何把 Agent 纳入团队研发 / 运维流程并形成稳定收益。</span></p><p><span>针对这一系列挑战，在 4 月 16-18 日即将举办的 QCon 北京站上，我们特别策划了「OpenClaw 生态实践」专题，将聚焦一线实践与踩坑复盘，分享企业如何构建私有 Skills、制定安全护栏、搭建审计与回放机制、建立质量 / 效率指标体系，最终把自托管 Agent 从可用的 Demo 升级为可靠的生产系统。</span></p><p><img alt="图片" class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=fed426d5&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FhLLZnAbUwNiaUwzA6XBvJh9jQZLdNHMMtbfxwibZBnPDsfibCt5XbOnJKgEOxMPyn0PHDa8sFFcMoic1xaFv8F09xW3X4y22B46icLuVfthYfUTo%2F640%3Fwx_fmt%3Djpeg%26from%3Dappmsg%26wxfrom%3D5%26wx_lazy%3D1%26tp%3Dwebp%23imgIndex%3D23" /></p><div><div><div><div align="" alt="" border="" class="rich_pages wxw-img" height="" hspace="" ismap="" src="https://mmbiz.qpic.cn/mmbiz_png/ZBjVrHIdkOnqHORUE28eAnPBy2YsmzFhuSyC0z5gtibTGEia0fia6VYb9WOib2eVPbHGCjjR1CEkicj39ibIv5ibXGTsg/0?wx_fmt=png&amp;from=appmsg" title="" type="block" usemap="" vspace="" width=""><div><div><div><h5><span>今日荐文</span></h5><div><p><span><a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&amp;mid=2247659346&amp;idx=1&amp;sn=c5494b7ceb50b6da4cebfdcce4ba2d26&amp;scene=21#wechat_redirect" target="_blank">发 token 当工资？工程师不只拿现金和期权，开始按 token 分身价了</a></span></p><p><span><a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&amp;mid=2247656784&amp;idx=1&amp;sn=9158fd3abc1fc9074cf5cd5be0371566&amp;scene=21#wechat_redirect" target="_blank">一个不打算安全的 Agent，被当成生产系统：OpenClaw 之父谈“误用危机”</a></span></p><p><span><a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&amp;mid=2247658581&amp;idx=1&amp;sn=5bb3721d3a180eab12ff1b65b67b73d5&amp;scene=21#wechat_redirect" target="_blank">模型不再是关键？LangChain 创始人：真正决定Agent 上限的是运行框架</a></span></p><p><span><a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&amp;mid=2247658546&amp;idx=1&amp;sn=fa41f3f4bc628163d72846dc41536bc3&amp;scene=21#wechat_redirect" target="_blank">360 周鸿祎回应“龙虾”玩梗图：“龙虾”不是病毒，不会因为存在安全问题就否定一项技术</a></span></p><p><img alt="图片" class="rich_pages wxw-img __bg_gif" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=a9297dde&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_gif%2FZBjVrHIdkOnuwJnWZEgj3C0zJnf1iaYSvWWIkchT1kR9m13cSrszq2icExufMBR3wanOGRM3glOY8Z5RribVVsMUA%2F640%3Fwx_fmt%3Dgif%26wxfrom%3D5%26wx_lazy%3D1%26tp%3Dwebp%23imgIndex%3D7" /></p><p><span><span style="color: rgb(2, 30, 170); font-weight: bold;">你也「在看」吗？👇</span></span></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></div></div><p style="display: none;"></p>
+
+
+
+<p><a href="https://wechat2rss.bestblogs.dev/link-proxy/?k=4e6b3336&amp;r=1&amp;u=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzU1NDA4NjU2MA%3D%3D%26mid%3D2247659871%26idx%3D1%26sn%3D34565e9adc9a8e9e417056cf3d013115">跳转微信打开</a></p></p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247659871&idx=2&sn=718585d4cfa572fdf029e926fb1d4f30" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">WeChat 2</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-25</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">35 年只卖设计，今天亲自下场造芯！Arm 首款自研芯片发布，Meta 抢下首单</h3>
+                                        <p class="news-summary"><p><span>AI前线</span> <span>2026-03-26 13:15</span> <span style="display: inline-block;">浙江</span></p>
+
+
+
+
+
+
+  
+  <p><img src="https://wechat2rss.bestblogs.dev/img-proxy/?k=ee59301d&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2FlYDricib2fsm4m7gC7MDbjcGeCmJwJdq25CY5pjeD2zdmaydomaL2XMpG3RQHLujyuaCSEBfUicj0Cwd8bA7kBRKzXrtibxQQtbwaSfTZUiaH3XM%2F0%3Fwx_fmt%3Djpeg" /></p>
+  <p>这家英国企业基于自研Neoverse系列CPU IP内核，并与Meta合作完成了这款芯片的开发。</p>
+  <p><span><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=54f35604&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2FlYDricib2fsm7JuEtodxxtuYwnaCibqCYYNwB0TicCxBuaeV29L6cuKb1vzUon63ibOLj7aEptechlpNYQdYDWgicsoCm2onib52EpPrN4ooIz7ytw%2F640%3Fwx_fmt%3Djpeg" style="width: 578px; height: 338px;" /></span></p><div><p><span>整理 | 华卫	</span></p><p><span>36 年来，半导体与软件公司 Arm 一直将芯片设计授权给英伟达、苹果等企业使用，如今终于开始自主研发并制造自有芯片。</span></p><p><span>在近日举办的发布活动上，该公司正式推出一款面向 AI 数据中心推理场景、可直接量产的处理器 Arm AGI CPU。这家英国企业基于自研 Neoverse 系列 CPU IP 内核，并与 Meta 合作完成了这款芯片的开发。</span></p><p><span>同时，Meta 也是 Arm AGI CPU 的首位客户，该芯片专为与 Meta 的 AI 训练及推理加速器协同工作而设计。Arm 的首批合作方还包括 OpenAI、Cerebras、Cloudflare 等多家科技公司。</span></p><p><span>市场对 Arm 转型自研芯片的动向早有预期。据外媒报道，该公司早在 2023 年便启动了芯片研发工作，目前相关处理器已开放订购。</span></p><p><span>尽管此举在预料之中，却标志着 Arm 历史性地打破了长期以来仅向其他芯片厂商授权设计的传统模式。这家由日本软银集团控股的公司，未来将与众多合作伙伴直接展开竞争。</span></p><p><span>Arm 选择推出 CPU 而非 GPU，这一点同样值得关注。</span></p><p><span><span>代理式 AI 基础设施崛起</span></span></p><p><span>AI 系统正日益以全球规模持续运行。在过去，人是计算环节的瓶颈——人们与系统的交互速度决定了工作推进的速度。而在代理式 AI 时代，因为软件智能体可自主协同任务、与多个模型交互，并实时做出决策，这种局限性将不复存在。</span></p><p><span>随着 AI 系统持续运行且工作负载复杂度不断提升，CPU 已成为现代基础设施中决定运行节奏的关键要素——负责保持分布式 AI 系统大规模的高效运行。在现下的 AI 数据中心中，CPU 管理数千个分布式任务，包括协调加速器、管理内存与存储、调度工作负载、跨系统迁移数据，加上当今的代理式 AI 场景兴起，CPU 还需面向海量智能体实现大规模协同调度。</span></p><p><span>这一转变对 CPU 提出了全新要求，驱动处理器架构的演进。</span></p><p><span>Arm Neoverse 现已成为当今众多领先超大规模云服务及 AI 平台的核心支撑，包括 Amazon Graviton、Google Axion、Microsoft Azure Cobalt 及 NVIDIA Vera 等。随着 AI 基础设施在全球范围内不断扩展，生态系统的合作伙伴纷纷期待 Arm 能够提供更多能力。为应对这一变革，Arm AGI CPU 应运而生。</span></p><div label="edit by 135editor"><div><div><div><p><span><strong><span><span style="font-weight: normal;">Arm AGI CPU：</span></span></strong></span></p><p><strong style="background-color: initial; color: rgb(66, 133, 244);"><span><span style="font-weight: normal;">专为机架级代理式 AI 效率而生</span></span></strong></p></div></div></div></div><p><span>代理式 AI 工作负载需要在大规模场景下实现持续稳定的性能输出。Arm AGI CPU 正是为此而设计，能够在数千核心并行的持续高负载下，为每个任务提供高性能表现，且满足现代数据中心功耗与散热的严格要求。</span></p><p><span>从运行频率到内存及 I/O 架构，Arm AGI CPU 的每一处设计都经过专门优化，在高密度机架部署场景下，支持大规模并行、高性能的代理式 AI 工作负载。</span></p><p><span>Arm 的参考服务器采用 1OU 双节点设计，每台刀片服务器中集成两颗 CPU 芯片，并配备独立内存与 I/O，共计 272 个核心。这些刀片服务器可在标准风冷 36 千瓦 (kW) 机架中满配部署，30 台刀片服务器可提供总计 8160 个核心。此外，Arm 还与 Supermicro 合作推出 200 千瓦 (kW) 液冷设计方案，可容纳 336 颗 Arm AGI CPU，提供超过 45000 个核心。</span></p><p><span>在该配置下，凭借 Arm 架构的根本优势，以及系统资源与计算能力的精准匹配，Arm AGI CPU 可实现单机架性能达到最新 x86 系统的两倍以上：</span></p><ul class="list-paddingleft-1" style="margin: 14px 0 0 0; line-height: 1.75em; text-align: left;"><li style="text-align: left; font-size: 16px;"><p><span>Arm AGI CPU 具备业界领先的内存带宽，使每个机架能够支持更多高效执行的线程；相比之下，x86 CPU 在持续高负载下会因核心争抢资源而导致性能下降；</span></p></li><li style="text-align: left; font-size: 16px;"><p><span>高性能、高能效的单线程 Arm Neoverse V3 处理器 核心性能出众，优于传统架构——每个 Arm 线程可处理更多任务；</span></p></li><li style="text-align: left; font-size: 16px;"><p><span>更多可用线程与更高单线程处理能力相互叠加，最终实现单机架性能的大幅提升。</span></p></li></ul><p><span>Arm AGI CPU 已获得合作伙伴的认可，这些合作伙伴均处于代理式 AI 基础设施规模化部署的前沿领域。计划部署场景涵盖加速器管理、代理式 AI 协同调度，以及支撑代理式 AI 任务规模化扩展所需的服务、应用与工具的高密度部署，同时还包括为 AI 数据中心提供更强的网络与数据面计算能力。</span></p><p><span>Meta 作为 Arm AGI CPU 的早期合作伙伴与客户，参与该 CPU 的联合开发，旨在为 Meta 全系应用优化吉瓦级规模基础设施，并与 Meta 自研的 MTIA 加速器协同运行。其他首发合作伙伴包括 Cerebras、Cloudflare、F5、OpenAI、Positron、Rebellions、SAP 及 SK 电讯——这些企业均与 Arm 合作部署 Arm AGI CPU，以加速云、网络及企业环境中的 AI 驱动型服务落地。目前，永擎电子、联想及 Supermicro 已开放商用系统订购。</span></p><p><span>为进一步加速产品采用，Arm 推出 Arm AGI CPU 1OU 双节点参考服务器，该服务器采用符合开放计算项目 (Open Compute Project,OCP) 的 DC-MHS 标准规格设计。Arm 计划向社区贡献该参考服务器设计方案及配套固件，并进一步提供包括系统架构规范、调试框架及适用于所有 Arm 架构系统的诊断与验证工具等资源。</span></p><p><span>图形处理器（GPU）因承担 AI 模型训练与运行任务而备受瞩目，而 CPU 在数据中心机架中同样扮演着不可或缺的关键角色。Arm 在主推这款 CPU 时强调，此类芯片负责处理成千上万项分布式任务，包括内存与存储管理、任务调度、系统间数据传输等。该公司表示，CPU 已成为“现代基础设施的节奏核心，保障分布式 AI 系统实现高效规模化运行”。</span></p><p><span>Arm 指出，这一趋势对 CPU 提出了全新要求，也推动处理器必须迭代升级。</span></p><p><span>与此同时，全球 CPU 供应也日趋紧张。据外媒此前报道，今年 3 月，英特尔与 AMD 均告知中国客户，受 CPU 短缺影响，产品交付周期将进一步延长。随着短缺状况加剧，电脑产品价格也已开始上涨。</span></p><p><span><span style="font-size: 14px; color: rgb(136, 136, 136);">参考链接：</span></span></p><p><span><span style="font-size: 14px; color: rgb(136, 136, 136);"><a href="https://techcrunch.com/2026/03/24/arm-is-releasing-its-first-in-house-chip-in-its-35-year-history/" target="_blank">https://techcrunch.com/2026/03/24/arm-is-releasing-its-first-in-house-chip-in-its-35-year-history/</a></span></span></p><div><p><span><div><div><div><div><p><span>会议推荐</span></p></div><div><div><div><p><span>OpenClaw 出圈，“养虾”潮狂热，开年 Agentic AI 这把火烧得不可谓不旺。在这一热潮下，自托管 Agent 形态迅速普及：多入口对话、持久记忆、Skills 工具链带来强大生产力。但这背后也暴露了工程化落地的真实难题——权限边界与隔离运行、Skills 供应链安全、可观测与可追溯、记忆分层与跨场景污染、以及如何把 Agent 纳入团队研发 / 运维流程并形成稳定收益。</span></p><p><span>针对这一系列挑战，在 4 月 16-18 日即将举办的 QCon 北京站上，我们特别策划了「OpenClaw 生态实践」专题，将聚焦一线实践与踩坑复盘，分享企业如何构建私有 Skills、制定安全护栏、搭建审计与回放机制、建立质量 / 效率指标体系，最终把自托管 Agent 从可用的 Demo 升级为可靠的生产系统。</span></p><p><img alt="图片" class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=fed426d5&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FhLLZnAbUwNiaUwzA6XBvJh9jQZLdNHMMtbfxwibZBnPDsfibCt5XbOnJKgEOxMPyn0PHDa8sFFcMoic1xaFv8F09xW3X4y22B46icLuVfthYfUTo%2F640%3Fwx_fmt%3Djpeg%26from%3Dappmsg%26wxfrom%3D5%26wx_lazy%3D1%26tp%3Dwebp%23imgIndex%3D23" /></p><div><div><div align="" alt="" border="" class="rich_pages wxw-img" height="" hspace="" ismap="" src="https://mmbiz.qpic.cn/mmbiz_png/ZBjVrHIdkOnqHORUE28eAnPBy2YsmzFhuSyC0z5gtibTGEia0fia6VYb9WOib2eVPbHGCjjR1CEkicj39ibIv5ibXGTsg/0?wx_fmt=png&amp;from=appmsg" title="" type="block" usemap="" vspace="" width=""><div><div><div><h5><span>今日荐文</span></h5><div><p><span><a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&amp;mid=2247659346&amp;idx=1&amp;sn=c5494b7ceb50b6da4cebfdcce4ba2d26&amp;scene=21#wechat_redirect" target="_blank">发 token 当工资？工程师不只拿现金和期权，开始按 token 分身价了</a></span></p><p><span><a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&amp;mid=2247656784&amp;idx=1&amp;sn=9158fd3abc1fc9074cf5cd5be0371566&amp;scene=21#wechat_redirect" target="_blank">一个不打算安全的 Agent，被当成生产系统：OpenClaw 之父谈“误用危机”</a></span></p><p><span><a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&amp;mid=2247658581&amp;idx=1&amp;sn=5bb3721d3a180eab12ff1b65b67b73d5&amp;scene=21#wechat_redirect" target="_blank">模型不再是关键？LangChain 创始人：真正决定Agent 上限的是运行框架</a></span></p><p><span><a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&amp;mid=2247658546&amp;idx=1&amp;sn=fa41f3f4bc628163d72846dc41536bc3&amp;scene=21#wechat_redirect" target="_blank">360 周鸿祎回应“龙虾”玩梗图：“龙虾”不是病毒，不会因为存在安全问题就否定一项技术</a></span></p><p><img alt="图片" class="rich_pages wxw-img __bg_gif" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=a9297dde&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_gif%2FZBjVrHIdkOnuwJnWZEgj3C0zJnf1iaYSvWWIkchT1kR9m13cSrszq2icExufMBR3wanOGRM3glOY8Z5RribVVsMUA%2F640%3Fwx_fmt%3Dgif%26wxfrom%3D5%26wx_lazy%3D1%26tp%3Dwebp%23imgIndex%3D7" /></p><p><span><span style="color: rgb(2, 30, 170); font-weight: bold;">你也「在看」吗？👇</span></span></p></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></div></div><p style="display: none;"></p>
+
+
+
+<p><a href="https://wechat2rss.bestblogs.dev/link-proxy/?k=5ed54395&amp;r=1&amp;u=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzU1NDA4NjU2MA%3D%3D%26mid%3D2247659871%26idx%3D2%26sn%3D718585d4cfa572fdf029e926fb1d4f30">跳转微信打开</a></p></p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247659871&idx=3&sn=f5b9d8771489bfe0cbb466baebe1d8f0" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">WeChat 2</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-25</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">《中国金融机构人才发展与培训白皮书（2026）》发布！助力金融机构打造“人 + 智能体”协同的超级员工梯队 | 极客时间企业版</h3>
+                                        <p class="news-summary"><p><span>极客时间企业版</span> <span>2026-03-26 13:15</span> <span style="display: inline-block;">浙江</span></p>
+
+
+
+
+
+
+  
+  <p><img src="https://wechat2rss.bestblogs.dev/img-proxy/?k=78e5eea9&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FlYDricib2fsm6AkqxibsrxshKk5Bs9PnbVR4k2cM6FG3OY6P8BdhIoy2CnYuaJE4XJt7C1yics4UsQlvNRticQGlQlJBeN6qnrQP2ibhAJ9k6poia0%2F0%3Fwx_fmt%3Djpeg" /></p>
+  
+  <p style="text-align: center;"><img class="rich_pages wxw-img js_insertlocalimg" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=718b3847&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FlYDricib2fsm7w23s66icF8pPA6Qdyv9AFIgmOn4b4CLbibiaiciaa6js3wsrMC1SdXpicFlorsQWNicn0vlGkzfZeK1vCq7HPXFjz0QzTNia8PBbhsvE%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" type="block" /></p><div><p><span>作者 | 极客时间企业版	</span></p></div><div><blockquote style="margin: 0; padding: 0; border-left: none; font-size: 15px;"><div><p><span>AI 时代，金融人才培养正在经历一场从“课程交付”到“生产力跃迁”的深刻变革。锻造“政治过硬、能力过硬、作风过硬”的金融人才队伍，成为金融强国建设的底座支撑。	</span></p></div></blockquote><p><span>当数字化浪潮席卷各行各业，金融业不仅率先拥抱技术变革，更在一次次迭代中重塑着行业边界。然而，AI 时代的到来正在重新定义“领先”：如何将过往的数字化积累，转化为面向 AI 时代的系统性竞争优势？如何让人才梯队从“懂技术”跃迁至“与 AI 协同进化”，在数智化转型的深水区再向前跨越一大步？这已成为决定金融业未来竞争力的核心命题。</span></p><p><span>这种紧迫感在市场中已有清晰体现。2026 年春招季，券商对人才的需求呈现“冰火两重天”：一方面，投顾和金融科技岗位需求爆棚，</span><strong style="font-size: 16px; font-weight: bold; text-align: left;"><span>AI 能力成为“硬通货</span></strong><span>”，多家头部券商明确要求候选人掌握大模型技术、智能体开发等核心技能；另一方面，传统投行、研究等岗位招聘持续收缩。这一信号表明，金融机构对人才的期待已发生根本性转变——不再是“懂金融即可”，而是“</span><strong style="font-size: 16px; font-weight: bold; text-align: left;"><span>懂金融、懂技术、懂 AI</span></strong><span>”的复合型人才。</span></p><p><span>在“十五五”规划开局之年，“加快建设金融强国”首次被纳入五年规划。全国政协委员、中国工商银行原董事长陈四清明确提出，</span><strong style="font-size: 16px; font-weight: bold; text-align: left;"><span>建设金融强国要“筑牢监管与人才底座”，锻造“政治过硬、能力过硬、作风过硬”的金融干部人才队伍</span></strong><span>。当国家战略与行业变革同频共振，金融人才培养已不再是简单的技能培训，而是关乎金融强国建设的系统工程。</span></p><p><span>在这样的时代背景下，《中国金融机构人才发展与培训白皮书（2026）》应运而生。作为联合出品方，极客邦科技与行业伙伴一道，基于 127 位金融机构培训工作者调研与 30 位行业专家深度访谈，力求为行业呈现一份有数据、有洞察、有路径的人才发展指南。白皮书揭示了当前金融培训领域最深刻的变革——AI 正从“试用期”走向“效能期”，未来 1-3 年，AI 在培训中的渗透率预计将显著提升至 30%-50%。</span></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=1aa23049&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm50zOtwfgu9XwFAUR6dLHs1vvfmniaV22fGd72MNnOq59XTJR8R8XjXbkrwgCAmLbtoCYsbtITXVT5rXdibpwLLiayhhcDJg3DzUA%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><div label="edit by 135editor"><div><div><div><p><span><strong><span><span style="font-weight: normal;">白皮书精华解读：AI 如何</span></span></strong></span></p><p><strong style="background-color: initial; color: rgb(66, 133, 244);"><span><span style="font-weight: normal;">重塑金融人才培养？三大关键发现</span></span></strong></p></div></div></div></div><p><span>AI 渗透率持续提升，但“如何用得好”成关键</span></p><p><span>调研中，76% 的受访者认可“技术成熟度”是推动 AI 落地的主因。但金融机构态度务实——超五成机构倾向于直接集成成熟的 AI 模块，而非从零自研。以“AI 智能陪练”为例，它正在解决新人培养、复杂产品话术演练的痛点，让“训战一体”成为可能。有机构测算，传统线下通关训练对百家网点规模的机构而言，全年隐性成本超 400 万元，而 AI 工具的引入可大幅降本增效。</span></p><p><span>业培融合从口号走向“成果显性化”</span></p><p><span>“培训成果不可视、难评估”以 77.95% 的认同度成为行业最大痛点。2026 年，“基于业务目标的专项技能提升类”项目成为资源投入首选，认同度超六成。培训的产出物也从“满意度问卷”转向“案例集 / 话术库 / 谈资库”（认同度 75.59%），以及“学习小组训战实践成果”（66.93%）。</span></p><p><span>经验内化，让“自己人”更专业</span></p><p><span>组织知识资产沉淀成为重中之重。71.65% 的机构希望提升内训师的“经验萃取 / 案例撰写能力”。同时，技术内训师队伍异军突起——超六成机构已建立专属技术内训师团队，让技术人员从“懂代码”向“懂业务、懂客户、懂场景”的复合型角色转型。</span></p><p><span>极客邦科技的深度参与：从课程交付到生产力跃迁</span></p><p><span>作为联合出品方，极客邦科技创始人兼 CEO 霍太稳在白皮书第三章明确提出：“培训正在从课程交付跃迁为组织生产力提升。” 他提出的 “智能体时代的 AI 人才粮仓模型” ，为金融机构构建 AI 人才梯队提供了系统框架——以智能体为核心，覆盖数据准备、安全合规、建模、部署优化、智能体搭建及应用的全链路环节，让人的能力结构与 AI 系统的能力结构对齐。</span></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=8c347723&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm5R1uWlZmrYRW3bE7MBMEGMs6icqu895U9EpfMChCN78kqBmftyo7QIWSU5oQ7CLSFr3pdFXYiaqkbqJ3XVSfEwicw76sDFbiaDURE%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><p><span>获取《2026 年中国企业 AI 人才与组织发展报告》暨智能体时代的 AI 人才粮仓模型解读完整版：<a class="normal_text_link" href="https://mp.weixin.qq.com/s?__biz=MzI1MjEyODQxNg==&amp;mid=2650065766&amp;idx=1&amp;sn=078a2a076d3680a781def4634c6586f2&amp;scene=21#wechat_redirect" style="color: rgb(91, 172, 235);" target="_blank"><a href="https://mp.weixin.qq.com/s/SI6cr4rhYGEs63jJg93x6Q" target="_blank">https://mp.weixin.qq.com/s/SI6cr4rhYGEs63jJg93x6Q</a></a></span></p><div label="edit by 135editor"><div><div><div><p><span><strong><span><span style="font-weight: normal;">极客时间：金融 AI 人才</span></span></strong></span></p><p><strong style="background-color: initial; color: rgb(66, 133, 244);"><span><span style="font-weight: normal;">培养的实战体系</span></span></strong></p></div></div></div></div><p><span>基于对行业痛点的深刻洞察，极客时间企业版构建了面向智能体时代的 “金融行业数智化人才培养解决方案”，助力金融机构打造“人 + 智能体”协同的超级员工梯队。</span></p><p><span>AI 人才粮仓模型：分层培养，协同进化</span></p><p><span>极客时间以“数字粮仓模型”为指引，将金融数字化人才分为四层：</span></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=04a08e08&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm4XdFRHU3nBOpMDlkKLG63gv5AaFyPKpPHDsMkayKCWWzsyJSeZUiciagjUTTpZKCcdEKIwMqPdw2WqYMup6gG3wzVDygVogO3MA%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=30e9eff6&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FlYDricib2fsm7LnEF7Ukh46IM00Jvsv6tkaVV2gFrutnxxciaXDNC7HdQy2k9nk7icyCQKvh7gIA3DN7S7b6KsSqSJibZXv893lV0zMdnaU9X5xU%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><p><span>金融行业专项课程推荐</span></p><p><span>基于“AI 人才粮仓模型”和金融行业岗位特性，极客时间为金融机构规划了以下课程模块推荐：</span></p><ul class="list-paddingleft-1"><li><p><span><span style="font-weight: bold;">AI 思维层引导者</span>——管理层试适学</span></p></li></ul><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=16b7aa57&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm4gibIibN8NvVzLxvzHDknklWTlAWqtdXm382IjgWQfzzpUb8QC0fj1CZS0woC7ziaN4y3kk22eVWOHTe6zfA785lulgUaeeccyYI%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><ul class="list-paddingleft-1" style="margin: 14px 0 0 0; line-height: 1.75em; text-align: left;"></ul><p><ul class="list-paddingleft-1"><li><p><span><span style="font-weight: bold;">智能体应用人才</span>——理财经理、投资顾问岗、客户经理等所有业务岗位适学</span></p></li></ul></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=34ab84aa&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm4pcVnItO2qSg7RuswFQlG6RrdiblLoJJoniaS5AicMBEZ4gPGYAHecicp5yhrLZmKTnwicNEKZr8vbbJwe3NpWc2dNLolJUASl8ibbI%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><ul class="list-paddingleft-1" style="margin: 14px 0 0 0; line-height: 1.75em; text-align: left;"></ul><p><ul class="list-paddingleft-1"><li><p><span><span style="font-weight: bold;">智能体定义人才</span>——产品经理适学</span></p></li></ul></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=cf3d10f5&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FlYDricib2fsm5UGuRUoKARgsvYjVjQVdOApdeiakKYybwoXshOIiaC81To0f8qaTeIZJr7Dk67N0rqIQrc2BU8Ez95B1kbEYdQA0zKgqjVxDEEc%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><ul class="list-paddingleft-1" style="margin: 14px 0 0 0; line-height: 1.75em; text-align: left;"></ul><p><ul class="list-paddingleft-1"><li><p><span><span style="font-weight: bold;">AI 工程团队</span>——AI Agent 工程师、算法、数据、架构等工程师适学</span></p></li></ul></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=0acbb6cd&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm5WiaXKnsBPdFDNF4spuBChGjxL4KZibSKWAsIibxruwIGoh3Kjtz1UqtvoBjibJGKnIFibW2DWLTYWLvgdIdE6X5gLcVhWj7mAOVNw%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><ul class="list-paddingleft-1" style="margin: 14px 0 0 0; line-height: 1.75em; text-align: left;"></ul><p><ul class="list-paddingleft-1"><li><p><span><span style="font-weight: bold;">数据与安全团队</span>——数据分析师、安全工程师适学</span></p></li></ul></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=dd3940d2&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FlYDricib2fsm73HB0A8xZ6llrialnfc9fcqPTE8EEjsLrMWygtQAyyibhogxgd32VbnJ22kUibxdIktUDgS01AdT4KVeXdjUvfuwichfyEYMib4nU0%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p><div label="edit by 135editor"><div><div><div><p><span><strong><span><span style="font-weight: normal;">写在最后：以 AI 为翼，</span></span></strong></span></p><p><strong style="background-color: initial; color: rgb(66, 133, 244);"><span><span style="font-weight: normal;">共筑金融人才发展新基建</span></span></strong></p></div></div></div></div><p><span>站在“十五五”的起点，金融强国建设已按下加速键。正如白皮书所言：“培训与人才发展培养工作是金融机构的资产，长坡厚雪，久久为功。”</span></p><p><span>作为深耕数智人才发展多年的赋能者，极客时间始终相信：AI 不是替代人的工具，而是放大人的杠杆。 我们致力于将前沿技术转化为可落地的人才培养体系，帮助金融机构在 AI 浪潮中不仅“跟上节奏”，更能“引领变革”。</span></p><p><span>当 AI 技术深度渗透业务全链路，当“人 + 智能体”的协同模式成为新常态，金融人才培养不再只是“听课”与“考试”，而是一场关于组织能力的系统升级。</span></p><p><span>为此，我们也为金融行业企业准备了一份专属 AI 加速礼——</span></p><p><span>📥 添加极客时间企业版小助手，您将免费获得：</span></p><ul class="list-paddingleft-1" style="margin: 14px 0 0 0; line-height: 1.75em; text-align: left;"><li style="text-align: left; font-size: 16px;"><p><span>《中国金融机构人才发展与培训白皮书（2026）》完整电子版</span></p></li><li style="text-align: left; font-size: 16px;"><p><span>一对一咨询：金融行业 AI 人才解决方案深度解读</span></p></li><li style="text-align: left; font-size: 16px;"><p><span>专属定制：根据您的业务需求，推荐匹配的金融企业 AI 课程清单</span></p></li></ul><p><span>让我们以 AI 为翼，共同锻造面向未来的金融人才梯队。</span></p><p><img class="rich_pages wxw-img" src="https://wechat2rss.bestblogs.dev/img-proxy/?k=ef94cca5&amp;u=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2FlYDricib2fsm7iaoQ79BsWlEJ1FEaicqgczq9wgdxlWb39tQ7hRYEGyjq0lcOO1OlRJYAXNNasvxXcP9oIicCBVy4zgqiasGiasKdj5MNZAt8VeHjo%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg" style="width: 100%;" /></p></div><p style="display: none;"></p>
+
+
+
+<p><a href="https://wechat2rss.bestblogs.dev/link-proxy/?k=72b6a6c7&amp;r=1&amp;u=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzU1NDA4NjU2MA%3D%3D%26mid%3D2247659871%26idx%3D3%26sn%3Df5b9d8771489bfe0cbb466baebe1d8f0">跳转微信打开</a></p></p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">技术博客</h2>
+                            <span class="section-count">1 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="http://www.ruanyifeng.com/blog/2026/03/weekly-issue-390.html" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">阮一峰博客</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-26</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">科技爱好者周刊（第 390 期）：没有语料，大模型就是智障</h3>
+                                        <p class="news-summary"><p>这里记录每周值得分享的科技内容，周五发布。</p>
+
+        <p>本杂志<a href="https://github.com/ruanyf/weekly">开源</a>，欢迎<a href="https://github.com/ruanyf/weekly/issues">投稿</a>。另有<a href="https://github.com/ruanyf/weekly/issues/9088">《谁在招人》</a>服务，发布程序员招聘信息。合作请<a href="mailto:yifeng.ruan@gmail.com">邮件联系</a>（yifeng.ruan@gmail.com）。</p>
+
+<h2>封面图</h2>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032201.webp" title="" /></p>
+
+<p>山东日照某住宅小区的彩色风雨连廊，入口处树林还设了咖啡馆。（<a href="https://mooool.com/coffee-tree-canopy-by-selgascano.html">via</a>）</p>
+
+<h2>没有语料，大模型就是智障</h2>
+
+<p>如果现在做一个问卷调查，问大家"你觉得大模型是否具有智能？"</p>
+
+<p>我相信，大多数人会是肯定的回答。</p>
+
+<p>哪怕现在只是 AI 的初级阶段，大模型已经能够替代很多的人类智力劳动，确实非常神奇。</p>
+
+<p>但是，我们不要忘记真实情况，<strong>大模型不是魔法，更不是具有自主智能的"硅基智能体"，而是基于统计规律的语言模型</strong>，它的一切行为都基于数学计算。</p>
+
+<p>最好的证据就是，如果让它解决没有训练过的题目，也就是不存在统计规律的话，它根本解不出来。</p>
+
+<p>这就是我今天想分享的一个<a href="https://esolang-bench.vercel.app/">实验</a>。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032008.webp" title="" /></p>
+
+<p>两位国外的研究者找了五个主流的大模型：GPT-5.2、O4-mini、Gemini 3 Pro、Qwen3-235B、Kimi K2。</p>
+
+<p>他们让大模型使用五种小众的编程语言----Brainfuck、Befunge-98、Whitespace、Unlambda 和 Shakespeare----来编程解决各种问题。</p>
+
+<p>这些小众语言的共同特征是，网上很少有它们的资料，因此不能用来训练大模型。大家猜猜看，结果怎么样？</p>
+
+<p>实验结果用一句话总结，就是大模型的表现一塌糊涂。</p>
+
+<p>这五个大模型的平均答题正确率仅为3.8%，即<strong>100道题可以答对3.8道</strong>。相比之下，它们处理 Python 问题的正确率可以达到90%。</p>
+
+<p>更尴尬的是，仅有的那几道答对的题目，都是入门级。更难的级别（初级、中级、高级），所有五个大模型的正确率都为0。</p>
+
+<p>这个实验充分说明了，<strong>大模型的表现（智能程度）首先由训练材料决定</strong>：训练的语料越多，表现越好，比如 Python 的语料遍地都是，大模型因此极其擅长解决 Python 问题；训练的语料越少，大模型表现就越差，简直跟智障一样，没什么用处。</p>
+
+<p>那么，一个让人好奇的问题就来了：如果某种冷门语言没有语料，但有一本很详尽的《使用手册》，我们让大模型学习这本手册，它是否就能学会这种冷门语言编程呢？</p>
+
+<h2>MAI-Image-2</h2>
+
+<p>本周，微软公司发布了自家的图像生成模型 <a href="https://microsoft.ai/news/introducing-MAI-Image-2/">MAI-Image-2</a>。</p>
+
+<p>这个模型生成的图像质量非常高，有<a href="https://decrypt.co/361791/microsoft-mai-image-2-text-image-model-review">评论</a>认为，目前仅次于谷歌的 nano-banana-2。</p>
+
+<p>微软开放了网站 <a href="https://playground.microsoft.ai/chat">MAI Playground</a>（下图），现在可以免费生成图片。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032009.webp" title="" /></p>
+
+<p>我试用后，图像质感确实很好，非常逼真。比如，一只狗在海里骑自行车。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032010.webp" title="" /></p>
+
+<p>但是，它的使用限制很多：（1）有争议的、可能冒犯的图片，都会拒绝生成；（2）每天的免费额度是15张，每次生成的间隔时间是30秒；（3）它只能生成长宽比 1:1 的图片，其他分辨率都不支持；（4）不提供图像编辑和加工，只能用来"文生图"。</p>
+
+<p>如果你需要通过文本生成高质量图片，可以试试它。</p>
+
+<h2>科技动态</h2>
+
+<p>1、<a href="https://www.yankodesign.com/2026/03/16/red-bull-just-put-a-playable-tetris-game-on-a-magazine-cover/">可玩的封面</a></p>
+
+<p>红牛公司推出了一本纸质的游戏杂志《GamePop》。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032002.webp" title="" /></p>
+
+<p>它的封面有一个可以玩的"俄罗斯方块"，是世界首本封面可以玩游戏的书。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032003.webp" title="" /></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032004.webp" title="" /></p>
+
+<p>奥秘就是封面里面，嵌入了一块非常薄的柔性电路板。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032005.webp" title="" /></p>
+
+<p>这块板配备了180个 RGB LED 灯、7个电容式触摸按钮、一颗32位 ARM 芯片。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032006.webp" title="" /></p>
+
+<p>它还包含一块可充电电池，可以通过 Type C 充电。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032007.webp" title="" /></p>
+
+<p>可惜的是，这个封面是限量版，不公开出售。它得到了俄罗斯方块公司的官方授权，全球仅发行150套，每套均有独立编号。</p>
+
+<p>2、<a href="https://arstechnica.com/gadgets/2025/02/misguided-hp-customer-support-approach-included-forced-15-minute-call-wait-times/">收费的真人客服</a></p>
+
+<p>企业都不喜欢提供真人的电话客服，因为成本很高，更希望改成机器应答的电话客服。</p>
+
+<p>惠普公司想出了一个点子，将用户往机器客服赶。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032203.webp" title="" /></p>
+
+<p>用户打惠普的客服电话，会听到一段语音提示，要你访问官网自己去寻找答案。如果你坚持要真人客服，就要在线等待15分钟。</p>
+
+<p>如果中途挂了电话，再打就需要重新等待15分钟。系统还会分别在第5、第10和第13分钟提醒你，可以访问网站或发邮件联系。</p>
+
+<p>虽然这种做法很可恶，但未来可能成为常态：免费就只有 AI 客服或机器人客服，额外付费才有真人客服。</p>
+
+<p>3、<a href="https://arstechnica.com/science/2024/10/how-physics-can-improve-your-disc-golf-game/">飞盘的玩法</a></p>
+
+<p>怎样扔飞盘，才能又快又远？</p>
+
+<p>一个美国的物理学家，找了几十个学生进行实验，使用不同手势和角度扔出飞盘。他测量了飞行速度和扭矩，把结果写成了论文。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202411/bg2024110510.webp" title="" /></p>
+
+<p>他发现，将拇指放置在距飞盘外缘约3厘米的位置，可以获得平均转速和初始速度的最佳结果。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202411/bg2024110511.webp" title="" /></p>
+
+<p>他还发现，转速与初始速度存在线性相关，转速越高，初始速度也越高。</p>
+
+<p>所以，下次玩飞盘的时候，你要放对拇指的位置，然后用足力气，反手甩出，就可以取得最佳结果。</p>
+
+<h2>文章</h2>
+
+<p>1、<a href="https://fpgmaas.com/blog/collapse-of-mkdocs/">MkDocs 的缓慢崩溃</a>（英文）</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032304.webp" title="" /></p>
+
+<p><a href="https://www.mkdocs.org/">MkDocs</a> 是著名的文档网站生成工具，但是主要贡献者之间有激烈矛盾，互相对抗，导致这个项目四分五裂。本文就梳理这件事。</p>
+
+<p>2、<a href="https://dynomight.net/coffee/">大模型预测咖啡散热</a>（英文）</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032306.webp" title="" /></p>
+
+<p>作者让各种大模型给出咖啡散热时间的公式，然后测量了实际的散热时间，得到了一个排行榜。</p>
+
+<p>3、<a href="https://tuananh.net/2026/03/18/why-your-next-mobile-app-is-probably-headless/">下一个 App 很可能是无头应用</a>（英文）</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032202.webp" title="" /></p>
+
+<p>如果我们未来都通过 AI 助手使用手机，那么各种 App 就不需要显示模块了（无头），只需向 AI 助手提供数据接口。</p>
+
+<p>4、<a href="https://jstrieb.github.io/posts/canvas-compress/">网页前端数据压缩的一种方法</a>（英文）</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202602/bg2026022105.webp" title="" /></p>
+
+<p>本文介绍如何在前端，通过 canvas（画布）将数据压缩成一张图片。</p>
+
+<p>5、<a href="https://paolino.me/ruby-is-the-best-language-for-ai-apps/">Ruby 是构建 AI 应用的最佳语言</a>（英文）</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202602/bg2026022406.webp" title="" /></p>
+
+<p>作者使用 Python、JavaScript、Ruby 三种语言写一个 AI Agent，比较后认为 Ruby 写 AI 应用最方便。</p>
+
+<p>6、<a href="https://unchartedterritories.tomaspueyo.com/p/how-roman-technology-drove-its-architecture">古罗马的混凝土建筑</a>（英文）</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032011.webp" title="" /></p>
+
+<p>古罗马人发现了混凝土，学会了用它浇筑建筑物。结果就是，古罗马建筑有古代最大的室内面积，并且非常坚固，保留到了今天。</p>
+
+<h2>工具</h2>
+
+<p>1、<a href="https://github.com/tianrking/proxychains-rs">proxychains-rs</a></p>
+
+<p>proxychains4 的 Rust 实现，指定某个进程走代理链。（<a href="https://github.com/ruanyf/weekly/issues/9316">@tianrking</a> 投稿）</p>
+
+<p>2、<a href="https://github.com/du2333/flare-stack-blog">Flare Stack Blog</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032001.webp" title="" /></p>
+
+<p>一个基于 Cloudflare Worker 的博客系统，集成 D1、R2、KV、Workflow 等服务。（<a href="https://github.com/ruanyf/weekly/issues/9312">@du2333</a> 投稿）</p>
+
+<p>3、<a href="https://github.com/jiweiyuan/tunelo">Tunelo</a></p>
+
+<p>一行命令将本地服务暴露到公网，只需要单个 4MB 二进制文件，使用 QUIC 协议。（<a href="https://github.com/ruanyf/weekly/issues/9328">@jiweiyuan</a> 投稿）</p>
+
+<p>4、<a href="https://github.com/codedogQBY/ReadAny">ReadAny</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032208.webp" title="" /></p>
+
+<p>桌面端 + 安卓端的电子书阅读工具，自带 AI 功能、语音朗读和多端同步。（<a href="https://github.com/ruanyf/weekly/issues/9342">@codedogQBY</a> 投稿）</p>
+
+<p>5、<a href="https://github.com/erweixin/RaTeX">RaTeX</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032401.webp" title="" /></p>
+
+<p>纯 Rust 实现的 KaTeX 兼容的数学渲染引擎，原生解析、排版 LaTeX 数学公式，支持各种环境。（<a href="https://github.com/ruanyf/weekly/issues/9350">@erweixin</a> 投稿）</p>
+
+<p>6、<a href="https://github.com/wm94i/Work_Review">Work Review</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032509.webp" title="" /></p>
+
+<p>开源的 Win/Mac 桌面应用，在后台持续记录当天使用过的应用、访问过的网站等，便于整理成个人的工作轨迹。（<a href="https://github.com/ruanyf/weekly/issues/9382">@wm94i</a> 投稿）</p>
+
+<p>7、<a href="https://github.com/Snapchat/Valdi">Valdi</a></p>
+
+<p>SnapChat 发布的 UI 框架，可以用类似 React 的语法编写组件，然后编译成 iOS、Android 和 macOS 的原生应用。</p>
+
+<p>8、<a href="https://npflared.thomas-cogez.fr/index.html">Npflared</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202412/bg2024122502.webp" title="" /></p>
+
+<p>架设私有 NPM 镜像的工具，适合企业用来提供内部的 JS 软件包。</p>
+
+<p>9、<a href="https://github.com/paulmillr/chokidar">Chokidar</a></p>
+
+<p>一个 Node.js 模块，用来监听文件系统的各种事件（新增、删除、编辑等），比原生的 fs.watch / fs.watchFile 功能强。</p>
+
+<h2>AI 相关</h2>
+
+<p>1、<strong>微信的龙虾接口</strong></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032301.webp" title="" /></p>
+
+<p>微信官方本周发布了龙虾接口，AI 机器人可以向微信发消息了。</p>
+
+<p>很多项目利用这个接口做二次开发，便于各种 Bot 和 Agent 网关的接入。</p>
+
+<ul>
+<li><a href="https://github.com/tianrking/weixin-agent-rs">wechat-rs-sdk</a>（<a href="https://github.com/ruanyf/weekly/issues/9343">@tianrking</a> 投稿）</li>
+<li><a href="https://github.com/corespeed-io/wechatbot">WeChatBot</a>（<a href="https://github.com/ruanyf/weekly/issues/9369">@jiweiyuan</a> 投稿）</li>
+<li><a href="https://github.com/fastclaw-ai/weclaw">WeClaw</a>（<a href="https://github.com/ruanyf/weekly/issues/9347">@idoubi</a> 投稿）</li>
+<li><a href="https://github.com/nanbingxyz/wechat-channel">WeChat-Channel</a>（<a href="https://github.com/ruanyf/weekly/issues/9357">@nanbingxyz</a> 投稿）</li>
+</ul>
+
+<p>2、<a href="https://github.com/ZekerTop/ai-cli-complete-notify">AI CLI Complete Notify</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032303.webp" title="" /></p>
+
+<p>跨平台桌面应用，AI 命令行任务（Claude code/Codex/Gemini）完成后，发出任务完成提醒，支持各种渠道（飞书/钉钉/企微 Webhook、Telegram、邮件、桌面/声音提示）。（<a href="https://github.com/ruanyf/weekly/issues/9348">@ZekerTop</a> 投稿）</p>
+
+<p>3、<a href="https://github.com/Daydayoneup/ccm">Claude Config Manager</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032501.webp" title="" /></p>
+
+<p>macOS 的 Claude 资源（Skills、MCP、Agent）桌面管理工具，提供一个图形化的中央控制台。（<a href="https://github.com/ruanyf/weekly/issues/9370">@Daydayoneup</a> 投稿）</p>
+
+<p>4、<a href="https://www.trustclaw.app/">TrustClaw</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032305.webp" title="" /></p>
+
+<p>龙虾 OpenClaw 的修改版，尽量消除代码的风险点。</p>
+
+<h2>资源</h2>
+
+<p>1、<a href="https://github.com/Crosstalk-Solutions/project-nomad">Project N.O.M.A.D.</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032302.webp" title="" /></p>
+
+<p>一个 Linux 应用，集成了各种人类知识（维基百科、全球地图、在线课程、本地 AI 助手）等等，用于在断网时查阅。（<a href="https://github.com/ruanyf/weekly/issues/9345">@15x3</a> 投稿）</p>
+
+<p>2、<a href="https://simonw.github.io/nicar-2026-coding-agents/index.html">用于数据分析的 AI Coding Agent</a>（英文）</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032204.webp" title="" /></p>
+
+<p>著名开发者 Simon Willison 的培训班讲课资料，通过 AI 工具进行数据分析，有详细步骤。</p>
+
+<p>3、<a href="https://gibbok.github.io/typescript-book/zh-cn/book/the-concise-typescript-book/">TypeScript 简洁之书</a></p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202601/bg2026011203.webp" title="" /></p>
+
+<p>一本开源的 TypeScript 教程，有中文版。</p>
+
+<h2>图片</h2>
+
+<p>1、<a href="https://www.macworld.com/article/3079526/easter-egg-hiding-in-macbook-neos-wallpaper.html">苹果壁纸彩蛋</a></p>
+
+<p>苹果公司最近发布了新笔记本 MacBook Neo，跟以前一样，配一张特别的壁纸。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032502.webp" title="" /></p>
+
+<p>壁纸里面嵌入了产品名，以前的壁纸也有这个彩蛋。</p>
+
+<p>iMac</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032503.webp" title="" /></p>
+
+<p>MacBook Pro</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032504.webp" title="" /></p>
+
+<p>iPad Air</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032505.webp" title="" /></p>
+
+<p>MacBook Air</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032507.webp" title="" /></p>
+
+<p>iPad Mini</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032506.webp" title="" /></p>
+
+<p>iPad Pro</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202603/bg2026032508.webp" title="" /></p>
+
+<p>1、<a href="https://kottke.org/25/12/an-astonishing-graph">儿童死亡率</a></p>
+
+<p>现代人很难想象的是，人类历史的大部分时间里，儿童死亡率（在成年前死亡）一直接近50%。</p>
+
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202512/bg2025120307.webp" title="" /></p>
+
+<p>上图中，红线就是婴儿死亡率，一直稳定在50%左右。直到19世纪后期，才开始快速下降。</p>
+
+<p>2020年，全球平均婴儿死亡率是4.3%，最低的国家已经达到了0.3%。</p>
+
+<h2>文摘</h2>
+
+<p>1、<a href="https://blog.armeet.ca/becoming-the-machine/">别变成机器</a></p>
+
+<p>我最近看到一句话："只有奴隶才通过生产力来量化自身的存在价值。"</p>
+
+<p>是啊，生产力越高，奴隶越有价值。</p>
+
+<p>这让我想到，如今的社交媒体上充斥着大量的奋斗文化，许多人展示自己是多么努力在提高个人生产力。</p>
+
+<p>在我看来，这就是将自己跟机器做比较。大家认定，如果能像机器一样，接收指令并高效地完成某个目标，自己就越有价值，就能取得人生成功。</p>
+
+<p>社交媒体上，这种"奋斗文化"有很多表现形式：（1）你还不够努力。（2）你得早上五点起床。（3）你得第一个到，最后一个走。</p>
+
+<p>这种文化的背后，<strong>就是要求人变成机器</strong>。</p>
+
+<p>机器确实很高效，但有一个问题：它是刚性的，以既定的模式和线性速度运转，无法自动适应环境变化，也无法学习游戏规则。</p>
+
+<p>你不是机器，你是人。<strong>你的特点应该是灵活应变，快速适应</strong>。你不要追求极致的努力，而是要找到最有价值的解决方案。你要专注于真正重要的因素：速度、效率或质量，不要迷恋枯燥乏味的工作。</p>
+
+<h2>言论</h2>
+
+<p>1、</p>
+
+<p>我们创造了一个文明，其中最重要的元素都深深地依赖于科学技术，但是我们还让科学技术变得如此难懂。这会带来灾难，我们可能暂时侥幸逃脱，但迟早，这种无知和权力的易燃混合物会爆炸。</p>
+
+<p>-- <a href="https://www.openculture.com/2025/02/carl-sagan-predicts-the-decline-of-america-unable-to-know-whats-true.html">卡尔·萨根</a></p>
+
+<p>2、</p>
+
+<p>巴黎以前总是堵车，市长想出一个办法，大幅减少停车位，后来果然少有人开车了。</p>
+
+<p>-- <a href="https://edition.cnn.com/2026/03/21/travel/paris-transformation-anne-hidalgo-mayor">CNN</a></p>
+
+<p>3、</p>
+
+<p>一项研究发现，远程教学下，外形出众学生的作业成绩，要比面对面教学时更低。</p>
+
+<p>-- <a href="https://www.sciencedirect.com/science/article/pii/S016517652200283X">《经济学快报》</a></p>
+
+<p>4、</p>
+
+<p>这些年对我影响最大的事情，就是我变成了一个"白天型"的人。</p>
+
+<p>我以前经常熬夜，有时会到天亮。最近五年，我强迫自己养成早起的习惯。现在，我的生活都在白天，亲眼看到黎明和黄昏，让我感到心安，生命与自然循环和谐一致。</p>
+
+<p>-- <a href="https://herman.bearblog.dev/becoming-a-day-person/">《成为一个白天生活的人》</a></p>
+
+<p>5、</p>
+
+<p>AI 很擅长将清晰的想法转化为可运行的代码。真正耗时的是弄清楚我到底想开发什么。</p>
+
+<p>-- <a href="https://lustin.fr/blog/building-digs/">lustin.fr</a></p>
+
+<h2>往年回顾</h2>
+
+<p><a href="https://www.ruanyifeng.com/blog/2025/03/weekly-issue-343.html">如何阻止 AI 爬虫</a>（#343）</p>
+
+<p><a href="https://www.ruanyifeng.com/blog/2024/03/weekly-issue-293.html">一周是一年的2%</a>（#293）</p>
+
+<p><a href="https://www.ruanyifeng.com/blog/2023/02/weekly-issue-243.html">与孔子 AI 聊天</a>（#243）</p>
+
+<p><a href="https://www.ruanyifeng.com/blog/2022/01/weekly-issue-193.html">前端与后端，谁更难？</a>（#193）</p>
+
+<p>（完）</p>
+
+        <div><h3>文档信息</h3>
+<ul>
+<li>版权声明：自由转载-非商用-非衍生-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">创意共享3.0许可证</a>）</li>
+<li>发表日期： <abbr class="published" title="2026-03-27T05:49:12+08:00">2026年3月27日</abbr></li>
+
+</ul></div>        
+        <div></div></p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">AI框架</h2>
+                            <span class="section-count">3 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="https://blog.langchain.com/customers-kensho/" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">LangChain Blog</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-26</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval</h3>
+                                        <p class="news-summary"><img alt="How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval" src="https://blog.langchain.com/content/images/2026/03/KEnsho.png" /><p><em>Guest blog post by Ilya Yudkovich and Nick Roshdieh</em></p><p>In the era of AI agents, searching efficiently through S&amp;P Global&apos;s vast data estate presents a unique set of challenges. As S&amp;P Global&#x2019;s engine for AI innovation and transformation,&#xa0; <a href="https://kensho.com/?ref=blog.langchain.com"><strong><u>Kensho</u></strong></a>&#x2019;s goal is to ensure that as AI transforms industries, its outputs remain grounded in trusted data&#x2013;however and wherever customers choose to use it.</p><p>Kensho&#x2019;s team of engineers, researchers, and builders are focused on applying advanced AI and machine learning across S&amp;P Global&#x2019;s rich datasets to unify the data retrieval process, providing customers a single interface to bring this intelligence into AI applications and agentic workflows.</p><p>Unlike the textual information typical of many web-based search applications, S&amp;P Global data is highly structured and nuanced. This requires employing advanced data retrieval techniques to effectively integrate our data with cutting-edge generative AI applications. To solve this challenge, we developed <strong>Grounding, </strong>a multi-agent framework that serves as a core access layer for S&amp;P Global data. </p><p>Grounding ensures that every insight is derived directly from verified datasets. The framework, developed using several LangGraph tools, is a foundational solution for unifying data from multiple business units and integrating that data with AI agents, LLMs, and GenAI applications while maintaining high-trust validity and compliance.</p><h2 id="the-challenge-fragmented-financial-data-retrieval"><strong>The Challenge: Fragmented Financial Data Retrieval</strong></h2><p>Financial professionals often struggle with data retrieval across fragmented systems, spending hours locating and verifying information that they need to analyze earnings, retrieve financial metrics, perform market research, and more. Kensho&#x2019;s Grounding system simplifies this process by creating a single entry point for natural language queries against S&amp;P Global&apos;s verified financial datasets. This eliminates the need to navigate complex database schemas or learn specialized query languages. Through <strong>Grounding</strong>, clients can access accurate real-time financial information with citation-backed responses to verified S&amp;P Global data sources, ensuring high-trust validity and compliance with transparency and traceability in every result. This pattern enables users to focus on analysis rather than data access hunting and source validation.</p><h2 id="designing-a-multi-agent-framework-with-langgraph"><strong>Designing a Multi-Agent Framework with LangGraph</strong></h2><p>We architected our Grounding system as a centralized entry point for data access across our AI agents, which retrieve data from an array of cross-divisional S&amp;P Global data sources stemming from various data repositories. Rather than embedding natural language parsing logic into individual agents, our router intelligently directs queries to specialized Data Retrieval Agents (DRAs) owned by different data teams such as equity research, fixed income, macroeconomics to name a few domains. This provides a separation of concern between data routing and data retrieval layers, supporting parallel ownership of each.&#xa0;</p><figure class="kg-card kg-image-card kg-card-hascaption"><img alt="How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval" class="kg-image" height="641" src="https://blog.langchain.com/content/images/2026/03/data-src-image-a43a0333-e80b-4e81-b18a-6c222823b359.png" width="1600" /><figcaption><i><em class="italic" style="white-space: pre-wrap;">The Grounding search agent includes a router component that calls S&amp;P Global DRAs.</em></i></figcaption></figure><p>The DRAs are meant to provide a single responsibility vertical, increasing the signal-to-noise ratio for queries using that dataset. The aggregation layer within the router then solves the map-reduce problem: taking distributed responses from multiple DRAs and intelligently combining them into coherent, actionable insights that maintain both accuracy and context.</p><p>LangGraph is the engine behind the Grounding router. Its core responsibilities include providing access to the diverse agents based on relevant context from the user query, breaking down a query into smaller DRA-specific sub-queries, and aggregating the responses back to the user. LangGraph&#x2019;s design made it easy to iterate and test the router locally, providing that single entry point and ensuring a smooth developer experience.</p><h2 id="establishing-a-custom-data-retrieval-protocol"><strong>Establishing a Custom Data Retrieval Protocol</strong></h2><p>Distributed data and AI systems often suffer from inconsistent communication interfaces. These can lead to unreliable agent interactions and create complex data processing needs for each individual agent. Through our team&#x2019;s early internal experimentation, we developed a custom DRA protocol to ensure consistent data access patterns.&#xa0;</p><p>The protocol established a common data format for all returned data, including both structured and unstructured data. This has accelerated collaboration and consistent data exchange across our entire multi-agent ecosystem as we work across S&amp;P Global to develop and deploy DRAs connected to Grounding.</p><p>Architecting the protocol in this way, centralized through our Grounding system, has enabled Kensho to rapidly deploy multiple specialized financial AI products ( i.e. agents and APIs), each leveraging the same robust data foundation. From our equity research assistant&#x2013;which helps analysts compare sector performance&#x2013;to our ESG (Environmental, Social, and Governance) compliance agent that tracks sustainability metrics, all applications share the same reliable data access layer. Building agents and products atop a consistent system accelerates our time-to-market giving newly created agents immediate access to the full breadth of S&amp;P Global data without rebuilding data pipelines.</p><h2 id="key-learnings-for-an-evolving-agentic-ecosystem"><strong>Key Learnings for an Evolving Agentic Ecosystem</strong></h2><p>The process of building and refining our multi-agent framework left the Kensho team with a few key insights. We hope these best practices will help guide other organizations when developing complex multi-agent architectures:</p><p><strong>1. Observability: </strong>Comprehensive tracing and deliberate metadata requirements are essential for maintaining visibility into agent behavior and enabling effective debugging and optimization at scale. Our custom protocol allows us to package the necessary information across our distributed multi-agent system. Native embedded LangGraph integration is a critical component for maintaining our distributed systems and ensuring end-to-end traceability and debugging for developers.</p><p><strong>2. Multi-stage evaluation: </strong>The financial industry requires high trust and certainty in financial data retrieval. Evaluating our federated agent system requires multi-faceted matrices evaluating routing decisions, data quality, and answer completeness at each step of the multi-agent retrieval. The evaluation suite executes test queries through the LangGraph-based RouterGraph. We measure accuracy against selected agents and various data agents, focusing on exact-match (selected the correct agents and retrieved expected responses) and tool-calling (whether the router selected the right tools, but got various responses). This allowed us to evaluate accuracy and identify gaps within our system.</p><p><strong>3. Protocol studies and optimization:</strong> We continuously analyze user and agent interaction patterns, which enables iterative refinement of Kensho&#x2019;s custom protocol. This has significantly improved system efficiency, maximizing the output format for both direct LLM contextual understanding as well as programmatic processing&#x2013;all while maintaining the reliability that financial services demand.</p></p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://blog.langchain.com/how-we-build-evals-for-deep-agents/" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">LangChain Blog</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-26</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">How we build evals for Deep Agents</h3>
+                                        <p class="news-summary"><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">&#x1f4a1;</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">TLDR:</strong></b> The best agent evals directly measure an agent behavior we care about. Here&apos;s how we source data, create metrics, and run well-scoped, targeted experiments over time to make agents more accurate and reliable.</div></div><h2 id="evals-shape-agent-behavior">Evals shape agent behavior</h2><img alt="How we build evals for Deep Agents" src="https://blog.langchain.com/content/images/2026/03/32.svg" /><p>We&#x2019;ve been curating evaluations to measure and improve <a href="https://github.com/langchain-ai/deepagents?ref=blog.langchain.com">Deep Agents</a>. Deep Agents is an open source, model agnostic agent harness that powers products like <a href="https://www.langchain.com/langsmith/fleet?ref=blog.langchain.com">Fleet</a> and <a href="https://github.com/langchain-ai/open-swe?ref=blog.langchain.com">Open SWE</a>. Evals define and shape agent behavior, which is why it&#x2019;s so important to design them thoughtfully.</p><p>Every eval is a vector that shifts the behavior of your agentic system. For example, if an eval for efficient file reading fails, you&#x2019;ll likely tweak the system prompt or the <code>read_file</code> tool description to nudge behavior until it passes. Every eval you keep applies pressure on the overall system over time.</p><p>It is crucial to be thoughtful when adding evals. It can be tempting to blindly add hundreds (or thousands) of tests. This leads to an illusion of &#x201c;improving your agent&#x201d; by scoring well on an eval suite that may not accurately reflect behaviors you care about in production.</p><p><strong>More evals &#x2260; better agents. Instead, build targeted evals that reflect desired behaviors in production.</strong></p><p>When building Deep Agents, we catalog the behaviors that matter in production, such as retrieving content across multiple files in the filesystem or accurately composing 5+ tool calls in sequence. Rather than using benchmark tasks in aggregate, we take the following approach to eval curation:</p><ol><li>Decide which behaviors we want our agent to follow. Then research and curate targeted evals that measure those behaviors in a verifiable way.</li><li>For each eval, add a docstring that explains <em>how</em> it measures an agent capability. This ensures <strong>each eval is self-documenting.</strong> We also tag each eval with categories like <code>tool_use</code> to enable grouped runs.</li><li>Review output traces to understand failure modes and update eval coverage.</li></ol><p>Because we trace every eval run to a shared <a href="https://docs.langchain.com/langsmith/observability?ref=blog.langchain.com">LangSmith</a> project, anyone on the team can jump in to analyze issues, make fixes, and reassess the value of a given eval. This creates shared responsibility for adding and maintaining good evals. Running many models across many evals can also get expensive, so targeted evals save money while improving your agent.</p><p>In this blog we cover:</p><ul><li>How we curate data</li><li>How we define metrics</li><li>How we run the evals</li></ul><h2 id="how-we-curate-data">How we curate data</h2><p>There&#x2019;s a few ways we source evals:</p><ol><li>Using feedback from dogfooding our agents</li><li>Pulling selected evals from external benchmarks (like <a href="https://www.tbench.ai/?ref=blog.langchain.com">Terminal Bench 2.0</a> or <a href="https://gorilla.cs.berkeley.edu/leaderboard.html?ref=blog.langchain.com">BFCL</a>) and often adapting them for a particular agent</li><li>Writing our own (artisanal) evals and unit tests by hand for behaviors we think are important</li></ol><figure class="kg-card kg-image-card kg-card-hascaption"><img alt="How we build evals for Deep Agents" class="kg-image" height="484" src="https://blog.langchain.com/content/images/2026/03/Screenshot-2026-03-24-at-11.53.59---PM.png" width="1022" /><figcaption><span style="white-space: pre-wrap;">We dogfood our agents every day. Every error becomes an opportunity to write an eval and update our agent definition &amp; context engineering practices.We dogfood our agents every day. Every error becomes an opportunity to write an eval and update our agent definition &amp; context engineering practices.</span></figcaption></figure><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#x1f4a1;</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Note:</strong></b> We separate SDK unit and integration tests (system prompt passthrough, interrupt config, subagent routing) from model capability evals. Any model passes those tests, so including them in scoring adds no signal. You should absolutely write unit and integration tests, but this blog focuses solely on model capability evals.</div></div><h3 id="dogfooding-agents-reading-traces-are-great-sources-of-evals">Dogfooding agents &amp; reading traces are great sources of evals</h3><p>This makes finding mistakes possible. <a href="https://docs.langchain.com/langsmith/observability-concepts?ref=blog.langchain.com#traces">Traces</a> give us data to understand agent behavior. Because traces are often large, we use a built-in agent like <a href="https://docs.langchain.com/langsmith/polly?ref=blog.langchain.com">Polly</a> or <a href="https://docs.langchain.com/langsmith/insights?ref=blog.langchain.com">Insights</a> to analyze them at scale. You can do the same with other agents (like Claude Code or the <a href="https://docs.langchain.com/oss/python/deepagents/cli/overview?ref=blog.langchain.com">Deep Agents CLI</a>) plus a way to pull down traces, like the <a href="https://docs.langchain.com/langsmith/langsmith-cli?ref=blog.langchain.com">LangSmith CLI</a>. Our goal is to understand each failure mode, propose a fix, rerun the agent, and track progress and regressions over time.</p><p>For example, a large fraction of bug-fix PRs are now driven through <a href="https://blog.langchain.com/open-swe-an-open-source-framework-for-internal-coding-agents/">Open SWE</a>, our open source background coding agent. Teams using it touch many different codebases with different context, conventions, and goals. This naturally leads to mistakes. Every interaction of Open SWE is traced, so those can easily become evals to make sure the mistake doesn&#x2019;t happen again.</p><p>Other evals are pulled and adjusted from existing benchmarks like <a href="https://gorilla.cs.berkeley.edu/leaderboard.html?ref=blog.langchain.com">BFCL</a> for function calling. For coding tasks, we integrate with <a href="https://github.com/laude-institute/terminal-bench?ref=blog.langchain.com">Harbor</a> to run selected tasks from datasets like <a href="https://www.tbench.ai/leaderboard/terminal-bench/2.0?ref=blog.langchain.com">Terminal Bench 2.0</a> tasks in sandboxed environments. Many evals are written from scratch and act as focused tests to observe isolated behavior, like testing a <code>read_file</code> tool.</p><h3 id="we-group-evals-by-what-they-test"><strong>We group evals by what they test</strong></h3><p>It&#x2019;s helpful to have a taxonomy of evals to get a middle view of how agents perform (not a single number, not individual runs).</p><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#x1f4a1;</div><div class="kg-callout-text"><b><strong style="white-space: pre-wrap;">Tip:</strong></b> Create that taxonomy by looking at what they test, not where they come from.<br /><br />For example, tasks from <a href="https://huggingface.co/datasets/google/frames-benchmark?ref=blog.langchain.com">FRAMES</a> and <a href="https://gorilla.cs.berkeley.edu/leaderboard.html?ref=blog.langchain.com">BFCL</a> could be tagged &quot;external benchmarks,&quot; but that would not show how they measure retrieval and tool use, respectively</div></div><p>Here are some categories we define and what they test:</p>
+<!--kg-card-begin: html-->
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>What It Tests</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_operations</code></td>
+<td>File tools (read, write, edit, ls, grep, glob), parallel invocation, pagination</td>
+</tr>
+<tr>
+<td><code>retrieval</code></td>
+<td>Finding information across files, search strategies, multi-hop document synthesis</td>
+</tr>
+<tr>
+<td><code>tool_use</code></td>
+<td>Selecting the right tool, chaining multi-step calls, tracking state across turns</td>
+</tr>
+<tr>
+<td><code>memory</code></td>
+<td>Recalling seeded context, extracting implicit preferences, persisting durable info</td>
+</tr>
+<tr>
+<td><code>conversation</code></td>
+<td>Asking clarifying questions for vague requests, sustaining multi-turn dialogue with correct actions</td>
+</tr>
+<tr>
+<td><code>summarization</code></td>
+<td>Handling context overflow, triggering summarization, recovering info after compaction</td>
+</tr>
+<tr>
+<td><code>unit_tests</code></td>
+<td>SDK plumbing - do our system prompt passthrough, interrupt config, subagent routing, skill path resolution, etc. all work?</td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: html-->
+<p>Today, all evals are end-to-end runs of an agent on a task. We intentionally encourage diversity in eval structure. Some tasks finish in a single step from an input prompt, while others take 10+ turns with another model simulating a user.</p><h2 id="how-we-define-metrics">How we define metrics</h2><p>When choosing a model for our agent, we start with correctness. If a model can&#x2019;t reliably complete the tasks we care about, nothing else matters. We run multiple models on our evals and refine the harness over time to address the issues we uncover.</p><p>Measuring correctness depends on what&apos;s being tested. Most internal evals use custom assertions such as &#x201c;did the agent parallelize tool calls?&#x201d;. External benchmarks like BFCL use exact matching against ground truth answers from the dataset. For evals where correctness is semantic like whether the agent persisted the correct thing in memory, we use LLM-as-a-judge.</p><p>Once several models clear that bar, we move to efficiency. <strong>Two models that solve the same task can behave very differently as in practice</strong>. One might take extra turns, make unnecessary tool calls, or move through the task more slowly because of model size. In production, those differences show up as higher latency, higher cost, and a worse overall user experience.</p><p>All together, the metrics we measure for each evaluator run are:</p>
+<!--kg-card-begin: html-->
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Correctness</td>
+<td>Whether the model completed the task correctly</td>
+</tr>
+<tr>
+<td>Step ratio</td>
+<td>Observed agent steps / ideal agent steps</td>
+</tr>
+<tr>
+<td>Tool call ratio</td>
+<td>Observed tool calls / ideal tool calls</td>
+</tr>
+<tr>
+<td>Latency ratio</td>
+<td>Observed latency / ideal latency</td>
+</tr>
+<tr>
+<td>Solve rate</td>
+<td>Number of expected steps / observed latency, with a score of 0 if the task was not solved correctly</td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: html-->
+<p>Solve rate measures how quickly an agent solves a task, normalized by the expected number of steps. Like latency ratio, it captures end-to-end time to solve the task, including model round trips, provider latency, wrong turns, and tool execution time. For simple tasks where we can define an ideal trajectory, solve rate can be easier to work with than latency ratio because it only requires measuring the given agent&apos;s task duration.</p><p>This gives us a simple way to choose models with a targeted eval set:</p><ol><li>Check correctness first: which models are accurate enough on the tasks you actually care about?</li><li>Then, compare efficiency: among the models that are good enough, which one gives the best tradeoff between correctness, latency, and cost?</li></ol><h3 id="example-of-useful-metrics-around-evals">Example of useful metrics around evals</h3><p>To make model comparisons actionable, we examine <em>how</em> models succeed and fail. That requires a concrete reference point for what &#x201c;good&#x201d; execution looks like beyond accuracy. One primitive we use is an <strong>ideal trajectory.</strong> This is a sequence of steps that produces a correct outcome with no &#x201c;unnecessary&#x201d; actions.</p><p>For simple, well-scoped tasks, the variables are defined tightly enough that the optimal path is usually obvious. For more open-ended tasks, we approximate a trajectory using the best-performing model we&#x2019;ve seen so far, then revisit the baseline as models and harnesses improve. In this way, observing agent behavior helps us refine our priors about ideal trajectories.</p><p>Consider a simple request:</p><blockquote>&quot;What is the current time and weather where I live?&quot;</blockquote><p>An agent&#x2019;s ideal trajectory might look like this:</p><ul><li>It makes the fewest necessary tool calls (e.g., resolve user &#x2192; resolve location &#x2192; fetch time and weather)</li><li>It parallelizes independent tool calls where possible</li><li>It produces the final answer without unnecessary intermediate turns</li></ul><p><strong>Ideal trajectory:</strong> 4 steps, 4 tool calls, ~8 seconds</p><figure class="kg-card kg-image-card"><img alt="How we build evals for Deep Agents" class="kg-image" height="1476" src="https://blog.langchain.com/content/images/2026/03/LLM-User-Interaction-Flow-2026-03-25-171715.png" width="2000" /></figure><p>Now compare that with a trajectory that is still technically correct, but less efficient.</p><p><strong>Inefficient trajectory:</strong> 6 steps, 5 tool calls, ~14 seconds.</p><figure class="kg-card kg-image-card"><img alt="How we build evals for Deep Agents" class="kg-image" height="1487" src="https://blog.langchain.com/content/images/2026/03/LLM-User-Interaction-Flow-2026-03-25-171748.png" width="2000" /></figure><p><strong>Correct but inefficient trajectory:</strong> 6 agent steps, 5 tool calls, includes an unnecessary tool call, and doesn&#x2019;t parallelize tool calls.</p><p><em>The above examples are illustrative: a REPL could solve this particular task even faster, but the simpler tool-calling version makes the idea easier to explain.</em></p><p>Both runs are correct, but the second run increases latency and cost, and creates more opportunities for failure.</p><p>This framing lets us evaluate both correctness and efficiency over evals. We maintain and update metrics to distill the runs into measurable numbers we can use to compare experiments.</p><p>From the example above, the inefficient but correct run would score:</p>
+<!--kg-card-begin: html-->
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Definition</th>
+<th>Example value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Correctness</td>
+<td>Whether the model completed the task correctly</td>
+<td>1</td>
+<td>The run succeeded</td>
+</tr>
+<tr>
+<td>Step ratio</td>
+<td>Observed agent steps / ideal agent steps</td>
+<td>6 / 4 = 1.5</td>
+<td>50% more agent steps than ideal; lower is better</td>
+</tr>
+<tr>
+<td>Tool call ratio</td>
+<td>Observed tool calls / ideal tool calls</td>
+<td>5 / 4 = 1.25</td>
+<td>25% more tool calls than ideal; lower is better</td>
+</tr>
+<tr>
+<td>Latency ratio</td>
+<td>Observed latency / ideal latency</td>
+<td>14 / 8 = 1.75</td>
+<td>75% slower than ideal; lower is better</td>
+</tr>
+<tr>
+<td>Solve rate</td>
+<td>Number of expected steps / observed latency, with a score of 0 if the task was not solved correctly</td>
+<td>4 / 14 = 0.29 expected steps per second</td>
+<td>Faster progress through the expected trajectory; higher is better</td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: html-->
+<h2 id="how-we-run-evals">How we run evals</h2><p>We use pytest with GitHub Actions to run evals in CI so changes run in a clean, reproducible environment. Each eval creates a Deep Agent instance with a given model, feeds it a task, and computes correctness and efficiency metrics.</p><p>We can also run a subset of eval using tags save costs and measure targeted experiments. For example, if building an agent that requires a lot of local file processing and synthesis, we may focus on the <code>file_operations</code> and <code>tool_use</code> tagged subsets.</p><pre><code class="language-bash">export LANGSMITH_API_KEY=&quot;lsv2_...&quot;
+
+uv run pytest tests/evals --eval-category file_operations --eval-category tool_use --model baseten:nvidia/zai-org/GLM-5
+</code></pre><p>Our eval architecture and implementation is open sourced in the <a href="https://github.com/langchain-ai/deepagents/tree/main/libs/evals?ref=blog.langchain.com">Deep Agents repository</a>.</p><hr /><h2 id="what%E2%80%99s-next">What&#x2019;s next</h2><p>We&#x2019;re expanding our eval suite and doing more work around open source LLMs! Some things we&#x2019;re excited to share soon:</p><ul><li>How Open Models measure against closed frontier models across eval categories</li><li>Evals as a mechanism to auto-improve agents for tasks in real time</li><li>Openly share how we maintain, reduce, and expand evals per agent over time</li></ul><p><a href="https://github.com/langchain-ai/deepagents?ref=blog.langchain.com">Deep Agents</a> is fully open source. Try it and let us know what you think! We&#x2019;re excited to help teams build great agents &amp; evals.</p></p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://blog.langchain.com/how-middleware-lets-you-customize-your-agent-harness/" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">LangChain Blog</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-26</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">How Middleware Lets You Customize Your Agent Harness</h3>
+                                        <p class="news-summary"><img alt="How Middleware Lets You Customize Your Agent Harness" src="https://blog.langchain.com/content/images/2026/03/30.png" /><p>Agent harnesses are what help build an agent, they connect an LLM to its environment and let it do things.</p><p>When you&#x2019;re building an agent, it&#x2019;s likely you&#x2019;ll want build an application specific agent harness. &#x201c;Agent Middleware&#x201d; empowers you to build on top of LangChain and Deep Agent&#x2019;s solid foundation, but customize them for your use case.</p><h2 id="what-are-agent-harnesses">What are agent harnesses</h2><p>An agent is a system built around a model. The model needs to be connected to an environment, data, memory, and tools. Agent harnesses are the system that helps you do that.</p><p>The core of every agent harness is the same, and remarkably simple: an LLM, running in a loop, calling tools. Simple as it is, there&apos;s power in this core loop.</p><figure class="kg-card kg-image-card"><img alt="How Middleware Lets You Customize Your Agent Harness" class="kg-image" height="268" src="https://blog.langchain.com/content/images/2026/03/agent_loop.png" width="300" /></figure><p>LangChain contains <code>create_agent</code> - an abstraction with just this core loop.</p><h2 id="why-you-would-want-to-customize-your-agent-harnesses">Why you would want to customize your agent harnesses</h2><p>Different agent use cases have different needs. They may require different agent harnesses.</p><p>Some parts of the an agent harness - like instructions or tools - are pretty easy to customize. <code>create_agent</code> in LangChain lets you pass in a system prompt and tools for example.</p><p>Other parts are more involved. What if you want always run a certain step before the model executes? What if you always want to check the tool output for certain things?</p><p>Things that involve changing the core loop of the agent are trickier to change. When done correctly, it enables really powerful customization that still allows you to build on the core harness.</p><p><code>AgentMiddleware</code> is our answer for this - how we let people customize LangChain agents.</p><h2 id="what-is-agent-middleware">What is agent middleware?</h2><div class="kg-card kg-callout-card kg-callout-card-blue"><div class="kg-callout-emoji">&#x1f4a1;</div><div class="kg-callout-text">&#x201c;Middleware&#x201d; is a general term often used in other software engineering practices, but below we refer to a different system which we call agent middleware.</div></div><p>Middleware exposes a set of hooks that let you run custom logic before and after each step, so you can control what happens at every stage of the loop:</p><figure class="kg-card kg-image-card"><img alt="How Middleware Lets You Customize Your Agent Harness" class="kg-image" height="560" src="https://blog.langchain.com/content/images/2026/03/middleware.png" width="500" /></figure><ul><li><strong><code>before_agent</code></strong>: Runs once on invocation. Good for loading memory, connecting to resources, or validating initial input.</li><li><strong><code>before_model</code></strong>: Fires before each model call. Use it to trim history or catch PII before it hits the LLM.</li><li><strong><code>wrap_model_call</code></strong>: Wraps the model call end-to-end. Caching, retries, and dynamic model requests like changing available tools all live here.</li><li><strong><code>wrap_tool_call</code></strong>: Wraps tool execution similarly. Inject context, intercept results, or gate which tools actually run.</li><li><strong><code>after_model</code></strong>: Runs after the model responds but before tools execute. The most natural place for human-in-the-loop.</li><li><strong><code>after_agent</code></strong>: Runs once on completion. Save results, send notifications, clean up.</li></ul><p>Middleware are composable, so you can mix and match to your heart&#x2019;s content.</p><p>LangChain ships a set of prebuilt middleware for the most common patterns, like summarization, retries, and PII redaction. Builders can also subclass the <code>AgentMiddleware</code> class to write your own for anything bespoke to your business.</p><h2 id="examples-of-middleware">Examples of Middleware</h2><p>Customization needs tend to cluster around the same themes. Below are the most common use cases:</p><p><strong>Business logic &amp; compliance.</strong> Some things can&apos;t live in a prompt, like PII redaction and content moderation. These are deterministic policies that have to fire every time. You can&apos;t prompt your way to HIPAA compliance.</p><div class="kg-card kg-toggle-card">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Deep dive: PII detection</span></h4>
+                <button class="kg-toggle-card-icon">
+                    <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311">
+                    </svg>
+                </button>
             </div>
-            <div class="news-list">
-                <article class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">OpenClaw</span>
-                        <span>·</span>
-                        <span>2026-03-27</span>
-                    </div>
-                    <h3 class="news-title">AI 日报系统升级：新增历史归档与自动推送功能</h3>
-                    <p class="news-summary">今日对 AI Daily Tracker 进行了重要升级：首页只展示今日日报入口，所有历史日报移至二级归档页面；新增 GitHub 自动推送功能，每天生成日报后自动提交到 GitHub 仓库。</p>
-                    <a href="ai-daily-archive.html" class="news-link">查看历史归档 →</a>
-                </article>
-
-                <article class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">产品更新</span>
-                        <span>·</span>
-                        <span>2026-03-27</span>
-                    </div>
-                    <h3 class="news-title">第二号数字分身首页重构完成</h3>
-                    <p class="news-summary">数字分身首页完成重构，优化了信息架构：AI 日报区域简化为今日日报+历史入口模式，追踪维度展示更加清晰，整体视觉风格统一为现代简洁设计。</p>
-                    <a href="index.html" class="news-link">查看首页 →</a>
-                </article>
-
-                <article class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">工程实践</span>
-                        <span>·</span>
-                        <span>2026-03-27</span>
-                    </div>
-                    <h3 class="news-title">OpenClaw 技能系统持续完善</h3>
-                    <p class="news-summary">近期完成了多个实用技能开发：AI Daily Tracker 支持自动生成和推送、历史归档管理、GitHub 监控等。技能文档和定时任务配置同步更新到 HEARTBEAT.md。</p>
-                    <a href="https://github.com/malcolmyu/second-brain" class="news-link" target="_blank">查看仓库 →</a>
-                </article>
-
-                <article class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">架构设计</span>
-                        <span>·</span>
-                        <span>2026-03-27</span>
-                    </div>
-                    <h3 class="news-title">Harness 架构设计模式分析</h3>
-                    <p class="news-summary">基于 Anthropic 和 OpenAI 的 Harness Engineering 实践，分析 AI 友好型 harness 的核心模块：沙箱执行、上下文管理、工具注册、权限控制、持久化存储等关键组件。</p>
-                    <a href="harness-engineering-report.html" class="news-link">阅读报告 →</a>
-                </article>
-
-                <article class="news-card">
-                    <div class="news-meta">
-                        <span class="news-source">知识库</span>
-                        <span>·</span>
-                        <span>2026-03-27</span>
-                    </div>
-                    <h3 class="news-title">思维模型知识库持续更新</h3>
-                    <p class="news-summary">第二号知识武器库包含决策、产品、认知、沟通四大类思维模型，共计36个核心模型。每个模型配有概念卡片和使用场景说明，支持跨概念关联。</p>
-                    <a href="decision-models.html" class="news-link">浏览知识库 →</a>
-                </article>
+            <div class="kg-toggle-content"><p dir="ltr"><span style="white-space: pre-wrap;">LangChain&#x2019;s builtin </span><a href="https://langchain-5e9cc07a-preview-srimpr-1771619406-31dcf4f.mintlify.app/oss/python/langchain/middleware/built-in?ref=blog.langchain.com#pii-detection"><span style="white-space: pre-wrap;">PIIMiddleware</span></a><span style="white-space: pre-wrap;"> implements </span><code style="white-space: pre-wrap;"><span>before_model</span></code><span style="white-space: pre-wrap;"> and </span><code style="white-space: pre-wrap;"><span>after_model</span></code><span style="white-space: pre-wrap;"> hooks. It has the ability to mask/redact/hash PII on model inputs, outputs, and tool outputs. It can also raise a </span><code style="white-space: pre-wrap;"><span>PIIDetectionError</span></code><span style="white-space: pre-wrap;"> for the most critical PII detection situations.</span></p></div>
+        </div><p><strong>Dynamic agent control.</strong> Middleware can reshape the agent at runtime: inject tools based on current state, swap the model mid-task, update the system prompt as context evolves. It&apos;s active control over how the agent behaves at each step.</p><div class="kg-card kg-toggle-card">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Deep dive: dynamic tool selection</span></h4>
+                <button class="kg-toggle-card-icon">
+                    <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311">
+                    </svg>
+                </button>
             </div>
-        </div>
+            <div class="kg-toggle-content"><p dir="ltr"><span style="white-space: pre-wrap;">LangChain&#x2019;s </span><a href="https://docs.langchain.com/oss/python/langchain/middleware/built-in?ref=blog.langchain.com#llm-tool-selector"><span style="white-space: pre-wrap;">LLMToolSelectorMiddleware</span></a><span style="white-space: pre-wrap;"> runs a fast LLM in the </span><code style="white-space: pre-wrap;"><span>wrap_model_call</span></code><span style="white-space: pre-wrap;"> hook to identify which tools from a registry are relevant for a given request. It then binds those tools to the model request to minimize context bloat from unnecessary tools in the main model call.</span></p></div>
+        </div><p><strong>Context management.</strong> The model is only as good as what you put in front of it. For example, you might need to summarize when you&apos;re approaching token limits and trim noisy tool inputs/outputs. Context engineering is a runtime problem, not a one-time prompt problem.</p><div class="kg-card kg-toggle-card">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Deep dive: summarization and context offloading</span></h4>
+                <button class="kg-toggle-card-icon">
+                    <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311">
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p dir="ltr"><span style="white-space: pre-wrap;">LangChain&#x2019;s builtin </span><a href="https://docs.langchain.com/oss/python/langchain/middleware/built-in?ref=blog.langchain.com#summarization"><span style="white-space: pre-wrap;">SummarizationMiddleware</span></a><span style="white-space: pre-wrap;"> implements the </span><code style="white-space: pre-wrap;"><span>before_model</span></code><span style="white-space: pre-wrap;"> hook. To avoid context overflow, if message history exceeds a certain token threshold, its contents are summarized before being passed to the model. Extensions of this middleware implement a </span><code style="white-space: pre-wrap;"><span>wrap_tool_call</span></code><span style="white-space: pre-wrap;"> hook to extend verbose tool call inputs and outputs to the filesystem.</span></p></div>
+        </div><p><strong>Production readiness.</strong> Middleware allows you to build in model/tool retry logic, model fallbacks, and human-in-the-loop with interrupts. These kinds of features don&#x2019;t show up in demos, but are essential for production agents.</p><div class="kg-card kg-toggle-card">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Deep dive: model retries</span></h4>
+                <button class="kg-toggle-card-icon">
+                    <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311">
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p dir="ltr"><span style="white-space: pre-wrap;">LangChain&#x2019;s builtin </span><a href="https://docs.langchain.com/oss/python/langchain/middleware/built-in?ref=blog.langchain.com#model-retry"><span style="white-space: pre-wrap;">ModelRetryMiddleware</span></a><span style="white-space: pre-wrap;"> implements the </span><code style="white-space: pre-wrap;"><span>wrap_model_call</span></code><span style="white-space: pre-wrap;"> hook in order to wrap a model&#x2019;s API call with a retry handler. This handler supports retry configuration such as retry count, backoff factor, and initial delay (to troubleshoot rate limiting).</span></p></div>
+        </div><p><strong>Toolsets.</strong> Inject tools that require custom setup and teardown around the agent loop like connecting to an external tool server, initializing a shell, or spinning up a sandbox.</p><div class="kg-card kg-toggle-card">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><span style="white-space: pre-wrap;">Deep dive: shell tool middleware</span></h4>
+                <button class="kg-toggle-card-icon">
+                    <svg id="Regular" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311">
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p dir="ltr"><span style="white-space: pre-wrap;">LangChain&#x2019;s </span><a href="https://docs.langchain.com/oss/python/langchain/middleware/built-in?ref=blog.langchain.com#shell-tool"><span style="white-space: pre-wrap;">ShellToolMiddleware</span></a><span style="white-space: pre-wrap;"> implements the </span><code style="white-space: pre-wrap;"><span>before_agent</span></code><span style="white-space: pre-wrap;"> and </span><code style="white-space: pre-wrap;"><span>after_agent</span></code><span style="white-space: pre-wrap;"> hooks in order to initialize and teardown shell resources around the core agent loop. It also adds the shell tool to the model&#x2019;s list of tools.</span></p></div>
+        </div><h2 id="deep-agents-case-study">Deep Agents case study</h2><p>Deep Agents is a batteries included agent harness built entirely on <code>create_agent</code>, LangChain&apos;s standard entry point for building agents, with an opinionated middleware stack on top.</p><p>Here are a few of the middlewares that power Deep Agents:</p><ul><li><code>FilesystemMiddleware</code>: file-based context on/offloading and long-term memory</li><li><code>SubagentMiddleware</code>: subagents with context isolation</li><li><code>SummarizationMiddleware</code>: context overflow management for long-running tasks</li><li><code>SkillsMiddleware</code>: progressive disclosure of specialized capabilities</li><li>And more!</li></ul><p>For a full review of the middleware powering Deep Agents, see <a href="https://docs.langchain.com/oss/python/deepagents/harness?ref=blog.langchain.com">this guide</a> and Vivek&#x2019;s <a href="https://blog.langchain.com/the-anatomy-of-an-agent-harness/">anatomy of a harness</a> post.</p><p>On top of all of this - you can add even more middleware to Deep Agents to customize it for your use case!</p><h2 id="why-we%E2%80%99re-betting-on-agent-middleware">Why we&#x2019;re betting on agent middleware</h2><p>Models are getting more capable, and that will change parts of the middleware stack. Some of what Deep Agents does today &#x2014; summarization, tool selection, output trimming &#x2014; will eventually be absorbed into the model itself.</p><p>But the underlying need won&apos;t change. Builders will always need levers for customization: deterministic policy enforcement, production readiness guardrails, use-case-specific business logic. None of that moves into the model. The harness is still where it lives, and middleware is still the cleanest way to expose it.</p><p>We&apos;ve seen this play out since the LangChain v1 launch. Middleware lets different teams own different concerns, keeps business logic decoupled from core agent code, and makes it easy to reuse logic across an org. Building Deep Agents entirely on top of it convinced us it&apos;s the right abstraction.</p><p>Want to get started from a barebones agent harness? Try out middleware in <a href="https://docs.langchain.com/oss/python/langchain/agents?ref=blog.langchain.com"><code>create_agent</code></a>.</p><p>Want to build on top of a more robust agent harness? Try out middleware in <a href="https://docs.langchain.com/oss/python/deepagents/quickstart?ref=blog.langchain.com"><code>create_deep_agent</code></a>.</p><p>Want to contribute your own middleware? See guides for that <a href="https://docs.langchain.com/oss/python/integrations/middleware?ref=blog.langchain.com">here</a>.</p></p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">开源项目</h2>
+                            <span class="section-count">3 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="https://github.com/agentscope-ai/agentscope" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">GitHub Trending Daily</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-27</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">agentscope-ai/agentscope</h3>
+                                        <p class="news-summary"><p>Build and run agents you can see, understand and trust.</p><hr /><p align="center"> <img alt="AgentScope Logo" src="https://img.alicdn.com/imgextra/i1/O1CN01nTg6w21NqT5qFKH1u_!!6000000001621-55-tps-550-550.svg?sanitize=true" width="200" /> </p> 
+<span align="center"> <p><a href="https://github.com/agentscope-ai/agentscope/raw/main/README_zh.md"><strong>中文主页</strong></a> | <a href="https://doc.agentscope.io/"><strong>Tutorial</strong></a> | <a href="https://github.com/agentscope-ai/agentscope/raw/main/docs/roadmap.md"><strong>Roadmap (Jan 2026 -)</strong></a> | <a href="https://doc.agentscope.io/tutorial/faq.html"><strong>FAQ</strong></a></p> </span> 
+<p align="center"> <a href="https://arxiv.org/abs/2402.14034"> <img alt="arxiv" src="https://img.shields.io/badge/cs.MA-2402.14034-B31C1C?logo=arxiv&amp;logoColor=B31C1C" /> </a> <a href="https://pypi.org/project/agentscope/"> <img alt="pypi" src="https://img.shields.io/badge/python-3.10+-blue?logo=python" /> </a> <a href="https://pypi.org/project/agentscope/"> <img alt="pypi" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpypi.org%2Fpypi%2Fagentscope%2Fjson&amp;query=%24.info.version&amp;prefix=v&amp;logo=pypi&amp;label=version" /> </a> <a href="https://discord.gg/eYMpfnkG8h"> <img alt="discord" src="https://img.shields.io/discord/1194846673529213039?label=Discord&amp;logo=discord" /> </a> <a href="https://doc.agentscope.io/"> <img alt="docs" src="https://img.shields.io/badge/Docs-English%7C%E4%B8%AD%E6%96%87-blue?logo=markdown" /> </a> <a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/LICENSE"> <img alt="license" src="https://img.shields.io/badge/license-Apache--2.0-black" /> </a> </p> 
+<p align="center"> <img alt="agentscope-ai%2Fagentscope | Trendshift" height="55" src="https://trendshift.io/api/badge/repositories/20310" style="width: 250px; height: 55px;" width="250" /> </p> 
+<h2>What is AgentScope?</h2> 
+<p>AgentScope is a production-ready, easy-to-use agent framework with essential abstractions that work with rising model capability and built-in support for finetuning.</p> 
+<p>We design for increasingly agentic LLMs. Our approach leverages the models' reasoning and tool use abilities rather than constraining them with strict prompts and opinionated orchestrations.</p> 
+<h2>Why use AgentScope?</h2> 
+<ul> 
+ <li><strong>Simple</strong>: start building your agents in 5 minutes with built-in ReAct agent, tools, skills, human-in-the-loop steering, memory, planning, realtime voice, evaluation and model finetuning</li> 
+ <li><strong>Extensible</strong>: large number of ecosystem integrations for tools, memory and observability; built-in support for MCP and A2A; message hub for flexible multi-agent orchestration and workflows</li> 
+ <li><strong>Production-ready</strong>: deploy and serve your agents locally, as serverless in the cloud, or on your K8s cluster with built-in OTel support</li> 
+</ul> 
+<p align="center"> <img src="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/assets/images/agentscope.png" width="90%" /> <br /> The AgentScope Ecosystem </p> 
+<h2>News</h2> 
+<!-- BEGIN NEWS --> 
+<ul> 
+ <li><strong>[2026-02] <code>FEAT</code>:</strong> Realtime Voice Agent support. <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/realtime_voice_agent">Example</a> | <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/workflows/multiagent_realtime">Multi-Agent Realtime Example</a> | <a href="https://doc.agentscope.io/tutorial/task_realtime.html">Tutorial</a></li> 
+ <li><strong>[2026-01] <code>COMM</code>:</strong> Biweekly Meetings launched to share ecosystem updates and development plans - join us! <a href="https://github.com/agentscope-ai/agentscope/discussions/1126">Details &amp; Schedule</a></li> 
+ <li><strong>[2026-01] <code>FEAT</code>:</strong> Database support &amp; memory compression in memory module. <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/short_term_memory/memory_compression">Example</a> | <a href="https://doc.agentscope.io/tutorial/task_memory.html">Tutorial</a></li> 
+ <li><strong>[2025-12] <code>INTG</code>:</strong> A2A (Agent-to-Agent) protocol support. <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/a2a_agent">Example</a> | <a href="https://doc.agentscope.io/tutorial/task_a2a.html">Tutorial</a></li> 
+ <li><strong>[2025-12] <code>FEAT</code>:</strong> TTS (Text-to-Speech) support. <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/tts">Example</a> | <a href="https://doc.agentscope.io/tutorial/task_tts.html">Tutorial</a></li> 
+ <li><strong>[2025-11] <code>INTG</code>:</strong> Anthropic Agent Skill support. <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/agent_skill">Example</a> | <a href="https://doc.agentscope.io/tutorial/task_agent_skill.html">Tutorial</a></li> 
+ <li><strong>[2025-11] <code>RELS</code>:</strong> Alias-Agent for diverse real-world tasks and Data-Juicer Agent for data processing open-sourced. <a href="https://github.com/agentscope-ai/agentscope-samples/tree/main/alias">Alias-Agent</a> | <a href="https://github.com/agentscope-ai/agentscope-samples/tree/main/data_juicer_agent">Data-Juicer Agent</a></li> 
+ <li><strong>[2025-11] <code>INTG</code>:</strong> Agentic RL via Trinity-RFT library. <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/tuner/model_tuning">Example</a> | <a href="https://github.com/agentscope-ai/Trinity-RFT">Trinity-RFT</a></li> 
+ <li><strong>[2025-11] <code>INTG</code>:</strong> ReMe for enhanced long-term memory. <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/long_term_memory/reme">Example</a></li> 
+ <li><strong>[2025-11] <code>RELS</code>:</strong> agentscope-samples repository launched and agentscope-runtime upgraded with Docker/K8s deployment and VNC-powered GUI sandboxes. <a href="https://github.com/agentscope-ai/agentscope-samples">Samples</a> | <a href="https://github.com/agentscope-ai/agentscope-runtime">Runtime</a></li> 
+</ul> 
+<!-- END NEWS --> 
+<p><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/docs/NEWS.md">More news →</a></p> 
+<h2>Community</h2> 
+<p>Welcome to join our community on</p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th><a href="https://discord.gg/eYMpfnkG8h">Discord</a></th> 
+   <th>DingTalk</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><img height="100" src="https://gw.alicdn.com/imgextra/i1/O1CN01hhD1mu1Dd3BWVUvxN_!!6000000000238-2-tps-400-400.png" width="100" /></td> 
+   <td><img height="100" src="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/assets/images/dingtalk_qr_code.png" width="100" /></td> 
+  </tr> 
+ </tbody> 
+</table> 
+<!-- START doctoc generated TOC please keep comment here to allow auto update --> 
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> 
+<h2>📑 Table of Contents</h2> 
+<ul> 
+ <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#quickstart">Quickstart</a> 
+  <ul> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#installation">Installation</a> 
+    <ul> 
+     <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#from-pypi">From PyPI</a></li> 
+     <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#from-source">From source</a></li> 
+    </ul> </li> 
+  </ul> </li> 
+ <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#example">Example</a> 
+  <ul> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#hello-agentscope">Hello AgentScope!</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#voice-agent">Voice Agent</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#realtime-voice-agent">Realtime Voice Agent</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#human-in-the-loop">Human-in-the-loop</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#flexible-mcp-usage">Flexible MCP Usage</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#agentic-rl">Agentic RL</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#multi-agent-workflows">Multi-Agent Workflows</a></li> 
+  </ul> </li> 
+ <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#documentation">Documentation</a></li> 
+ <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#more-examples--samples">More Examples &amp; Samples</a> 
+  <ul> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#functionality">Functionality</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#agent">Agent</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#game">Game</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#workflow">Workflow</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#evaluation">Evaluation</a></li> 
+   <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#tuner">Tuner</a></li> 
+  </ul> </li> 
+ <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#contributing">Contributing</a></li> 
+ <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#license">License</a></li> 
+ <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#publications">Publications</a></li> 
+ <li><a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/#contributors">Contributors</a></li> 
+</ul> 
+<!-- END doctoc generated TOC please keep comment here to allow auto update --> 
+<h2>Quickstart</h2> 
+<h3>Installation</h3> 
+<blockquote> 
+ <p>AgentScope requires <strong>Python 3.10</strong> or higher.</p> 
+</blockquote> 
+<h4>From PyPI</h4> 
+<pre><code class="language-bash">pip install agentscope
+</code></pre> 
+<p>Or with uv:</p> 
+<pre><code class="language-bash">uv pip install agentscope
+</code></pre> 
+<h4>From source</h4> 
+<pre><code class="language-bash"># Pull the source code from GitHub
+git clone -b main https://github.com/agentscope-ai/agentscope.git
+
+# Install the package in editable mode
+cd agentscope
+
+pip install -e .
+# or with uv:
+# uv pip install -e .
+</code></pre> 
+<h2>Example</h2> 
+<h3>Hello AgentScope!</h3> 
+<p>Start with a conversation between user and a ReAct agent 🤖 named "Friday"!</p> 
+<pre><code class="language-python">from agentscope.agent import ReActAgent, UserAgent
+from agentscope.model import DashScopeChatModel
+from agentscope.formatter import DashScopeChatFormatter
+from agentscope.memory import InMemoryMemory
+from agentscope.tool import Toolkit, execute_python_code, execute_shell_command
+import os, asyncio
+
+
+async def main():
+    toolkit = Toolkit()
+    toolkit.register_tool_function(execute_python_code)
+    toolkit.register_tool_function(execute_shell_command)
+
+    agent = ReActAgent(
+        name="Friday",
+        sys_prompt="You're a helpful assistant named Friday.",
+        model=DashScopeChatModel(
+            model_name="qwen-max",
+            api_key=os.environ["DASHSCOPE_API_KEY"],
+            stream=True,
+        ),
+        memory=InMemoryMemory(),
+        formatter=DashScopeChatFormatter(),
+        toolkit=toolkit,
+    )
+
+    user = UserAgent(name="user")
+
+    msg = None
+    while True:
+        msg = await agent(msg)
+        msg = await user(msg)
+        if msg.get_text_content() == "exit":
+            break
+
+asyncio.run(main())
+</code></pre> 
+<h3>Voice Agent</h3> 
+<p>Create a voice-enabled ReAct agent that can understand and respond with speech, even playing a multi-agent werewolf game with voice interactions.</p> 
+<p><a href="https://github.com/user-attachments/assets/c5f05254-aff6-4375-90df-85e8da95d5da">https://github.com/user-attachments/assets/c5f05254-aff6-4375-90df-85e8da95d5da</a></p> 
+<h3>Realtime Voice Agent</h3> 
+<p>Build a realtime voice agent with web interface that can interact with users via voice input and output.</p> 
+<p><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/realtime_voice_agent">Realtime chatbot</a> | <a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/workflows/multiagent_realtime">Realtime Multi-Agent Example</a></p> 
+<p><a href="https://github.com/user-attachments/assets/1b7b114b-e995-4586-9b3f-d3bb9fcd2558">https://github.com/user-attachments/assets/1b7b114b-e995-4586-9b3f-d3bb9fcd2558</a></p> 
+<h3>Human-in-the-loop</h3> 
+<p>Support realtime interruption in ReActAgent: conversation can be interrupted via cancellation in realtime and resumed seamlessly via robust memory preservation.</p> 
+<img alt="Realtime Steering" src="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/assets/images/realtime_steering_en.gif" width="60%" /> 
+<h3>Flexible MCP Usage</h3> 
+<p>Use individual MCP tools as <strong>local callable functions</strong> to compose toolkits or wrap into a more complex tool.</p> 
+<pre><code class="language-python">from agentscope.mcp import HttpStatelessClient
+from agentscope.tool import Toolkit
+import os
+
+async def fine_grained_mcp_control():
+    # Initialize the MCP client
+    client = HttpStatelessClient(
+        name="gaode_mcp",
+        transport="streamable_http",
+        url=f"https://mcp.amap.com/mcp?key={os.environ['GAODE_API_KEY']}",
+    )
+
+    # Obtain the MCP tool as a **local callable function**, and use it anywhere
+    func = await client.get_callable_function(func_name="maps_geo")
+
+    # Option 1: Call directly
+    await func(address="Tiananmen Square", city="Beijing")
+
+    # Option 2: Pass to agent as a tool
+    toolkit = Toolkit()
+    toolkit.register_tool_function(func)
+    # ...
+
+    # Option 3: Wrap into a more complex tool
+    # ...
+</code></pre> 
+<h3>Agentic RL</h3> 
+<p>Train your agentic application seamlessly with Reinforcement Learning integration. We also prepare multiple sample projects covering various scenarios:</p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Example</th> 
+   <th>Description</th> 
+   <th>Model</th> 
+   <th>Training Result</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><a href="https://github.com/agentscope-ai/agentscope-samples/tree/main/tuner/math_agent">Math Agent</a></td> 
+   <td>Tune a math-solving agent with multi-step reasoning.</td> 
+   <td>Qwen3-0.6B</td> 
+   <td>Accuracy: 75% → 85%</td> 
+  </tr> 
+  <tr> 
+   <td><a href="https://github.com/agentscope-ai/agentscope-samples/tree/main/tuner/frozen_lake">Frozen Lake</a></td> 
+   <td>Train an agent to navigate the Frozen Lake environment.</td> 
+   <td>Qwen2.5-3B-Instruct</td> 
+   <td>Success rate: 15% → 86%</td> 
+  </tr> 
+  <tr> 
+   <td><a href="https://github.com/agentscope-ai/agentscope-samples/tree/main/tuner/learn_to_ask">Learn to Ask</a></td> 
+   <td>Tune agents using LLM-as-a-judge for automated feedback.</td> 
+   <td>Qwen2.5-7B-Instruct</td> 
+   <td>Accuracy: 47% → 92%</td> 
+  </tr> 
+  <tr> 
+   <td><a href="https://github.com/agentscope-ai/agentscope-samples/tree/main/tuner/email_search">Email Search</a></td> 
+   <td>Improve tool-use capabilities without labeled ground truth.</td> 
+   <td>Qwen3-4B-Instruct-2507</td> 
+   <td>Accuracy: 60%</td> 
+  </tr> 
+  <tr> 
+   <td><a href="https://github.com/agentscope-ai/agentscope-samples/tree/main/tuner/werewolves">Werewolf Game</a></td> 
+   <td>Train agents for strategic multi-agent game interactions.</td> 
+   <td>Qwen2.5-7B-Instruct</td> 
+   <td>Werewolf win rate: 50% → 80%</td> 
+  </tr> 
+  <tr> 
+   <td><a href="https://github.com/agentscope-ai/agentscope-samples/tree/main/tuner/data_augment">Data Augment</a></td> 
+   <td>Generate synthetic training data to enhance tuning results.</td> 
+   <td>Qwen3-0.6B</td> 
+   <td>AIME-24 accuracy: 20% → 60%</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h3>Multi-Agent Workflows</h3> 
+<p>AgentScope provides <code>MsgHub</code> and pipelines to streamline multi-agent conversations, offering efficient message routing and seamless information sharing</p> 
+<pre><code class="language-python">from agentscope.pipeline import MsgHub, sequential_pipeline
+from agentscope.message import Msg
+import asyncio
+
+async def multi_agent_conversation():
+    # Create agents
+    agent1 = ...
+    agent2 = ...
+    agent3 = ...
+    agent4 = ...
+
+    # Create a message hub to manage multi-agent conversation
+    async with MsgHub(
+        participants=[agent1, agent2, agent3],
+        announcement=Msg("Host", "Introduce yourselves.", "assistant")
+    ) as hub:
+        # Speak in a sequential manner
+        await sequential_pipeline([agent1, agent2, agent3])
+        # Dynamic manage the participants
+        hub.add(agent4)
+        hub.delete(agent3)
+        await hub.broadcast(Msg("Host", "Goodbye!", "assistant"))
+
+asyncio.run(multi_agent_conversation())
+</code></pre> 
+<h2>Documentation</h2> 
+<ul> 
+ <li><a href="https://doc.agentscope.io/tutorial/">Tutorial</a></li> 
+ <li><a href="https://doc.agentscope.io/tutorial/faq.html">FAQ</a></li> 
+ <li><a href="https://doc.agentscope.io/api/agentscope.html">API Docs</a></li> 
+</ul> 
+<h2>More Examples &amp; Samples</h2> 
+<h3>Functionality</h3> 
+<ul> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/mcp">MCP</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/agent_skill">Anthropic Agent Skill</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/plan">Plan</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/structured_output">Structured Output</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/rag">RAG</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/long_term_memory">Long-Term Memory</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/session_with_sqlite">Session with SQLite</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/stream_printing_messages">Stream Printing Messages</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/tts">TTS</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/deployment/planning_agent">Code-first Deployment</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/short_term_memory/memory_compression">Memory Compression</a></li> 
+</ul> 
+<h3>Agent</h3> 
+<ul> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/react_agent">ReAct Agent</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/voice_agent">Voice Agent</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/deep_research_agent">Deep Research Agent</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/browser_agent">Browser-use Agent</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/meta_planner_agent">Meta Planner Agent</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/a2a_agent">A2A Agent</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/realtime_voice_agent">Realtime Voice Agent</a></li> 
+</ul> 
+<h3>Game</h3> 
+<ul> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/game/werewolves">Nine-player Werewolves</a></li> 
+</ul> 
+<h3>Workflow</h3> 
+<ul> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/workflows/multiagent_debate">Multi-agent Debate</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/workflows/multiagent_conversation">Multi-agent Conversation</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/workflows/multiagent_concurrent">Multi-agent Concurrent</a></li> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/workflows/multiagent_realtime">Multi-agent Realtime Conversation</a></li> 
+</ul> 
+<h3>Evaluation</h3> 
+<ul> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/evaluation/ace_bench">ACEBench</a></li> 
+</ul> 
+<h3>Tuner</h3> 
+<ul> 
+ <li><a href="https://github.com/agentscope-ai/agentscope/tree/main/examples/tuner/model_tuning">Tune ReAct Agent</a></li> 
+</ul> 
+<h2>Contributing</h2> 
+<p>We welcome contributions from the community! Please refer to our <a href="https://raw.githubusercontent.com/agentscope-ai/agentscope/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for guidelines on how to contribute.</p> 
+<h2>License</h2> 
+<p>AgentScope is released under Apache License 2.0.</p> 
+<h2>Publications</h2> 
+<p>If you find our work helpful for your research or application, please cite our papers.</p> 
+<ul> 
+ <li> <p><a href="https://arxiv.org/abs/2508.16279">AgentScope 1.0: A Developer-Centric Framework for Building Agentic Applications</a></p> </li> 
+ <li> <p><a href="https://arxiv.org/abs/2402.14034">AgentScope: A Flexible yet Robust Multi-Agent Platform</a></p> </li> 
+</ul> 
+<pre><code>@article{agentscope_v1,
+    author  = {Dawei Gao, Zitao Li, Yuexiang Xie, Weirui Kuang, Liuyi Yao, Bingchen Qian, Zhijian Ma, Yue Cui, Haohao Luo, Shen Li, Lu Yi, Yi Yu, Shiqi He, Zhiling Luo, Wenmeng Zhou, Zhicheng Zhang, Xuguang He, Ziqian Chen, Weikai Liao, Farruh Isakulovich Kushnazarov, Yaliang Li, Bolin Ding, Jingren Zhou}
+    title   = {AgentScope 1.0: A Developer-Centric Framework for Building Agentic Applications},
+    journal = {CoRR},
+    volume  = {abs/2508.16279},
+    year    = {2025},
+}
+
+@article{agentscope,
+    author  = {Dawei Gao, Zitao Li, Xuchen Pan, Weirui Kuang, Zhijian Ma, Bingchen Qian, Fei Wei, Wenhao Zhang, Yuexiang Xie, Daoyuan Chen, Liuyi Yao, Hongyi Peng, Zeyu Zhang, Lin Zhu, Chen Cheng, Hongzhu Shi, Yaliang Li, Bolin Ding, Jingren Zhou}
+    title   = {AgentScope: A Flexible yet Robust Multi-Agent Platform},
+    journal = {CoRR},
+    volume  = {abs/2402.14034},
+    year    = {2024},
+}
+</code></pre> 
+<h2>Contributors</h2> 
+<p>All thanks to our contributors:</p> 
+<a href="https://github.com/agentscope-ai/agentscope/graphs/contributors"> <img src="https://contrib.rocks/image?repo=agentscope-ai/agentscope&amp;max=999&amp;columns=12&amp;anon=1" /> </a></p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://github.com/bytedance/deer-flow" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">GitHub Trending Daily</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-27</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">bytedance/deer-flow</h3>
+                                        <p class="news-summary"><p>An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.</p><hr /><h1>🦌 DeerFlow - 2.0</h1> 
+<p>English | <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/README_zh.md">中文</a> | <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/README_ja.md">日本語</a> | <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/README_fr.md">Français</a> | <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/README_ru.md">Русский</a></p> 
+<p><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/backend/pyproject.toml"><img alt="Python" src="https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&amp;logoColor=white" /></a> <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/Makefile"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-22%2B-339933?logo=node.js&amp;logoColor=white" /></a> <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg?sanitize=true" /></a></p> 
+<p><a href="https://trendshift.io/repositories/14699" target="_blank"><img alt="bytedance%2Fdeer-flow | Trendshift" height="55" src="https://trendshift.io/api/badge/repositories/14699" style="width: 250px; height: 55px;" width="250" /></a></p> 
+<blockquote> 
+ <p>On February 28th, 2026, DeerFlow claimed the 🏆 #1 spot on GitHub Trending following the launch of version 2. Thanks a million to our incredible community — you made this happen! 💪🔥</p> 
+</blockquote> 
+<p>DeerFlow (<strong>D</strong>eep <strong>E</strong>xploration and <strong>E</strong>fficient <strong>R</strong>esearch <strong>Flow</strong>) is an open-source <strong>super agent harness</strong> that orchestrates <strong>sub-agents</strong>, <strong>memory</strong>, and <strong>sandboxes</strong> to do almost anything — powered by <strong>extensible skills</strong>.</p> 
+<p><a href="https://github.com/user-attachments/assets/a8bcadc4-e040-4cf2-8fda-dd768b999c18">https://github.com/user-attachments/assets/a8bcadc4-e040-4cf2-8fda-dd768b999c18</a></p> 
+<blockquote> 
+ <p>[!NOTE] <strong>DeerFlow 2.0 is a ground-up rewrite.</strong> It shares no code with v1. If you're looking for the original Deep Research framework, it's maintained on the <a href="https://github.com/bytedance/deer-flow/tree/main-1.x"><code>1.x</code> branch</a> — contributions there are still welcome. Active development has moved to 2.0.</p> 
+</blockquote> 
+<h2>Official Website</h2> 
+<p><a href="https://deerflow.tech"><img alt="image" height="1600" src="https://github.com/user-attachments/assets/a598c49f-3b2f-41ea-a052-05e21349188a" width="2880" /></a></p> 
+<p>Learn more and see <strong>real demos</strong> on our <a href="https://deerflow.tech"><strong>official website</strong></a>.</p> 
+<h2>Coding Plan from ByteDance Volcengine</h2> 
+<img alt="英文方舟" height="2400" src="https://github.com/user-attachments/assets/2ecc7b9d-50be-4185-b1f7-5542d222fb2d" width="4808" /> 
+<ul> 
+ <li>We strongly recommend using Doubao-Seed-2.0-Code, DeepSeek v3.2 and Kimi 2.5 to run DeerFlow</li> 
+ <li><a href="https://www.byteplus.com/en/activity/codingplan?utm_campaign=deer_flow&amp;utm_content=deer_flow&amp;utm_medium=devrel&amp;utm_source=OWO&amp;utm_term=deer_flow">Learn more</a></li> 
+ <li><a href="https://www.volcengine.com/activity/codingplan?utm_campaign=deer_flow&amp;utm_content=deer_flow&amp;utm_medium=devrel&amp;utm_source=OWO&amp;utm_term=deer_flow">中国大陆地区的开发者请点击这里</a></li> 
+</ul> 
+<h2>InfoQuest</h2> 
+<p>DeerFlow has newly integrated the intelligent search and crawling toolset independently developed by BytePlus--<a href="https://docs.byteplus.com/en/docs/InfoQuest/What_is_Info_Quest">InfoQuest (supports free online experience)</a></p> 
+<a href="https://docs.byteplus.com/en/docs/InfoQuest/What_is_Info_Quest" target="_blank"> <img alt="InfoQuest_banner" src="https://sf16-sg.tiktokcdn.com/obj/eden-sg/hubseh7bsbps/20251208-160108.png" /> </a> 
+<hr /> 
+<h2>Table of Contents</h2> 
+<ul> 
+ <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#-deerflow---20">🦌 DeerFlow - 2.0</a> 
+  <ul> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#official-website">Official Website</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#infoquest">InfoQuest</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#table-of-contents">Table of Contents</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#one-line-agent-setup">One-Line Agent Setup</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#quick-start">Quick Start</a> 
+    <ul> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#configuration">Configuration</a></li> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#running-the-application">Running the Application</a> 
+      <ul> 
+       <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#option-1-docker-recommended">Option 1: Docker (Recommended)</a></li> 
+       <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#option-2-local-development">Option 2: Local Development</a></li> 
+      </ul> </li> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#advanced">Advanced</a> 
+      <ul> 
+       <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#sandbox-mode">Sandbox Mode</a></li> 
+       <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#mcp-server">MCP Server</a></li> 
+       <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#im-channels">IM Channels</a></li> 
+      </ul> </li> 
+    </ul> </li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#from-deep-research-to-super-agent-harness">From Deep Research to Super Agent Harness</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#core-features">Core Features</a> 
+    <ul> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#skills--tools">Skills &amp; Tools</a> 
+      <ul> 
+       <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#claude-code-integration">Claude Code Integration</a></li> 
+      </ul> </li> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#sub-agents">Sub-Agents</a></li> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#sandbox--file-system">Sandbox &amp; File System</a></li> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#context-engineering">Context Engineering</a></li> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#long-term-memory">Long-Term Memory</a></li> 
+    </ul> </li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#recommended-models">Recommended Models</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#embedded-python-client">Embedded Python Client</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#documentation">Documentation</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#%EF%B8%8F-security-notice">⚠️ Security Notice</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#contributing">Contributing</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#license">License</a></li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#acknowledgments">Acknowledgments</a> 
+    <ul> 
+     <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#key-contributors">Key Contributors</a></li> 
+    </ul> </li> 
+   <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/#star-history">Star History</a></li> 
+  </ul> </li> 
+</ul> 
+<h2>One-Line Agent Setup</h2> 
+<p>If you use Claude Code, Codex, Cursor, Windsurf, or another coding agent, you can hand it the setup instructions in one sentence:</p> 
+<pre><code class="language-text">Help me clone DeerFlow if needed, then bootstrap it for local development by following https://raw.githubusercontent.com/bytedance/deer-flow/main/Install.md
+</code></pre> 
+<p>That prompt is intended for coding agents. It tells the agent to clone the repo if needed, choose Docker when available, and stop with the exact next command plus any missing config the user still needs to provide.</p> 
+<h2>Quick Start</h2> 
+<h3>Configuration</h3> 
+<ol> 
+ <li> <p><strong>Clone the DeerFlow repository</strong></p> <pre><code class="language-bash">git clone https://github.com/bytedance/deer-flow.git
+cd deer-flow
+</code></pre> </li> 
+ <li> <p><strong>Generate local configuration files</strong></p> <p>From the project root directory (<code>deer-flow/</code>), run:</p> <pre><code class="language-bash">make config
+</code></pre> <p>This command creates local configuration files based on the provided example templates.</p> </li> 
+ <li> <p><strong>Configure your preferred model(s)</strong></p> <p>Edit <code>config.yaml</code> and define at least one model:</p> <pre><code class="language-yaml">models:
+  - name: gpt-4                       # Internal identifier
+    display_name: GPT-4               # Human-readable name
+    use: langchain_openai:ChatOpenAI  # LangChain class path
+    model: gpt-4                      # Model identifier for API
+    api_key: $OPENAI_API_KEY          # API key (recommended: use env var)
+    max_tokens: 4096                  # Maximum tokens per request
+    temperature: 0.7                  # Sampling temperature
+
+  - name: openrouter-gemini-2.5-flash
+    display_name: Gemini 2.5 Flash (OpenRouter)
+    use: langchain_openai:ChatOpenAI
+    model: google/gemini-2.5-flash-preview
+    api_key: $OPENAI_API_KEY          # OpenRouter still uses the OpenAI-compatible field name here
+    base_url: https://openrouter.ai/api/v1
+
+  - name: gpt-5-responses
+    display_name: GPT-5 (Responses API)
+    use: langchain_openai:ChatOpenAI
+    model: gpt-5
+    api_key: $OPENAI_API_KEY
+    use_responses_api: true
+    output_version: responses/v1
+</code></pre> <p>OpenRouter and similar OpenAI-compatible gateways should be configured with <code>langchain_openai:ChatOpenAI</code> plus <code>base_url</code>. If you prefer a provider-specific environment variable name, point <code>api_key</code> at that variable explicitly (for example <code>api_key: $OPENROUTER_API_KEY</code>).</p> <p>To route OpenAI models through <code>/v1/responses</code>, keep using <code>langchain_openai:ChatOpenAI</code> and set <code>use_responses_api: true</code> with <code>output_version: responses/v1</code>.</p> <p>CLI-backed provider examples:</p> <pre><code class="language-yaml">models:
+  - name: gpt-5.4
+    display_name: GPT-5.4 (Codex CLI)
+    use: deerflow.models.openai_codex_provider:CodexChatModel
+    model: gpt-5.4
+    supports_thinking: true
+    supports_reasoning_effort: true
+
+  - name: claude-sonnet-4.6
+    display_name: Claude Sonnet 4.6 (Claude Code OAuth)
+    use: deerflow.models.claude_provider:ClaudeChatModel
+    model: claude-sonnet-4-6
+    max_tokens: 4096
+    supports_thinking: true
+</code></pre> 
+  <ul> 
+   <li>Codex CLI reads <code>~/.codex/auth.json</code></li> 
+   <li>The Codex Responses endpoint currently rejects <code>max_tokens</code> and <code>max_output_tokens</code>, so <code>CodexChatModel</code> does not expose a request-level token cap</li> 
+   <li>Claude Code accepts <code>CLAUDE_CODE_OAUTH_TOKEN</code>, <code>ANTHROPIC_AUTH_TOKEN</code>, <code>CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR</code>, <code>CLAUDE_CODE_CREDENTIALS_PATH</code>, or plaintext <code>~/.claude/.credentials.json</code></li> 
+   <li>ACP agent entries are separate from model providers. If you configure <code>acp_agents.codex</code>, point it at a Codex ACP adapter such as <code>npx -y @zed-industries/codex-acp</code>; the standard <code>codex</code> CLI binary is not ACP-compatible by itself</li> 
+   <li>On macOS, DeerFlow does not probe Keychain automatically. Export Claude Code auth explicitly if needed:</li> 
+  </ul> <pre><code class="language-bash">eval "$(python3 scripts/export_claude_code_oauth.py --print-export)"
+</code></pre> </li> 
+ <li> <p><strong>Set API keys for your configured model(s)</strong></p> <p>Choose one of the following methods:</p> </li> 
+</ol> 
+<ul> 
+ <li> <p>Option A: Edit the <code>.env</code> file in the project root (Recommended)</p> <pre><code class="language-bash">TAVILY_API_KEY=your-tavily-api-key
+OPENAI_API_KEY=your-openai-api-key
+# OpenRouter also uses OPENAI_API_KEY when your config uses langchain_openai:ChatOpenAI + base_url.
+# Add other provider keys as needed
+INFOQUEST_API_KEY=your-infoquest-api-key
+</code></pre> </li> 
+ <li> <p>Option B: Export environment variables in your shell</p> <pre><code class="language-bash">export OPENAI_API_KEY=your-openai-api-key
+</code></pre> <p>For CLI-backed providers:</p> 
+  <ul> 
+   <li>Codex CLI: <code>~/.codex/auth.json</code></li> 
+   <li>Claude Code OAuth: explicit env/file handoff or <code>~/.claude/.credentials.json</code></li> 
+  </ul> </li> 
+ <li> <p>Option C: Edit <code>config.yaml</code> directly (Not recommended for production)</p> <pre><code class="language-yaml">models:
+  - name: gpt-4
+    api_key: your-actual-api-key-here  # Replace placeholder
+</code></pre> </li> 
+</ul> 
+<h3>Running the Application</h3> 
+<h4>Option 1: Docker (Recommended)</h4> 
+<p><strong>Development</strong> (hot-reload, source mounts):</p> 
+<pre><code class="language-bash">make docker-init    # Pull sandbox image (only once or when image updates)
+make docker-start   # Start services (auto-detects sandbox mode from config.yaml)
+</code></pre> 
+<p><code>make docker-start</code> starts <code>provisioner</code> only when <code>config.yaml</code> uses provisioner mode (<code>sandbox.use: deerflow.community.aio_sandbox:AioSandboxProvider</code> with <code>provisioner_url</code>).</p> 
+<p>Backend processes automatically pick up <code>config.yaml</code> changes on the next config access, so model metadata updates do not require a manual restart during development.</p> 
+<blockquote> 
+ <p>[!TIP] On Linux, if Docker-based commands fail with <code>permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock</code>, add your user to the <code>docker</code> group and re-login before retrying. See <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/CONTRIBUTING.md#linux-docker-daemon-permission-denied">CONTRIBUTING.md</a> for the full fix.</p> 
+</blockquote> 
+<p><strong>Production</strong> (builds images locally, mounts runtime config and data):</p> 
+<pre><code class="language-bash">make up     # Build images and start all production services
+make down   # Stop and remove containers
+</code></pre> 
+<blockquote> 
+ <p>[!NOTE] The LangGraph agent server currently runs via <code>langgraph dev</code> (the open-source CLI server).</p> 
+</blockquote> 
+<p>Access: <a href="http://localhost:2026">http://localhost:2026</a></p> 
+<p>See <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for detailed Docker development guide.</p> 
+<h4>Option 2: Local Development</h4> 
+<p>If you prefer running services locally:</p> 
+<p>Prerequisite: complete the "Configuration" steps above first (<code>make config</code> and model API keys). <code>make dev</code> requires a valid configuration file (defaults to <code>config.yaml</code> in the project root; can be overridden via <code>DEER_FLOW_CONFIG_PATH</code>).</p> 
+<ol> 
+ <li> <p><strong>Check prerequisites</strong>:</p> <pre><code class="language-bash">make check  # Verifies Node.js 22+, pnpm, uv, nginx
+</code></pre> </li> 
+ <li> <p><strong>Install dependencies</strong>:</p> <pre><code class="language-bash">make install  # Install backend + frontend dependencies
+</code></pre> </li> 
+ <li> <p><strong>(Optional) Pre-pull sandbox image</strong>:</p> <pre><code class="language-bash"># Recommended if using Docker/Container-based sandbox
+make setup-sandbox
+</code></pre> </li> 
+ <li> <p><strong>Start services</strong>:</p> <pre><code class="language-bash">make dev
+</code></pre> </li> 
+ <li> <p><strong>Access</strong>: <a href="http://localhost:2026">http://localhost:2026</a></p> </li> 
+</ol> 
+<h3>Advanced</h3> 
+<h4>Sandbox Mode</h4> 
+<p>DeerFlow supports multiple sandbox execution modes:</p> 
+<ul> 
+ <li><strong>Local Execution</strong> (runs sandbox code directly on the host machine)</li> 
+ <li><strong>Docker Execution</strong> (runs sandbox code in isolated Docker containers)</li> 
+ <li><strong>Docker Execution with Kubernetes</strong> (runs sandbox code in Kubernetes pods via provisioner service)</li> 
+</ul> 
+<p>For Docker development, service startup follows <code>config.yaml</code> sandbox mode. In Local/Docker modes, <code>provisioner</code> is not started.</p> 
+<p>See the <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/backend/docs/CONFIGURATION.md#sandbox">Sandbox Configuration Guide</a> to configure your preferred mode.</p> 
+<h4>MCP Server</h4> 
+<p>DeerFlow supports configurable MCP servers and skills to extend its capabilities. For HTTP/SSE MCP servers, OAuth token flows are supported (<code>client_credentials</code>, <code>refresh_token</code>). See the <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/backend/docs/MCP_SERVER.md">MCP Server Guide</a> for detailed instructions.</p> 
+<h4>IM Channels</h4> 
+<p>DeerFlow supports receiving tasks from messaging apps. Channels auto-start when configured — no public IP required for any of them.</p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Channel</th> 
+   <th>Transport</th> 
+   <th>Difficulty</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>Telegram</td> 
+   <td>Bot API (long-polling)</td> 
+   <td>Easy</td> 
+  </tr> 
+  <tr> 
+   <td>Slack</td> 
+   <td>Socket Mode</td> 
+   <td>Moderate</td> 
+  </tr> 
+  <tr> 
+   <td>Feishu / Lark</td> 
+   <td>WebSocket</td> 
+   <td>Moderate</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p><strong>Configuration in <code>config.yaml</code>:</strong></p> 
+<pre><code class="language-yaml">channels:
+  # LangGraph Server URL (default: http://localhost:2024)
+  langgraph_url: http://localhost:2024
+  # Gateway API URL (default: http://localhost:8001)
+  gateway_url: http://localhost:8001
+
+  # Optional: global session defaults for all mobile channels
+  session:
+    assistant_id: lead_agent
+    config:
+      recursion_limit: 100
+    context:
+      thinking_enabled: true
+      is_plan_mode: false
+      subagent_enabled: false
+
+  feishu:
+    enabled: true
+    app_id: $FEISHU_APP_ID
+    app_secret: $FEISHU_APP_SECRET
+
+  slack:
+    enabled: true
+    bot_token: $SLACK_BOT_TOKEN     # xoxb-...
+    app_token: $SLACK_APP_TOKEN     # xapp-... (Socket Mode)
+    allowed_users: []               # empty = allow all
+
+  telegram:
+    enabled: true
+    bot_token: $TELEGRAM_BOT_TOKEN
+    allowed_users: []               # empty = allow all
+
+    # Optional: per-channel / per-user session settings
+    session:
+      assistant_id: mobile_agent
+      context:
+        thinking_enabled: false
+      users:
+        "123456789":
+          assistant_id: vip_agent
+          config:
+            recursion_limit: 150
+          context:
+            thinking_enabled: true
+            subagent_enabled: true
+</code></pre> 
+<p>Set the corresponding API keys in your <code>.env</code> file:</p> 
+<pre><code class="language-bash"># Telegram
+TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrSTUvwxYZ
+
+# Slack
+SLACK_BOT_TOKEN=xoxb-...
+SLACK_APP_TOKEN=xapp-...
+
+# Feishu / Lark
+FEISHU_APP_ID=cli_xxxx
+FEISHU_APP_SECRET=your_app_secret
+</code></pre> 
+<p><strong>Telegram Setup</strong></p> 
+<ol> 
+ <li>Chat with <a href="https://t.me/BotFather">@BotFather</a>, send <code>/newbot</code>, and copy the HTTP API token.</li> 
+ <li>Set <code>TELEGRAM_BOT_TOKEN</code> in <code>.env</code> and enable the channel in <code>config.yaml</code>.</li> 
+</ol> 
+<p><strong>Slack Setup</strong></p> 
+<ol> 
+ <li>Create a Slack App at <a href="https://api.slack.com/apps">api.slack.com/apps</a> → Create New App → From scratch.</li> 
+ <li>Under <strong>OAuth &amp; Permissions</strong>, add Bot Token Scopes: <code>app_mentions:read</code>, <code>chat:write</code>, <code>im:history</code>, <code>im:read</code>, <code>im:write</code>, <code>files:write</code>.</li> 
+ <li>Enable <strong>Socket Mode</strong> → generate an App-Level Token (<code>xapp-…</code>) with <code>connections:write</code> scope.</li> 
+ <li>Under <strong>Event Subscriptions</strong>, subscribe to bot events: <code>app_mention</code>, <code>message.im</code>.</li> 
+ <li>Set <code>SLACK_BOT_TOKEN</code> and <code>SLACK_APP_TOKEN</code> in <code>.env</code> and enable the channel in <code>config.yaml</code>.</li> 
+</ol> 
+<p><strong>Feishu / Lark Setup</strong></p> 
+<ol> 
+ <li>Create an app on <a href="https://open.feishu.cn/">Feishu Open Platform</a> → enable <strong>Bot</strong> capability.</li> 
+ <li>Add permissions: <code>im:message</code>, <code>im:message.p2p_msg:readonly</code>, <code>im:resource</code>.</li> 
+ <li>Under <strong>Events</strong>, subscribe to <code>im.message.receive_v1</code> and select <strong>Long Connection</strong> mode.</li> 
+ <li>Copy the App ID and App Secret. Set <code>FEISHU_APP_ID</code> and <code>FEISHU_APP_SECRET</code> in <code>.env</code> and enable the channel in <code>config.yaml</code>.</li> 
+</ol> 
+<p><strong>Commands</strong></p> 
+<p>Once a channel is connected, you can interact with DeerFlow directly from the chat:</p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Command</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>/new</code></td> 
+   <td>Start a new conversation</td> 
+  </tr> 
+  <tr> 
+   <td><code>/status</code></td> 
+   <td>Show current thread info</td> 
+  </tr> 
+  <tr> 
+   <td><code>/models</code></td> 
+   <td>List available models</td> 
+  </tr> 
+  <tr> 
+   <td><code>/memory</code></td> 
+   <td>View memory</td> 
+  </tr> 
+  <tr> 
+   <td><code>/help</code></td> 
+   <td>Show help</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<blockquote> 
+ <p>Messages without a command prefix are treated as regular chat — DeerFlow creates a thread and responds conversationally.</p> 
+</blockquote> 
+<h2>From Deep Research to Super Agent Harness</h2> 
+<p>DeerFlow started as a Deep Research framework — and the community ran with it. Since launch, developers have pushed it far beyond research: building data pipelines, generating slide decks, spinning up dashboards, automating content workflows. Things we never anticipated.</p> 
+<p>That told us something important: DeerFlow wasn't just a research tool. It was a <strong>harness</strong> — a runtime that gives agents the infrastructure to actually get work done.</p> 
+<p>So we rebuilt it from scratch.</p> 
+<p>DeerFlow 2.0 is no longer a framework you wire together. It's a super agent harness — batteries included, fully extensible. Built on LangGraph and LangChain, it ships with everything an agent needs out of the box: a filesystem, memory, skills, sandboxed execution, and the ability to plan and spawn sub-agents for complex, multi-step tasks.</p> 
+<p>Use it as-is. Or tear it apart and make it yours.</p> 
+<h2>Core Features</h2> 
+<h3>Skills &amp; Tools</h3> 
+<p>Skills are what make DeerFlow do <em>almost anything</em>.</p> 
+<p>A standard Agent Skill is a structured capability module — a Markdown file that defines a workflow, best practices, and references to supporting resources. DeerFlow ships with built-in skills for research, report generation, slide creation, web pages, image and video generation, and more. But the real power is extensibility: add your own skills, replace the built-in ones, or combine them into compound workflows.</p> 
+<p>Skills are loaded progressively — only when the task needs them, not all at once. This keeps the context window lean and makes DeerFlow work well even with token-sensitive models.</p> 
+<p>When you install <code>.skill</code> archives through the Gateway, DeerFlow accepts standard optional frontmatter metadata such as <code>version</code>, <code>author</code>, and <code>compatibility</code> instead of rejecting otherwise valid external skills.</p> 
+<p>Tools follow the same philosophy. DeerFlow comes with a core toolset — web search, web fetch, file operations, bash execution — and supports custom tools via MCP servers and Python functions. Swap anything. Add anything.</p> 
+<p>Gateway-generated follow-up suggestions now normalize both plain-string model output and block/list-style rich content before parsing the JSON array response, so provider-specific content wrappers do not silently drop suggestions.</p> 
+<pre><code># Paths inside the sandbox container
+/mnt/skills/public
+├── research/SKILL.md
+├── report-generation/SKILL.md
+├── slide-creation/SKILL.md
+├── web-page/SKILL.md
+└── image-generation/SKILL.md
+
+/mnt/skills/custom
+└── your-custom-skill/SKILL.md      ← yours
+</code></pre> 
+<h4>Claude Code Integration</h4> 
+<p>The <code>claude-to-deerflow</code> skill lets you interact with a running DeerFlow instance directly from <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a>. Send research tasks, check status, manage threads — all without leaving the terminal.</p> 
+<p><strong>Install the skill</strong>:</p> 
+<pre><code class="language-bash">npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow
+</code></pre> 
+<p>Then make sure DeerFlow is running (default at <code>http://localhost:2026</code>) and use the <code>/claude-to-deerflow</code> command in Claude Code.</p> 
+<p><strong>What you can do</strong>:</p> 
+<ul> 
+ <li>Send messages to DeerFlow and get streaming responses</li> 
+ <li>Choose execution modes: flash (fast), standard, pro (planning), ultra (sub-agents)</li> 
+ <li>Check DeerFlow health, list models/skills/agents</li> 
+ <li>Manage threads and conversation history</li> 
+ <li>Upload files for analysis</li> 
+</ul> 
+<p><strong>Environment variables</strong> (optional, for custom endpoints):</p> 
+<pre><code class="language-bash">DEERFLOW_URL=http://localhost:2026            # Unified proxy base URL
+DEERFLOW_GATEWAY_URL=http://localhost:2026    # Gateway API
+DEERFLOW_LANGGRAPH_URL=http://localhost:2026/api/langgraph  # LangGraph API
+</code></pre> 
+<p>See <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/skills/public/claude-to-deerflow/SKILL.md"><code>skills/public/claude-to-deerflow/SKILL.md</code></a> for the full API reference.</p> 
+<h3>Sub-Agents</h3> 
+<p>Complex tasks rarely fit in a single pass. DeerFlow decomposes them.</p> 
+<p>The lead agent can spawn sub-agents on the fly — each with its own scoped context, tools, and termination conditions. Sub-agents run in parallel when possible, report back structured results, and the lead agent synthesizes everything into a coherent output.</p> 
+<p>This is how DeerFlow handles tasks that take minutes to hours: a research task might fan out into a dozen sub-agents, each exploring a different angle, then converge into a single report — or a website — or a slide deck with generated visuals. One harness, many hands.</p> 
+<h3>Sandbox &amp; File System</h3> 
+<p>DeerFlow doesn't just <em>talk</em> about doing things. It has its own computer.</p> 
+<p>Each task runs inside an isolated Docker container with a full filesystem — skills, workspace, uploads, outputs. The agent reads, writes, and edits files. It executes bash commands and codes. It views images. All sandboxed, all auditable, zero contamination between sessions.</p> 
+<p>This is the difference between a chatbot with tool access and an agent with an actual execution environment.</p> 
+<pre><code># Paths inside the sandbox container
+/mnt/user-data/
+├── uploads/          ← your files
+├── workspace/        ← agents' working directory
+└── outputs/          ← final deliverables
+</code></pre> 
+<h3>Context Engineering</h3> 
+<p><strong>Isolated Sub-Agent Context</strong>: Each sub-agent runs in its own isolated context. This means that the sub-agent will not be able to see the context of the main agent or other sub-agents. This is important to ensure that the sub-agent is able to focus on the task at hand and not be distracted by the context of the main agent or other sub-agents.</p> 
+<p><strong>Summarization</strong>: Within a session, DeerFlow manages context aggressively — summarizing completed sub-tasks, offloading intermediate results to the filesystem, compressing what's no longer immediately relevant. This lets it stay sharp across long, multi-step tasks without blowing the context window.</p> 
+<h3>Long-Term Memory</h3> 
+<p>Most agents forget everything the moment a conversation ends. DeerFlow remembers.</p> 
+<p>Across sessions, DeerFlow builds a persistent memory of your profile, preferences, and accumulated knowledge. The more you use it, the better it knows you — your writing style, your technical stack, your recurring workflows. Memory is stored locally and stays under your control.</p> 
+<p>Memory updates now skip duplicate fact entries at apply time, so repeated preferences and context do not accumulate endlessly across sessions.</p> 
+<h2>Recommended Models</h2> 
+<p>DeerFlow is model-agnostic — it works with any LLM that implements the OpenAI-compatible API. That said, it performs best with models that support:</p> 
+<ul> 
+ <li><strong>Long context windows</strong> (100k+ tokens) for deep research and multi-step tasks</li> 
+ <li><strong>Reasoning capabilities</strong> for adaptive planning and complex decomposition</li> 
+ <li><strong>Multimodal inputs</strong> for image understanding and video comprehension</li> 
+ <li><strong>Strong tool-use</strong> for reliable function calling and structured outputs</li> 
+</ul> 
+<h2>Embedded Python Client</h2> 
+<p>DeerFlow can be used as an embedded Python library without running the full HTTP services. The <code>DeerFlowClient</code> provides direct in-process access to all agent and Gateway capabilities, returning the same response schemas as the HTTP Gateway API. The HTTP Gateway also exposes <code>DELETE /api/threads/{thread_id}</code> to remove DeerFlow-managed local thread data after the LangGraph thread itself has been deleted:</p> 
+<pre><code class="language-python">from deerflow.client import DeerFlowClient
+
+client = DeerFlowClient()
+
+# Chat
+response = client.chat("Analyze this paper for me", thread_id="my-thread")
+
+# Streaming (LangGraph SSE protocol: values, messages-tuple, end)
+for event in client.stream("hello"):
+    if event.type == "messages-tuple" and event.data.get("type") == "ai":
+        print(event.data["content"])
+
+# Configuration &amp; management — returns Gateway-aligned dicts
+models = client.list_models()        # {"models": [...]}
+skills = client.list_skills()        # {"skills": [...]}
+client.update_skill("web-search", enabled=True)
+client.upload_files("thread-1", ["./report.pdf"])  # {"success": True, "files": [...]}
+</code></pre> 
+<p>All dict-returning methods are validated against Gateway Pydantic response models in CI (<code>TestGatewayConformance</code>), ensuring the embedded client stays in sync with the HTTP API schemas. See <code>backend/packages/harness/deerflow/client.py</code> for full API documentation.</p> 
+<h2>Documentation</h2> 
+<ul> 
+ <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/CONTRIBUTING.md">Contributing Guide</a> - Development environment setup and workflow</li> 
+ <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/backend/docs/CONFIGURATION.md">Configuration Guide</a> - Setup and configuration instructions</li> 
+ <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/backend/CLAUDE.md">Architecture Overview</a> - Technical architecture details</li> 
+ <li><a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/backend/README.md">Backend Architecture</a> - Backend architecture and API reference</li> 
+</ul> 
+<h2>⚠️ Security Notice</h2> 
+<h3>Improper Deployment May Introduce Security Risks</h3> 
+<p>DeerFlow has key high-privilege capabilities including <strong>system command execution, resource operations, and business logic invocation</strong>, and is designed by default to be <strong>deployed in a local trusted environment (accessible only via the 127.0.0.1 loopback interface)</strong>. If you deploy the agent in untrusted environments — such as LAN networks, public cloud servers, or other multi-endpoint accessible environments — without strict security measures, it may introduce security risks, including:</p> 
+<ul> 
+ <li><strong>Unauthorized illegal invocation</strong>: Agent functionality could be discovered by unauthorized third parties or malicious internet scanners, triggering bulk unauthorized requests that execute high-risk operations such as system commands and file read/write, potentially causing serious security consequences.</li> 
+ <li><strong>Compliance and legal risks</strong>: If the agent is illegally invoked to conduct cyberattacks, data theft, or other illegal activities, it may result in legal liability and compliance risks.</li> 
+</ul> 
+<h3>Security Recommendations</h3> 
+<p><strong>Note: We strongly recommend deploying DeerFlow in a local trusted network environment.</strong> If you need cross-device or cross-network deployment, you must implement strict security measures, such as:</p> 
+<ul> 
+ <li><strong>IP allowlist</strong>: Use <code>iptables</code>, or deploy hardware firewalls / switches with Access Control Lists (ACL), to <strong>configure IP allowlist rules</strong> and deny access from all other IP addresses.</li> 
+ <li><strong>Authentication gateway</strong>: Configure a reverse proxy (e.g., nginx) and <strong>enable strong pre-authentication</strong>, blocking any unauthenticated access.</li> 
+ <li><strong>Network isolation</strong>: Where possible, place the agent and trusted devices in the <strong>same dedicated VLAN</strong>, isolated from other network devices.</li> 
+ <li><strong>Stay updated</strong>: Continue to follow DeerFlow's security feature updates.</li> 
+</ul> 
+<h2>Contributing</h2> 
+<p>We welcome contributions! Please see <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for development setup, workflow, and guidelines.</p> 
+<p>Regression coverage includes Docker sandbox mode detection and provisioner kubeconfig-path handling tests in <code>backend/tests/</code>. Gateway artifact serving now forces active web content types (<code>text/html</code>, <code>application/xhtml+xml</code>, <code>image/svg+xml</code>) to download as attachments instead of inline rendering, reducing XSS risk for generated artifacts.</p> 
+<h2>License</h2> 
+<p>This project is open source and available under the <a href="https://raw.githubusercontent.com/bytedance/deer-flow/main/LICENSE">MIT License</a>.</p> 
+<h2>Acknowledgments</h2> 
+<p>DeerFlow is built upon the incredible work of the open-source community. We are deeply grateful to all the projects and contributors whose efforts have made DeerFlow possible. Truly, we stand on the shoulders of giants.</p> 
+<p>We would like to extend our sincere appreciation to the following projects for their invaluable contributions:</p> 
+<ul> 
+ <li><strong><a href="https://github.com/langchain-ai/langchain">LangChain</a></strong>: Their exceptional framework powers our LLM interactions and chains, enabling seamless integration and functionality.</li> 
+ <li><strong><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></strong>: Their innovative approach to multi-agent orchestration has been instrumental in enabling DeerFlow's sophisticated workflows.</li> 
+</ul> 
+<p>These projects exemplify the transformative power of open-source collaboration, and we are proud to build upon their foundations.</p> 
+<h3>Key Contributors</h3> 
+<p>A heartfelt thank you goes out to the core authors of <code>DeerFlow</code>, whose vision, passion, and dedication have brought this project to life:</p> 
+<ul> 
+ <li><strong><a href="https://github.com/hetaoBackend/">Daniel Walnut</a></strong></li> 
+ <li><strong><a href="https://github.com/magiccube/">Henry Li</a></strong></li> 
+</ul> 
+<p>Your unwavering commitment and expertise have been the driving force behind DeerFlow's success. We are honored to have you at the helm of this journey.</p> 
+<h2>Star History</h2> 
+<p><a href="https://star-history.com/#bytedance/deer-flow&amp;Date"><img alt="Star History Chart" src="https://api.star-history.com/svg?repos=bytedance/deer-flow&amp;type=Date" /></a></p></p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://github.com/Vaibhavs10/insanely-fast-whisper" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">GitHub Trending Daily</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-27</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">Vaibhavs10/insanely-fast-whisper</h3>
+                                        <p class="news-summary"><h1>Insanely Fast Whisper</h1> 
+<p>An opinionated CLI to transcribe Audio files w/ Whisper on-device! Powered by 🤗 <em>Transformers</em>, <em>Optimum</em> &amp; <em>flash-attn</em></p> 
+<p><strong>TL;DR</strong> - Transcribe <strong>150</strong> minutes (2.5 hours) of audio in less than <strong>98</strong> seconds - with <a href="https://huggingface.co/openai/whisper-large-v3">OpenAI's Whisper Large v3</a>. Blazingly fast transcription is now a reality!⚡️</p> 
+<pre><code>pipx install insanely-fast-whisper==0.0.15 --force
+</code></pre> 
+<p align="center"> <img height="308" src="https://huggingface.co/datasets/reach-vb/random-images/resolve/main/insanely-fast-whisper-img.png" width="615" /> </p> 
+<p>Not convinced? Here are some benchmarks we ran on a Nvidia A100 - 80GB 👇</p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Optimisation type</th> 
+   <th>Time to Transcribe (150 mins of Audio)</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>large-v3 (Transformers) (<code>fp32</code>)</td> 
+   <td>~31 (<em>31 min 1 sec</em>)</td> 
+  </tr> 
+  <tr> 
+   <td>large-v3 (Transformers) (<code>fp16</code> + <code>batching [24]</code> + <code>bettertransformer</code>)</td> 
+   <td>~5 (<em>5 min 2 sec</em>)</td> 
+  </tr> 
+  <tr> 
+   <td><strong>large-v3 (Transformers) (<code>fp16</code> + <code>batching [24]</code> + <code>Flash Attention 2</code>)</strong></td> 
+   <td><strong>~2 (<em>1 min 38 sec</em>)</strong></td> 
+  </tr> 
+  <tr> 
+   <td>distil-large-v2 (Transformers) (<code>fp16</code> + <code>batching [24]</code> + <code>bettertransformer</code>)</td> 
+   <td>~3 (<em>3 min 16 sec</em>)</td> 
+  </tr> 
+  <tr> 
+   <td><strong>distil-large-v2 (Transformers) (<code>fp16</code> + <code>batching [24]</code> + <code>Flash Attention 2</code>)</strong></td> 
+   <td><strong>~1 (<em>1 min 18 sec</em>)</strong></td> 
+  </tr> 
+  <tr> 
+   <td>large-v2 (Faster Whisper) (<code>fp16</code> + <code>beam_size [1]</code>)</td> 
+   <td>~9.23 (<em>9 min 23 sec</em>)</td> 
+  </tr> 
+  <tr> 
+   <td>large-v2 (Faster Whisper) (<code>8-bit</code> + <code>beam_size [1]</code>)</td> 
+   <td>~8 (<em>8 min 15 sec</em>)</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p>P.S. We also ran the benchmarks on a <a href="https://raw.githubusercontent.com/Vaibhavs10/insanely-fast-whisper/main/notebooks/">Google Colab T4 GPU</a> instance too!</p> 
+<p>P.P.S. This project originally started as a way to showcase benchmarks for Transformers, but has since evolved into a lightweight CLI for people to use. This is purely community driven. We add whatever community seems to have a strong demand for!</p> 
+<h2>🆕 Blazingly fast transcriptions via your terminal! ⚡️</h2> 
+<p>We've added a CLI to enable fast transcriptions. Here's how you can use it:</p> 
+<p>Install <code>insanely-fast-whisper</code> with <code>pipx</code> (<code>pip install pipx</code> or <code>brew install pipx</code>):</p> 
+<pre><code class="language-bash">pipx install insanely-fast-whisper
+</code></pre> 
+<p>⚠️ If you have python 3.11.XX installed, <code>pipx</code> may parse the version incorrectly and install a very old version of <code>insanely-fast-whisper</code> without telling you (version <code>0.0.8</code>, which won't work anymore with the current <code>BetterTransformers</code>). In that case, you can install the latest version by passing <code>--ignore-requires-python</code> to <code>pip</code>:</p> 
+<pre><code class="language-bash">pipx install insanely-fast-whisper --force --pip-args="--ignore-requires-python"
+</code></pre> 
+<p>If you're installing with <code>pip</code>, you can pass the argument directly: <code>pip install insanely-fast-whisper --ignore-requires-python</code>.</p> 
+<p>Run inference from any path on your computer:</p> 
+<pre><code class="language-bash">insanely-fast-whisper --file-name &lt;filename or URL&gt;
+</code></pre> 
+<p><em>Note: if you are running on macOS, you also need to add <code>--device-id mps</code> flag.</em></p> 
+<p>🔥 You can run <a href="https://huggingface.co/openai/whisper-large-v3">Whisper-large-v3</a> w/ <a href="https://github.com/Dao-AILab/flash-attention">Flash Attention 2</a> from this CLI too:</p> 
+<pre><code class="language-bash">insanely-fast-whisper --file-name &lt;filename or URL&gt; --flash True 
+</code></pre> 
+<p>🌟 You can run <a href="https://huggingface.co/distil-whisper">distil-whisper</a> directly from this CLI too:</p> 
+<pre><code class="language-bash">insanely-fast-whisper --model-name distil-whisper/large-v2 --file-name &lt;filename or URL&gt; 
+</code></pre> 
+<p>Don't want to install <code>insanely-fast-whisper</code>? Just use <code>pipx run</code>:</p> 
+<pre><code class="language-bash">pipx run insanely-fast-whisper --file-name &lt;filename or URL&gt;
+</code></pre> 
+<blockquote> 
+ <p>[!NOTE] The CLI is highly opinionated and only works on NVIDIA GPUs &amp; Mac. Make sure to check out the defaults and the list of options you can play around with to maximise your transcription throughput. Run <code>insanely-fast-whisper --help</code> or <code>pipx run insanely-fast-whisper --help</code> to get all the CLI arguments along with their defaults.</p> 
+</blockquote> 
+<h2>CLI Options</h2> 
+<p>The <code>insanely-fast-whisper</code> repo provides an all round support for running Whisper in various settings. Note that as of today 26th Nov, <code>insanely-fast-whisper</code> works on both CUDA and mps (mac) enabled devices.</p> 
+<pre><code>  -h, --help            show this help message and exit
+  --file-name FILE_NAME
+                        Path or URL to the audio file to be transcribed.
+  --device-id DEVICE_ID
+                        Device ID for your GPU. Just pass the device number when using CUDA, or "mps" for Macs with Apple Silicon. (default: "0")
+  --transcript-path TRANSCRIPT_PATH
+                        Path to save the transcription output. (default: output.json)
+  --model-name MODEL_NAME
+                        Name of the pretrained model/ checkpoint to perform ASR. (default: openai/whisper-large-v3)
+  --task {transcribe,translate}
+                        Task to perform: transcribe or translate to another language. (default: transcribe)
+  --language LANGUAGE   
+                        Language of the input audio. (default: "None" (Whisper auto-detects the language))
+  --batch-size BATCH_SIZE
+                        Number of parallel batches you want to compute. Reduce if you face OOMs. (default: 24)
+  --flash FLASH         
+                        Use Flash Attention 2. Read the FAQs to see how to install FA2 correctly. (default: False)
+  --timestamp {chunk,word}
+                        Whisper supports both chunked as well as word level timestamps. (default: chunk)
+  --hf-token HF_TOKEN
+                        Provide a hf.co/settings/token for Pyannote.audio to diarise the audio clips
+  --diarization_model DIARIZATION_MODEL
+                        Name of the pretrained model/ checkpoint to perform diarization. (default: pyannote/speaker-diarization)
+  --num-speakers NUM_SPEAKERS
+                        Specifies the exact number of speakers present in the audio file. Useful when the exact number of participants in the conversation is known. Must be at least 1. Cannot be used together with --min-speakers or --max-speakers. (default: None)
+  --min-speakers MIN_SPEAKERS
+                        Sets the minimum number of speakers that the system should consider during diarization. Must be at least 1. Cannot be used together with --num-speakers. Must be less than or equal to --max-speakers if both are specified. (default: None)
+  --max-speakers MAX_SPEAKERS
+                        Defines the maximum number of speakers that the system should consider in diarization. Must be at least 1. Cannot be used together with --num-speakers. Must be greater than or equal to --min-speakers if both are specified. (default: None)
+</code></pre> 
+<h2>Frequently Asked Questions</h2> 
+<p><strong>How to correctly install flash-attn to make it work with <code>insanely-fast-whisper</code>?</strong></p> 
+<p>Make sure to install it via <code>pipx runpip insanely-fast-whisper install flash-attn --no-build-isolation</code>. Massive kudos to @li-yifei for helping with this.</p> 
+<p><strong>How to solve an <code>AssertionError: Torch not compiled with CUDA enabled</code> error on Windows?</strong></p> 
+<p>The root cause of this problem is still unknown, however, you can resolve this by manually installing torch in the virtualenv like <code>python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</code>. Thanks to @pto2k for all tdebugging this.</p> 
+<p><strong>How to avoid Out-Of-Memory (OOM) exceptions on Mac?</strong></p> 
+<p>The <em>mps</em> backend isn't as optimised as CUDA, hence is way more memory hungry. Typically you can run with <code>--batch-size 4</code> without any issues (should use roughly 12GB GPU VRAM). Don't forget to set <code>--device-id mps</code>.</p> 
+<h2>How to use Whisper without a CLI?</h2> 
+<details> 
+ All you need to run is the below snippet: 
+ <pre><code>pip install --upgrade transformers optimum accelerate
+</code></pre> 
+ <pre><code class="language-python">import torch
+from transformers import pipeline
+from transformers.utils import is_flash_attn_2_available
+
+pipe = pipeline(
+    "automatic-speech-recognition",
+    model="openai/whisper-large-v3", # select checkpoint from https://huggingface.co/openai/whisper-large-v3#model-details
+    torch_dtype=torch.float16,
+    device="cuda:0", # or mps for Mac devices
+    model_kwargs={"attn_implementation": "flash_attention_2"} if is_flash_attn_2_available() else {"attn_implementation": "sdpa"},
+)
+
+outputs = pipe(
+    "&lt;FILE_NAME&gt;",
+    chunk_length_s=30,
+    batch_size=24,
+    return_timestamps=True,
+)
+
+outputs
+</code></pre> 
+</details> 
+<h2>Acknowledgements</h2> 
+<ol> 
+ <li><a href="https://github.com/openai/whisper">OpenAI Whisper</a> team for open sourcing such a brilliant check point.</li> 
+ <li>Hugging Face Transformers team, specifically <a href="https://github.com/ArthurZucker">Arthur</a>, <a href="https://github.com/patrickvonplaten">Patrick</a>, <a href="https://github.com/sanchit-gandhi">Sanchit</a> &amp; <a href="https://github.com/ylacombe">Yoach</a> (alphabetical order) for continuing to maintain Whisper in Transformers.</li> 
+ <li>Hugging Face <a href="https://github.com/huggingface/optimum">Optimum</a> team for making the BetterTransformer API so easily accessible.</li> 
+ <li><a href="https://github.com/patrick91">Patrick Arminio</a> for helping me tremendously to put together this CLI.</li> 
+</ol> 
+<h2>Community showcase</h2> 
+<ol> 
+ <li>@ochen1 created a brilliant MVP for a CLI here: <a href="https://github.com/ochen1/insanely-fast-whisper-cli">https://github.com/ochen1/insanely-fast-whisper-cli</a> (Try it out now!)</li> 
+ <li>@arihanv created an app (Shush) using NextJS (Frontend) &amp; Modal (Backend): <a href="https://github.com/arihanv/Shush">https://github.com/arihanv/Shush</a> (Check it outtt!)</li> 
+ <li>@kadirnar created a python package on top of the transformers with optimisations: <a href="https://github.com/kadirnar/whisper-plus">https://github.com/kadirnar/whisper-plus</a> (Go go go!!!)</li> 
+</ol></p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">Agent产品</h2>
+                            <span class="section-count">2 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="https://manus.im/zh-cn/blog/manus-joins-meta-for-next-era-of-innovation" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">Manus AI</span>
+                                            <span>·</span>
+                                            
+                                                <span>近期</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">产品·2025年12月29日Manus 加入 Meta，开启新一轮探索Manus 即将加入 Meta，我们将继续稳定提供现有服务并加速迭代，把更强大、可靠的通用 AI Agent 能力带给更多用户与企业。</h3>
+                                        <p class="news-summary">来自 Manus AI 的最新文章</p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://manus.im/zh-cn/blog/manus-meta-ads-manager-connector" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">Manus AI</span>
+                                            <span>·</span>
+                                            
+                                                <span>近期</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">使用 Manus 连接器连接 Meta Ads Manager产品·2026年3月18日</h3>
+                                        <p class="news-summary">来自 Manus AI 的最新文章</p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+        
     </main>
+
+    <footer>
+        <div class="container">
+            <p>数据来源: AI 洞察</p>
+            <p style="margin-top: 8px; opacity: 0.7;">
+                更新时间: 2026-03-27 13:16
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

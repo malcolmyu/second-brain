@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 日报 - 近一周精选</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafafa;
+            --card: #ffffff;
+            --accent: #3b82f6;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 48px 0;
+            margin-bottom: 32px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            h1 {
+                color: #f9fafb;
+            }
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .stats {
+            text-align: right;
+        }
+
+        .stats-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+
+        .stats-label {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .section-count {
+            margin-left: auto;
+            background: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .news-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.2s ease;
+        }
+
+        .news-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .news-card {
+                background: #1f2937;
+                border-color: #374151;
+            }
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .news-source {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .news-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .news-summary {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .news-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .news-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state-text {
+            font-size: 16px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式断点 */
+        @media (max-width: 640px) {
+            .header-content {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .stats {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .stats-value {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 18px;
+            }
+
+            .news-card {
+                padding: 16px;
+            }
+
+            .news-title {
+                font-size: 15px;
+            }
+
+            .news-summary {
+                font-size: 13px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #111827;
+                --card: #1f2937;
+                --text: #f9fafb;
+                --text-secondary: #9ca3af;
+                --border: #374151;
+                --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+            }
+
+            header {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            }
+
+            .news-card {
+                background: var(--card);
+                border-color: var(--border);
+            }
+
+            .news-title {
+                color: var(--text);
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            header {
+                background: none;
+                color: var(--text);
+            }
+
+            .stats-value {
+                color: var(--text);
+            }
+
+            .news-card {
+                box-shadow: none;
+                border: 1px solid var(--border);
+            }
+
+            .news-link {
+                background: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>🤖 AI 日报</h1>
+                    <p class="subtitle">
+                        2026-03-26
+                         - 近一周精选
+                    </p>
+                </div>
+                <div class="stats">
+                    <div class="stats-value">10</div>
+                    <div class="stats-label">条资讯</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">AI框架</h2>
+                            <span class="section-count">2 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">LangChain Blog</span>
+                                        <span>·</span>
+                                        
+                                            <span>2026-03-25</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">Skills in LangSmith Fleet</h3>
+                                    <p class="news-summary">LangSmith Fleet 现在支持共享技能，使团队成员能够为代理配备特定任务的专业知识。这些技能可以通过提示创建，也可以手动创建，还可以从模板或之前的代理对话中生成。共享的技能会自动同步到工作空间，确保所有代理都能访问最新的公司知识。
+
+文章指出，代理的有效性很大程度上依赖于领域知识，而这些知识往往分散在团队成员的头脑和各种文档中。技能的出现旨在将这些隐性知识显性化，使其成为代理可用的资源。一个技能可以包含一系列指令和领域知识，例如支持工单分类标准、品牌语调指南或退款处理流程。代理仅在需要时加载相关技能，从而保持专注和响应迅速。这不仅能帮助新成员更快上手，还能在员工离职时保留宝贵的知识资产。Fleet 提供了多种创建技能的方式，包括利用 AI 进行创建。</p>
+                                    <a href="https://blog.langchain.com/skills-in-langsmith-fleet/" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">LangChain Blog</span>
+                                        <span>·</span>
+                                        
+                                            <span>2026-03-24</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">How Moda Builds Production-Grade AI Design Agents with Deep Agents</h3>
+                                    <p class="news-summary">Moda 是一款面向非设计专业人士的 AI 原生设计平台，旨在帮助营销人员、创始人等用户无需设计背景即可创建专业级演示文稿、社交媒体帖子等。
+
+该平台的核心是一个基于 **Deep Agents** 构建的多智能体系统，并利用 **LangSmith** 提供可观测性，以支持快速迭代和可靠发布。
+
+Moda 面临的挑战在于，与代码生成不同，视觉设计缺乏成熟的抽象表示，导致 AI 难以生成高质量、美观的设计。
+
+Moda 的 AI 系统包含三个智能体：
+1.  **设计智能体**：负责在画布上实时创建和迭代设计。
+2.  **研究智能体**：从外部源提取结构化内容。
+3.  **品牌套件智能体**：整合品牌资产，确保设计符合品牌调性。
+
+其中，研究智能体和品牌套件智能体运行在 **Deep Agents** 上，而设计智能体目前运行在自定义的 LangGraph 循环上，团队正考虑将其迁移至 Deep Agents。</p>
+                                    <a href="https://blog.langchain.com/how-moda-builds-production-grade-ai-design-agents-with-deep-agents/" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">开源项目</h2>
+                            <span class="section-count">3 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">GitHub Trending Daily</span>
+                                        <span>·</span>
+                                        
+                                            <span>2026-03-26</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">mvanhorn/last30days-skill</h3>
+                                    <p class="news-summary">该文章介绍了一个名为 `/last30days` 的 AI Agent 技能，版本为 v2.9.5。该技能旨在帮助用户追踪过去30天内特定主题在 Reddit、X（Twitter）、Bluesky、YouTube、TikTok、Instagram、Hacker News、Polymarket 以及整个网络上的热点讨论和社区共识。
+
+新版本 v2.9.5 增加了对 Bluesky 的支持，并引入了“对比模式”，允许用户比较两个主题的优劣。此外，还改进了配置管理，支持项目级别的 `.env` 文件和启动时的配置校验。
+
+v2.9.1 版本实现了自动保存功能，将每次的研究结果保存为 Markdown 文件到用户文档目录，方便建立个人研究库。v2.9 版本则优化了 Reddit 数据抓取，默认使用 ScrapeCreators 服务，并增加了智能子版块发现和置顶评论的展示。该技能的核心价值在于提供一个“接地气”的、带有真实引用的研究总结，帮助用户快速了解行业最新动态。</p>
+                                    <a href="https://github.com/mvanhorn/last30days-skill" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">GitHub Trending Daily</span>
+                                        <span>·</span>
+                                        
+                                            <span>2026-03-26</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">bytedance/deer-flow</h3>
+                                    <p class="news-summary">DeerFlow 是一个开源的超级代理框架（SuperAgent harness），旨在进行深度探索和高效研究。它通过协调子代理、记忆模块、沙箱环境、可扩展技能和消息网关，能够处理从几分钟到几小时不等、不同复杂程度的任务，实现研究、编码和创作等功能。DeerFlow 2.0 是一个重写版本，与 v1 版本不共享代码，其活跃开发已转移至 2.0 版本。该项目在 GitHub 上获得了广泛关注，并推出了官方网站提供更多信息和演示。</p>
+                                    <a href="https://github.com/bytedance/deer-flow" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">GitHub Trending Daily</span>
+                                        <span>·</span>
+                                        
+                                            <span>2026-03-26</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">letta-ai/claude-subconscious</h3>
+                                    <p class="news-summary">Claude Subconscious 是一个实验性的后台代理，旨在解决 Claude Code 在会话间遗忘的问题。它通过 Letta 的内存系统、工具访问和上下文工程来增强 Claude Code 的能力。
+
+该代理会监控 Claude Code 的会话记录，并读取用户的代码库，利用 Read、Grep 和 Glob 等工具进行探索。它能够跨会话、项目和时间累积记忆，并在每次提示前“低语”提供上下文、模式和提醒，从而引导 Claude Code。Claude Subconscious 运行在后台，不会阻塞用户，并且可以通过 Letta 的 Conversations 功能实现跨多个 Claude Code 会话的共享内存。其工作流程是在每次 Claude Code 响应后，将对话记录发送给 Letta 代理，代理更新内存并准备下一次的提示。
+
+文章同时推荐了完全开源、内存优先且模型无关的 Letta Code 作为替代方案。</p>
+                                    <a href="https://github.com/letta-ai/claude-subconscious" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">综合资讯</h2>
+                            <span class="section-count">3 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">WeChat 2</span>
+                                        <span>·</span>
+                                        
+                                            <span>2026-03-25</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">谷歌迎来“DeepSeek时刻”！TurboQuant引爆AI圈、全球开发者疯狂复现：6倍无损压缩，内存股集体暴跌</h3>
+                                    <p class="news-summary">谷歌研究院发布了名为 TurboQuant 的 AI 模型压缩算法，该技术能够显著降低大语言模型（LLM）运行时的内存占用，同时保持模型性能和准确性不变。TurboQuant 主要通过优化键值缓存（KV cache）实现，可将内存占用压缩至少 6 倍，并在特定硬件上实现最高 8 倍的速度提升，从而大幅降低 AI 运行成本。
+
+该算法的关键亮点在于实现了“精度零损失”，无需微调或训练数据即可直接应用于 Transformer 模型。TurboQuant 的出现被一些业内人士誉为谷歌的“DeepSeek 时刻”，预示着 AI 效率的重大飞跃。该技术的发布已对内存相关股票产生影响，引发了市场对未来 AI 行业内存需求可能减少的担忧。</p>
+                                    <a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247659871&idx=1&sn=34565e9adc9a8e9e417056cf3d013115" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">WeChat 2</span>
+                                        <span>·</span>
+                                        
+                                            <span>2026-03-25</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">35 年只卖设计，今天亲自下场造芯！Arm 首款自研芯片发布，Meta 抢下首单</h3>
+                                    <p class="news-summary">Arm 公司在成立 36 年后，首次打破了仅授权芯片设计的传统模式，正式发布了首款自研芯片 Arm AGI CPU。这款芯片基于 Arm 自家的 Neoverse 系列 CPU IP 内核开发，并与 Meta 合作完成，专为 AI 数据中心的推理场景设计，可直接量产。Meta 已成为 Arm AGI CPU 的首位客户，该芯片旨在与 Meta 的 AI 加速器协同工作。
+
+Arm AGI CPU 的推出标志着其向自研自产芯片领域的历史性转变，未来将与众多合作伙伴展开直接竞争。文章还探讨了代理式 AI 基础设施的兴起，强调了 CPU 在管理分布式 AI 系统、协调加速器、调度任务等方面的关键作用，以及 Arm AGI CPU 为满足这些新需求而进行的优化设计。该芯片在高密度机架部署下，能提供强大的并行计算能力和高能效表现。</p>
+                                    <a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247659871&idx=2&sn=718585d4cfa572fdf029e926fb1d4f30" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">WeChat 2</span>
+                                        <span>·</span>
+                                        
+                                            <span>2026-03-25</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">《中国金融机构人才发展与培训白皮书（2026）》发布！助力金融机构打造“人 + 智能体”协同的超级员工梯队 | 极客时间企业版</h3>
+                                    <p class="news-summary">《中国金融机构人才发展与培训白皮书（2026）》指出，AI时代正深刻变革金融人才培养模式，从“课程交付”转向“生产力跃迁”。金融机构需打造“人+智能体”协同的超级员工梯队，以应对数智化转型挑战。
+
+白皮书基于调研发现，AI在金融培训中的渗透率预计将显著提升。当前，金融机构对人才的需求已从“懂金融”转变为“懂金融、懂技术、懂AI”的复合型人才，AI能力成为关键“硬通货”。建设金融强国对人才队伍提出了“政治过硬、能力过硬、作风过硬”的要求。
+
+白皮书强调，AI在金融培训中的应用正从“试用期”进入“效能期”，未来1-3年渗透率将大幅提高。金融机构倾向于集成成熟AI模块，而非从零自研，AI智能陪练等工具能有效解决新人培养和话术演练难题，实现降本增效。</p>
+                                    <a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247659871&idx=3&sn=f5b9d8771489bfe0cbb466baebe1d8f0" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">Agent产品</h2>
+                            <span class="section-count">2 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">Manus AI</span>
+                                        <span>·</span>
+                                        
+                                            <span>近期</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">产品·2025年12月29日Manus 加入 Meta，开启新一轮探索Manus 即将加入 Meta，我们将继续稳定提供现有服务并加速迭代，把更强大、可靠的通用 AI Agent 能力带给更多用户与企业。</h3>
+                                    <p class="news-summary">Manus AI 即将加入 Meta，标志着其在通用人工智能（AI）Agent 领域的新一轮探索。此次合并将使 Manus AI 能够利用 Meta 的资源和平台，进一步加速其 AI Agent 能力的研发和迭代。 Manus AI 承诺，在加入 Meta 后，将继续稳定地为现有用户提供服务，并致力于将更强大、更可靠的通用 AI Agent 能力推广给更广泛的用户群体和企业。此次合作预示着 AI Agent 技术将迎来新的发展机遇，有望为用户和企业带来更智能化的解决方案。</p>
+                                    <a href="https://manus.im/zh-cn/blog/manus-joins-meta-for-next-era-of-innovation" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                                <article class="news-card">
+                                    <div class="news-meta">
+                                        <span class="news-source">Manus AI</span>
+                                        <span>·</span>
+                                        
+                                            <span>近期</span>
+                                        
+                                    </div>
+                                    <h3 class="news-title">使用 Manus 连接器连接 Meta Ads Manager产品·2026年3月18日</h3>
+                                    <p class="news-summary">Manus AI 发布了一篇关于使用 Manus 连接器连接 Meta Ads Manager 的文章。该连接器旨在简化广告管理流程，使用户能够更有效地管理其 Meta（Facebook）广告活动。文章可能详细介绍了连接器的功能、设置步骤以及它如何帮助用户优化广告投放、监测效果和分析数据。核心要点在于 Manus 连接器为 Meta Ads Manager 用户提供了一个更便捷、高效的工具，以提升广告营销的整体表现。</p>
+                                    <a href="https://manus.im/zh-cn/blog/manus-meta-ads-manager-connector" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        阅读原文 →
+                                    </a>
+                                </article>
+                            
+                        </div>
+                    </section>
+                
+            
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>数据来源: AI 洞察</p>
+            <p style="margin-top: 8px; opacity: 0.7;">
+                更新时间: 2026-03-26 20:05
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

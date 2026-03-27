@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 日报 - 2026-03-17</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafafa;
+            --card: #ffffff;
+            --accent: #3b82f6;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 48px 0;
+            margin-bottom: 32px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .stats {
+            text-align: right;
+        }
+        
+        .stats-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+        
+        .stats-label {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .section-count {
+            margin-left: auto;
+            background: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .news-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.2s ease;
+        }
+        
+        .news-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+        
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .news-source {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .news-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text);
+            line-height: 1.4;
+        }
+        
+        .news-summary {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+        
+        .news-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .news-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        @media (max-width: 640px) {
+            .header-content {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+            
+            .stats {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>🤖 AI 日报</h1>
+                    <p class="subtitle">2026-03-17 · 近一周精选</p>
+                </div>
+                <div class="stats">
+                    <div class="stats-value">58</div>
+                    <div class="stats-label">条资讯</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Agent & 应用</h2>
+            <span class="section-count">10 条</span>
+        </div>
+        <div class="news-list">
+            
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">OpenAI News</span>
+                <span>·</span>
+                <span>Wed, 11 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Designing AI agents to resist prompt injection</h3>
+            <p class="news-summary">该文章讨论了ChatGPT如何通过限制风险操作和在代理工作流程中保护敏感数据来防御提示注入和社交工程。核心在于设计AI代理，使其能够抵御恶意指令，维护系统安全和数据隐私。</p>
+            <a href="https://openai.com/index/designing-agents-to-resist-prompt-injection" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">LangChain Blog</span>
+                <span>·</span>
+                <span>Mon, 16 Mar 2026</span>
+            </div>
+            <h3 class="news-title">LangChain Announces Enterprise Agentic AI Platform Built with NVIDIA</h3>
+            <p class="news-summary">LangChain宣布与NVIDIA合作推出企业级Agentic AI平台。该平台旨在帮助企业大规模构建、部署和监控生产级AI代理，结合了LangChain的Agent工程能力与NVIDIA的AI技术。</p>
+            <a href="https://blog.langchain.com/nvidia-enterprise/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">宝玉 (中文)</span>
+                <span>·</span>
+                <span>Wed, 11 Mar 2026</span>
+            </div>
+            <h3 class="news-title">编程 Agent 如何重塑工程、产品和设计</h3>
+            <p class="news-summary">编程 Agent 的兴起极大地简化了代码编写过程，预示着工程、产品和设计（EPD）领域将迎来深刻变革。PRD（产品需求文档）或将过时，瓶颈从具体实现转向更为重要的评审环节。在此背景下，具备多领域知识的“通才”将变得比以往任何时候都更有价值。</p>
+            <a href="https://baoyu.io/translations/2026-03-11/coding-agents-reshaping-epd" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Tw93</span>
+                <span>·</span>
+                <span>2026-03-12</span>
+            </div>
+            <h3 class="news-title">你不知道的 Claude Code：架构、治理与工程实践</h3>
+            <p class="news-summary">这篇文章基于作者深度使用Claude Code的经验，指出其上下文管理混乱、工具效果不佳等问题并非Prompt原因，而是源于系统设计。文章将深入探讨Claude Code的底层架构、上下文治理、Skills与Hooks设计、Subagents应用、Prompt Caching及其对CLAUDE.md编写的影响。</p>
+            <a href="https://tw93.fun/2026-03-12/claude.html" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">GitHub Trending</span>
+                <span>·</span>
+                <span></span>
+            </div>
+            <h3 class="news-title">obra/superpowers</h3>
+            <p class="news-summary">`obra/superpowers` 是一个代理技能框架和软件开发方法论。它为编码代理提供了一套完整的软件开发流程，其核心在于可组合的“技能”和指导代理使用这些技能的初始指令。</p>
+            <a href="https://github.com/obra/superpowers" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">OpenAI News</span>
+                <span>·</span>
+                <span>Wed, 11 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Rakuten fixes issues twice as fast with Codex</h3>
+            <p class="news-summary">Rakuten 采用 OpenAI 的编码代理 Codex，显著提升了软件交付效率和安全性。通过集成 Codex，公司将平均恢复时间 (MTTR) 缩短了50%，并实现了CI/CD审查的自动化。这使得Rakuten能够大幅加速开发周期，在数周内完成全栈构建。</p>
+            <a href="https://openai.com/index/rakuten" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">LangChain Blog</span>
+                <span>·</span>
+                <span>Mon, 16 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Introducing deploy cli</h3>
+            <p class="news-summary">Langgraph-cli 新推出了 &quot;deploy cli&quot; 系列命令，旨在简化从命令行部署和管理代理的过程。其中首个命令 &quot;langgraph deploy&quot; 允许用户将代理直接部署到 LangSmith Deployment。</p>
+            <a href="https://blog.langchain.com/introducing-deploy-cli/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">LangChain Blog</span>
+                <span>·</span>
+                <span>Wed, 11 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Autonomous context compression</h3>
+            <p class="news-summary">Deep Agents SDK（Python）及其CLI新增了一项名为“自主上下文压缩”的工具。该工具允许模型在适当的时机自动压缩其上下文窗口，旨在减少代理工作内存中的信息量。通过用压缩版本替换旧消息，此功能提升了效率。</p>
+            <a href="https://blog.langchain.com/autonomous-context-compression/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">One Useful Thing</span>
+                <span>·</span>
+                <span>Wed, 18 Feb 2026</span>
+            </div>
+            <h3 class="news-title">A Guide to Which AI to Use in the Agentic Era</h3>
+            <p class="news-summary">文章标题“A Guide to Which AI to Use in the Agentic Era”和内容“It&#x27;s not just chatbots anymore”指出，人工智能已超越传统聊天机器人，进入了“智能体时代”。这意味着现在需要理解并选择适合不同任务的AI类型，以应对AI应用日益复杂和多样化的新趋势。</p>
+            <a href="https://www.oneusefulthing.org/p/a-guide-to-which-ai-to-use-in-the" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">One Useful Thing</span>
+                <span>·</span>
+                <span>Tue, 27 Jan 2026</span>
+            </div>
+            <h3 class="news-title">Management as AI superpower</h3>
+            <p class="news-summary">标题“管理即AI超能力”和内容“在智能体世界中蓬勃发展”强调了在人工智能（AI）日益普及的时代，管理层应将AI视为核心优势。文章的核心观点是，组织需要适应并学习如何在AI智能体主导的环境中有效运作和发展，从而利用AI的潜力实现更大的成功。这表明了管理策略需要转型，以充分利用和整合AI智能体。</p>
+            <a href="https://www.oneusefulthing.org/p/management-as-ai-superpower" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">AI 编程工具</h2>
+            <span class="section-count">5 条</span>
+        </div>
+        <div class="news-list">
+            
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">宝玉 (中文)</span>
+                <span>·</span>
+                <span>Mon, 16 Mar 2026</span>
+            </div>
+            <h3 class="news-title">智能体工程的 8 个等级</h3>
+            <p class="news-summary">AI 的编程能力正在超越我们驾驭它的能力，而弥合这个差距需要一步步来——总共 8 个等级。从 Tab 补全到自主智能体团队，这是完整的进阶之路。</p>
+            <a href="https://baoyu.io/translations/2026-03-11/levels-of-agentic-engineering" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">宝玉 (中文)</span>
+                <span>·</span>
+                <span>Wed, 11 Mar 2026</span>
+            </div>
+            <h3 class="news-title">当 AI 写了几乎所有代码，软件工程会怎样？</h3>
+            <p class="news-summary">资深工程师们纷纷经历&quot;顿悟时刻&quot;——AI 编码能力已跨过质变门槛，写代码的价值在下降，但软件&quot;工程&quot;的价值在上升。</p>
+            <a href="https://baoyu.io/translations/2026-01-07/ai-writes-most-code" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Alignment Forum</span>
+                <span>·</span>
+                <span>Fri, 13 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Power Steering: Behavior Steering via Layer-to-Layer Jacobian Singular Vectors</h3>
+            <p class="news-summary">cross-posted from my blog TLDR The map of how the activations of one ‘source’ layer in an LLM impact the activations in some later ‘target’ layer can ...</p>
+            <a href="https://www.alignmentforum.org/posts/EAE9u4YnE75eoiWDg/power-steering-behavior-steering-via-layer-to-layer-jacobian" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Stanford AI Lab</span>
+                <span>·</span>
+                <span>Wed, 25 May 2022</span>
+            </div>
+            <h3 class="news-title">Stanford AI Lab Papers and Talks at ACL 2022</h3>
+            <p class="news-summary">&lt;p&gt;&lt;img class=&quot;postimage_75&quot; src=&quot;/blog/assets/img/posts/2022-05-25-acl-2022/logo.png&quot; /&gt;&lt;/p&gt; &lt;p&gt;The &lt;a href=&quot;https://www.2022.aclweb.org/&quot;&gt;60th Annua...</p>
+            <a href="/blog/acl-2022/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Stanford AI Lab</span>
+                <span>·</span>
+                <span>Mon, 25 Apr 2022</span>
+            </div>
+            <h3 class="news-title">Stanford AI Lab Papers and Talks at ICLR 2022</h3>
+            <p class="news-summary">&lt;p&gt;&lt;img class=&quot;postimage_75&quot; src=&quot;/blog/assets/img/posts/2022-04-25-iclr-2022/logo.png&quot; /&gt;&lt;/p&gt; &lt;p&gt;The &lt;a href=&quot;https://iclr.cc&quot;&gt;International Conferen...</p>
+            <a href="/blog/iclr-2022/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">其他动态</h2>
+            <span class="section-count">10 条</span>
+        </div>
+        <div class="news-list">
+            
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Last Week in AI</span>
+                <span>·</span>
+                <span>Fri, 13 Mar 2026</span>
+            </div>
+            <h3 class="news-title">LWiAI Podcast #236 - GPT 5.4, Gemini 3.1 Flash Lite, Supply Chain Risk</h3>
+            <p class="news-summary">OpenAI launches GPT-5.4 with Pro and Thinking versions, Google releases Gemini 3.1 Flash Lite at 1/8th the cost of Pro, Where things stand with the De...</p>
+            <a href="https://lastweekin.ai/p/lwiai-podcast-236-gpt-54-gemini-31" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Stephen Wolfram</span>
+                <span>·</span>
+                <span>Wed, 04 Feb 2026</span>
+            </div>
+            <h3 class="news-title">What Ultimately Is There? Metaphysics and the Ruliad</h3>
+            <p class="news-summary">The Wolfram Institute recently received a grant from the Templeton World Charity Foundation for “Computational Metaphysics”. I wrote this piece in par...</p>
+            <a href="https://writings.stephenwolfram.com/2026/02/what-ultimately-is-there-metaphysics-and-the-ruliad/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">OpenAI News</span>
+                <span>·</span>
+                <span>Mon, 16 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Why Codex Security Doesn’t Include a SAST Report</h3>
+            <p class="news-summary">A deep dive into why Codex Security doesn’t rely on traditional SAST, instead using AI-driven constraint reasoning and validation to find real vulnera...</p>
+            <a href="https://openai.com/index/why-codex-security-doesnt-include-sast" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Google AI Blog</span>
+                <span>·</span>
+                <span>Thu, 12 Mar 2026</span>
+            </div>
+            <h3 class="news-title">How AI is helping improve heart health in rural Australia</h3>
+            <p class="news-summary">&lt;img src=&quot;https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIHealth_v2_2096x1182_02.max-600x600.format-webp.webp&quot;&gt;A new Google AI initi...</p>
+            <a href="https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Google AI Blog</span>
+                <span>·</span>
+                <span>Tue, 10 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Gemini in Google Sheets just achieved state-of-the-art performance.</h3>
+            <p class="news-summary">&lt;img src=&quot;https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Workspace_Jan_Moment_Sheets_Blo.max-600x600.format-webp.webp&quot;&gt;Today we annou...</p>
+            <a href="https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Google AI Blog</span>
+                <span>·</span>
+                <span>Fri, 06 Mar 2026</span>
+            </div>
+            <h3 class="news-title">How our open-source AI model SpeciesNet is helping to promote wildlife conservation</h3>
+            <p class="news-summary">&lt;img src=&quot;https://storage.googleapis.com/gweb-uniblog-publish-prod/images/specieshero_v2.max-600x600.format-webp.webp&quot;&gt;An overview of SpeciesNet, our ...</p>
+            <a href="https://blog.google/company-news/outreach-and-initiatives/sustainability/speciesnet-open-source-ai-wildlife/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Hugging Face Blog</span>
+                <span>·</span>
+                <span>Mon, 16 Mar 2026</span>
+            </div>
+            <h3 class="news-title">The First Healthcare Robotics Dataset and Foundational Physical AI Models for Healthcare Robotics</h3>
+            <p class="news-summary">...</p>
+            <a href="https://huggingface.co/blog/nvidia/physical-ai-for-healthcare-robotics" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Hugging Face Blog</span>
+                <span>·</span>
+                <span>Tue, 10 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Introducing Storage Buckets on the Hugging Face Hub</h3>
+            <p class="news-summary">...</p>
+            <a href="https://huggingface.co/blog/storage-buckets" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Hugging Face Blog</span>
+                <span>·</span>
+                <span>Tue, 10 Mar 2026</span>
+            </div>
+            <h3 class="news-title">Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries</h3>
+            <p class="news-summary">...</p>
+            <a href="https://huggingface.co/blog/async-rl-training-landscape" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-source">Stanford AI Lab</span>
+                <span>·</span>
+                <span>Tue, 31 May 2022</span>
+            </div>
+            <h3 class="news-title">LinkBERT: Improving Language Model Training with Document Link</h3>
+            <p class="news-summary">&lt;h3 id=&quot;language-model-pretraining&quot;&gt;&lt;strong&gt;Language Model Pretraining&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Language models (LMs), like BERT &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-n...</p>
+            <a href="/blog/linkbert/" class="news-link" target="_blank">
+                阅读原文 →
+            </a>
+        </article>
+        
+        </div>
+    </section>
+    
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>数据来源: <a href="https://xiaoxiong20260206.github.io/ai-insight/" target="_blank" style="color:var(--accent);">AI 洞察</a> · 
+               更新时间: 2026-03-17 17:59</p>
+        </div>
+    </footer>
+</body>
+</html>

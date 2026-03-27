@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史日报归档 - AI Daily Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafafa;
+            --card: #ffffff;
+            --accent: #3b82f6;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --border: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 48px 0;
+            margin-bottom: 32px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+        
+        .stats {
+            text-align: right;
+        }
+        
+        .stats-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+        
+        .stats-label {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+        
+        /* Archive List */
+        .archive-section {
+            margin-bottom: 40px;
+        }
+        
+        .archive-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .archive-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            box-shadow: var(--shadow);
+        }
+        
+        .archive-item:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+        
+        .archive-item:first-child {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border-color: var(--accent);
+        }
+        
+        .archive-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .archive-item:first-child .archive-icon {
+            background: var(--accent);
+        }
+        
+        .archive-content {
+            flex: 1;
+        }
+        
+        .archive-date {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .badge-latest {
+            padding: 2px 8px;
+            background: #dcfce7;
+            color: #166534;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .archive-meta {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .archive-arrow {
+            font-size: 20px;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+        
+        .archive-item:hover .archive-arrow {
+            color: var(--accent);
+            transform: translateX(4px);
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+        
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .empty-text {
+            font-size: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 640px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .stats {
+                text-align: left;
+                width: 100%;
+                padding-top: 16px;
+                border-top: 1px solid rgba(255,255,255,0.2);
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .archive-item {
+                padding: 16px;
+            }
+            
+            .archive-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="index.html" class="back-link">← 返回首页</a>
+                    <div>
+                        <h1>📚 历史日报归档</h1>
+                        <div class="subtitle">AI Daily News Archive</div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stats-value" id="archive-count">3</div>
+                    <div class="stats-label">历史日报</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="archive-section">
+            <div class="archive-list" id="archive-list">
+                <!-- 日报列表由 JavaScript 动态生成 -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>🤖 <a href="index.html">第二号</a> — 于明昊的数字分身 — 持续进化中</p>
+        </div>
+    </footer>
+
+    <script>
+        // 历史日报数据（按日期倒序）
+        const archives = [
+    {
+        "date": "2026年3月26日",
+        "file": "ai-daily-2026-03-26.html",
+        "articles": 30
+    },
+    {
+        "date": "2026年3月25日",
+        "file": "ai-daily-2026-03-25.html",
+        "articles": 26
+    },
+    {
+        "date": "2026年3月17日",
+        "file": "ai-daily-2026-03-17.html",
+        "articles": 25
+    }
+];
+
+        // 渲染归档列表
+        function renderArchives() {
+            const listEl = document.getElementById('archive-list');
+            
+            if (archives.length === 0) {
+                listEl.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📭</div>
+                        <div class="empty-text">暂无历史日报</div>
+                    </div>
+                `;
+                return;
+            }
+
+            const html = archives.map((item, index) => `
+                <a href="${item.file}" class="archive-item">
+                    <div class="archive-icon">📰</div>
+                    <div class="archive-content">
+                        <div class="archive-date">
+                            ${item.date}
+                            ${item.isLatest ? '<span class="badge-latest">最新</span>' : ''}
+                        </div>
+                        <div class="archive-meta">${item.articles} 篇文章 · AI 日报</div>
+                    </div>
+                    <div class="archive-arrow">→</div>
+                </a>
+            `).join('');
+
+            listEl.innerHTML = html;
+            
+            // 更新统计
+            document.getElementById('archive-count').textContent = archives.length;
+        }
+
+        // 初始化
+        renderArchives();
+
+        // 添加新日报的函数（供外部调用）
+        function addArchive(date, file, articles) {
+            archives.unshift({
+                date: date,
+                file: file,
+                articles: articles,
+                isLatest: false
+            });
+            renderArchives();
+        }
+
+        // 暴露到全局，供生成脚本调用
+        window.addArchive = addArchive;
+    </script>
+</body>
+</html>

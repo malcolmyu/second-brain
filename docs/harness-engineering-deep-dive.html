@@ -37,7 +37,7 @@
         /* Content */
         main { padding: 48px 0; }
         .section { margin-bottom: 64px; }
-        h2 { font-size: 28px; font-weight: 700; margin-bottom: 24px; color: var(--text); border-bottom: 2px solid var(--border); padding-bottom: 12px; }
+        h2 { font-size: 28px; font-weight: 700; margin-top: 48px; margin-bottom: 24px; color: var(--text); border-bottom: 2px solid var(--border); padding-bottom: 12px; }
         h3 { font-size: 20px; font-weight: 600; margin: 32px 0 16px; color: var(--text); }
         h4 { font-size: 16px; font-weight: 600; margin: 24px 0 12px; color: var(--text-secondary); }
         p { margin-bottom: 16px; color: var(--text-secondary); }
@@ -473,6 +473,57 @@
                 <li>从 Review 代码到 Review 交互和测试</li>
                 <li>Agent 在独立沙盒工作，只交换结构化摘要</li>
             </ul>
+
+            <h3>案例 4：字节 DeerFlow - 开源 Super Agent Harness</h3>
+            <div class="card">
+                <div class="card-title">项目概况</div>
+                <ul>
+                    <li><strong>发布时间</strong>：2026年2月28日（GitHub Trending #1）</li>
+                    <li><strong>定位</strong>：开源长时程 Super Agent Harness</li>
+                    <li><strong>核心能力</strong>：研究、编码、创作一体化</li>
+                    <li><strong>技术栈</strong>：Sandboxes + Memories + Tools + Skills + Sub-agents + Message Gateway</li>
+                </ul>
+            </div>
+
+            <h4>架构特点</h4>
+            <p>DeerFlow (Deep Exploration and Efficient Research Flow) 是一个典型的 Harness Engineering 实现：</p>
+            <ol>
+                <li><strong>多层级 Agent 协作</strong>
+                    <ul>
+                        <li>Orchestrator：任务编排与分发</li>
+                        <li>Sub-agents：独立沙盒执行具体任务</li>
+                        <li>工具层：MCP Server 提供原子能力</li>
+                    </ul>
+                </li>
+                <li><strong>完整的上下文治理</strong>
+                    <ul>
+                        <li>长期记忆（Long-term Memory）：跨会话保持上下文</li>
+                        <li>结构化通信：Agent 间通过消息网关交换摘要</li>
+                        <li>Context Engineering：优化的上下文布局策略</li>
+                    </ul>
+                </li>
+                <li><strong>闭环验证系统</strong>
+                    <ul>
+                        <li>Sandbox 隔离：每个任务在独立沙盒执行</li>
+                        <li>文件系统管理：统一的文件读写接口</li>
+                        <li>Claude Code 集成：支持主流 Coding Agent 接入</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4>推荐模型与生态</h4>
+            <p>DeerFlow 官方推荐使用的模型：</p>
+            <ul>
+                <li>Doubao-Seed-2.0-Code（豆包代码模型）</li>
+                <li>DeepSeek v3.2</li>
+                <li>Kimi 2.5</li>
+            </ul>
+            <p>同时集成了字节自研的智能搜索爬取工具集 <a href="https://docs.byteplus.com/en/docs/InfoQuest/What_is_Info_Quest" target="_blank">InfoQuest</a>。</p>
+
+            <h4>工程启示</h4>
+            <div class="highlight">
+                <p style="margin:0;"><strong>DeerFlow 验证了 Harness Engineering 的可落地性：</strong>通过系统化的沙箱、记忆、工具和子智能体架构，实现从 Deep Research 到 Super Agent Harness 的演进，支持分钟到小时级的长时程任务。</p>
+            </div>
         </section>
 
         <!-- 结论 -->

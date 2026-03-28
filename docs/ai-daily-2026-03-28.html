@@ -89,6 +89,25 @@
             font-weight: 600;
         }
         
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            transition: all 0.2s;
+            margin-bottom: 16px;
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
         .section-count {
             margin-left: auto;
             background: var(--bg);
@@ -191,6 +210,7 @@
 <body>
     <header>
         <div class="container">
+            <a href="ai-daily-latest.html" class="back-button">← 返回日报首页</a>
             <div class="header-content">
                 <div>
                     <h1>🤖 AI 日报</h1>
@@ -627,8 +647,7 @@
 
     <footer>
         <div class="container">
-            <p>数据来源: <a href="https://xiaoxiong20260206.github.io/ai-insight/" target="_blank" style="color:var(--accent);">AI 洞察</a> · 
-               更新时间: 2026-03-28 20:27</p>
+            <p>更新时间: 2026-03-28 20:33</p>
         </div>
     </footer>
 </body>

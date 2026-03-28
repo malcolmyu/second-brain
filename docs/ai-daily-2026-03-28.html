@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 日报 - 2026-03-28</title>
+    <title>AI 日报 - 近一周精选</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,53 +13,78 @@
             --text: #1f2937;
             --text-secondary: #6b7280;
             --border: #e5e7eb;
-            --shadow: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         header {
             background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
             color: white;
             padding: 48px 0;
             margin-bottom: 32px;
         }
+
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
-        .subtitle { font-size: 14px; opacity: 0.8; }
-        .stats { text-align: right; }
-        .stats-value { font-size: 36px; font-weight: 700; color: #60a5fa; }
-        .stats-label { font-size: 12px; opacity: 0.7; }
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 8px;
-            transition: all 0.2s;
-            margin-bottom: 16px;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
-        .back-button:hover { background: rgba(255, 255, 255, 0.25); }
-        .section { margin-bottom: 40px; }
+
+        @media (prefers-color-scheme: dark) {
+            h1 {
+                color: #f9fafb;
+            }
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .stats {
+            text-align: right;
+        }
+
+        .stats-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+
+        .stats-label {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
         .section-header {
             display: flex;
             align-items: center;
@@ -68,7 +93,12 @@
             padding-bottom: 12px;
             border-bottom: 2px solid var(--border);
         }
-        .section-title { font-size: 20px; font-weight: 600; }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
         .section-count {
             margin-left: auto;
             background: var(--bg);
@@ -77,432 +107,498 @@
             font-size: 13px;
             color: var(--text-secondary);
         }
-        .news-list { display: flex; flex-direction: column; gap: 16px; }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .news-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        /* 摘要中的列表样式 */
+        .news-summary ul,
+        .news-summary ol {
+            padding-left: 0;
+            margin: 12px 0;
+            list-style: none;
+        }
+
+        .news-summary li {
+            position: relative;
+            padding-left: 24px;
+            margin: 6px 0;
+            line-height: 1.6;
+        }
+
+        /* 无序列表 - 使用圆点 */
+        .news-summary ul li::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        /* 有序列表 - 使用数字卡片 */
+        .news-summary ol {
+            counter-reset: item;
+        }
+
+        .news-summary ol li {
+            counter-increment: item;
+        }
+
+        .news-summary ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            color: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* 标题样式 */
+        .news-summary h1,
+        .news-summary h2,
+        .news-summary h3,
+        .news-summary h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 16px 0 8px 0;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        /* 强调文本 */
+        .news-summary strong,
+        .news-summary b {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* 段落间距 */
+        .news-summary p {
+            margin: 8px 0;
+        }
+
         .news-card {
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 16px;
+            padding: 24px;
             box-shadow: var(--shadow);
             transition: all 0.2s ease;
         }
+
         .news-card:hover {
             box-shadow: var(--shadow-hover);
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+            border-color: var(--accent);
         }
+
+        .news-card:hover .news-title {
+            color: var(--accent);
+        }
+
+        /* 特色卡片 - 如果文章内容较长 */
+        .news-card.featured {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border-color: #dbeafe;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .news-card {
+                background: #1f2937;
+                border-color: #374151;
+            }
+
+            .news-card.featured {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+                border-color: #1e40af;
+            }
+        }
+
         .news-meta {
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 13px;
             color: var(--text-secondary);
+            font-weight: 500;
         }
-        .news-source { color: var(--accent); font-weight: 600; }
-        .news-title {
-            font-size: 17px;
+
+        .news-source {
+            color: var(--accent);
             font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--text);
-            line-height: 1.4;
+            text-decoration: none;
+            letter-spacing: 0.01em;
         }
+
+        .news-source::after {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--border);
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text);
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+        }
+
         .news-summary {
             font-size: 14px;
             color: var(--text-secondary);
             line-height: 1.7;
-            margin-bottom: 14px;
         }
-        .news-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--accent);
-            text-decoration: none;
-            padding: 8px 16px;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-        .news-link:hover { background: var(--accent); color: white; }
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 24px 0;
-            margin-top: 40px;
+
+        .empty-state {
             text-align: center;
-            font-size: 13px;
+            padding: 60px 20px;
             color: var(--text-secondary);
         }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state-text {
+            font-size: 16px;
+        }
+
+        /* 响应式断点 */
         @media (max-width: 640px) {
-            .header-content { flex-direction: column; gap: 24px; text-align: center; }
-            .stats { text-align: center; }
+            .header-content {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .stats {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .stats-value {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 18px;
+            }
+
+            .news-card {
+                padding: 16px;
+            }
+
+            .news-title {
+                font-size: 15px;
+            }
+
+            .news-summary {
+                font-size: 13px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #111827;
+                --card: #1f2937;
+                --text: #f9fafb;
+                --text-secondary: #9ca3af;
+                --border: #374151;
+                --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+            }
+
+            header {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            }
+
+            .news-card {
+                background: var(--card);
+                border-color: var(--border);
+            }
+
+            .news-title {
+                color: var(--text);
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            header {
+                background: none;
+                color: var(--text);
+            }
+
+            .stats-value {
+                color: var(--text);
+            }
+
+            .news-card {
+                box-shadow: none;
+                border: 1px solid var(--border);
+            }
+
+            .news-link {
+                background: none;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="ai-daily-archive.html" class="back-button">← 返回归档</a>
             <div class="header-content">
                 <div>
                     <h1>🤖 AI 日报</h1>
-                    <p class="subtitle">2026-03-28 · 近一周精选</p>
+                    <p class="subtitle">
+                        2026-03-28
+                         - 近一周精选
+                    </p>
                 </div>
                 <div class="stats">
-                    <div class="stats-value">57</div>
+                    <div class="stats-value">10</div>
                     <div class="stats-label">条资讯</div>
                 </div>
             </div>
         </div>
     </header>
+
     <main class="container">
         
-    <section class="section">
-        <div class="section-header">
-            <h2 class="section-title">Agent & 应用</h2>
-            <span class="section-count">10 条</span>
-        </div>
-        <div class="news-list">
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">OpenAI News</span>
-                <span>·</span>
-                <span>Wed, 25 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Introducing the OpenAI Safety Bug Bounty program</h3>
-            <p class="news-summary">OpenAI 推出了安全漏洞赏金计划，旨在发现其人工智能模型的滥用和安全风险。该计划主要关注代理漏洞、提示注入和数据泄露等方面。此举旨在通过外部安全研究人员的力量，进一步提升AI系统的安全性。</p>
-            <a href="https://openai.com/index/safety-bug-bounty" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">综合资讯</h2>
+                            <span class="section-count">3 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="https://baoyu.io/blog/from-note-taking-app-to-ai-workspace-the-simon-last-interview" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">宝玉</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-27</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">Notion 联合创始人 Simon Last：我从去年夏天起就没写过一行代码了</h3>
+                                        <p class="news-summary">Notion 联合创始人 Simon Last 在访谈中回顾了公司在 AI 方向的两大关键实践： AI harness 重写周期：团队每六个月对底层 AI 框架进行一次全盘推倒重写，以保持技术前沿和系统灵活性。 编码 Agent 持续运行：研发的自动化编码 Agent 曾连续运行 13 天，实现了从需求捕获到代码生成的全链路自动化。 创始人角色转变：自去年夏天起，Simon Last 已不再亲自编写代码，转而专注产品愿景、团队管理和生态布局。 总结：Notion 通过周期性重构 AI 基础设施和长时段的自动编码实验，提升了研发效率和创新能力；创始人也由技术实现者转向战略引领者。</p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247659972&idx=2&sn=ba8073be3d6bc127a6d88209c318975c" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">WeChat 2</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-27</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">AI 一键生成网站之后，最残酷的差距出现了：代码不再值钱，审美决定生死</h3>
+                                        <p class="news-summary">文章指出，随着 AI 能“一键生成”网站，代码价值下降，真正的竞争点转向审美与细节打磨。以 Lando Norris 个人官网为例，超过 7.5 万行代码背后是多层 3D 渲染、shader 动态遮罩和精细交互，所有技术服务于让用户停留并感受品牌。前端大咖 Wes Bos 认为 2026 年将是设计复兴之年，差异化来源于审美、取舍和打造令人记忆深刻的体验。 AI 生成：任何人都能快速搭建“还不错”的网站。 技术不再核心：代码量与技术炫技已不能证明价值。 审美决定生死：细致的交互、视觉层次和情感共鸣成为唯一竞争优势。 设计复兴：2026 年设计能力将成为职业生存的关键。 因此，开发者需转向提升审美和用户体验，以在 AI 时代保持竞争力。</p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247659928&idx=1&sn=4a1c2fb1adf80b072550dfab2d370642" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">WeChat 2</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-26</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">堆推理链全错了！林俊旸离职首曝：曾在阿里 Qwen 踩中一个“致命”技术误区</h3>
+                                        <p class="news-summary">文章回顾了阿里千问技术负责人林俊旸离职后发表的《从推理思维到智能体思维》观点，指出大模型未来应从延长推理链转向为行动而思考的智能体思维。 要点一：2025 年 Qwen 3 试图将 thinking 与 Instruct 模式合并，但因两种数据分布和。</p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">技术博客</h2>
+                            <span class="section-count">1 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="http://www.ruanyifeng.com/blog/2026/03/weekly-issue-390.html" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">阮一峰博客</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-26</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">科技爱好者周刊（第 390 期）：没有语料，大模型就是智障</h3>
+                                        <p class="news-summary">科技爱好者周刊（第 390 期）：没有语料，大模型就是智障 本期重点讨论大模型的局限性，并介绍最新图像生成模型及趣味科技动态。 大模型依赖训练语料：模型本质是统计语言模型，缺乏相关数据时表现极差。 实验结果：五大模型在 Brainfuck、Befunge‑98、Whitespace、Unlambda、Shakespeare 五种冷门语言上的平均正确率仅 3.8%，而 Python 正确率可达 90%。 MAI‑Image‑2：微软发布的高质量图像生成模型，免费每日 15 张，限制内容、分辨率（仅 1:1）及生成间隔。 科技动态：红牛推出《GamePop》杂志封面，内嵌柔性电路板实现可玩“俄罗斯方块”。 综上，模型智能程度首要取决于语料丰富度；同时，图像生成。</p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">AI框架</h2>
+                            <span class="section-count">2 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="https://blog.langchain.com/agent-evaluation-readiness-checklist/" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">LangChain Blog</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-27</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">Agent Evaluation Readiness Checklist</h3>
+                                        <p class="news-summary">《代理评估准备清单》提供了系统化评估智能代理的步骤，核心要点包括： 起步简易评估：先进行少量端到端评估获取基线信号，即使架构仍在演进也能使用。 评估前准备：熟。</p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://blog.langchain.com/how-we-build-evals-for-deep-agents/" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">LangChain Blog</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-26</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">How we build evals for Deep Agents</h3>
+                                        <p class="news-summary">文章介绍了我们为 Deep Agents 构建评估的思路，指出评估是塑造代理行为的关键，盲目增加大量测试并不能。</p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">开源项目</h2>
+                            <span class="section-count">2 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="https://github.com/Yeachan-Heo/oh-my-claudecode" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">GitHub Trending Daily</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-28</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">Yeachan-Heo/oh-my-claudecode</h3>
+                                        <p class="news-summary">oh-my-claudecode 是为 Claude Code 设计的团队优先多智能体编排工具，实现零学习曲线的使用体验。 核心要点包括： 安装与设置： 通过 /plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode 和 /plugin install oh-my-claudecode 安装，随后运行 /omc-setup 配置（约10-15分钟）。 主要特性： 零配置开箱即用、自然语言界面、自动并行化任务分配、持久执行直到完成、成本优化（节省30-50%代币）、从经验中学习并提取技能文件、实时可视化状态。 团队模式： 按需生成工作者，任务完成后自动退出，无资源浪费；需安装codex/gemini CLI并有活跃tmux会话。 其他资源： 支持多语言文档、Discord社区、迁移指南；Codex用户可使用 oh-my-codex。 该工具将单点交互升级为可编排协作开发协作者，支持技能如 analyze 和 ultrawork。</p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://github.com/virattt/dexter" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">GitHub Trending Daily</span>
+                                            <span>·</span>
+                                            
+                                                <span>2026-03-28</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">virattt/dexter</h3>
+                                        <p class="news-summary">Dexter 是。</p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
+                
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">Agent产品</h2>
+                            <span class="section-count">2 条</span>
+                        </div>
+                        <div class="news-list">
+                            
+                                <a href="https://manus.im/zh-cn/blog/manus-joins-meta-for-next-era-of-innovation" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">Manus AI</span>
+                                            <span>·</span>
+                                            
+                                                <span>近期</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">产品·2025年12月29日Manus 加入 Meta，开启新一轮探索Manus 即将加入 Meta，我们将继续稳定提供现有服务并加速迭代，把更强大、可靠的通用 AI Agent 能力带给更多用户与企业。</h3>
+                                        <p class="news-summary">《Manus 加入 Meta，开启新一轮探索》报道了 Manus AI 将正式并入 Meta，重点包括： 并入 Meta：Manus 将成为 Meta 生态的一部分，深化双方在人工智能领域的合作。 服务稳定：并入后仍会保持现有产品和服务的连续性，确保用户体验不受影响。 加速迭代：利用 Meta 的资源和平台，加快技术研发和功能更新的速度。 通用 AI Agent 能力提升：致力于提供更强大、可靠的通用 AI 代理，帮助个人用户和企业实现更高效的智能化应用。 总体而言，Manus 加入 Meta 将在保持服务稳定的前提下，借助 Meta 的平台优势，加速 AI 技术迭代，向更广泛的用户和企业提供先进的通用 AI Agent 能力。</p>
+                                    </article>
+                                </a>
+                            
+                                <a href="https://manus.im/zh-cn/blog/manus-meta-ads-manager-connector" class="news-card-link" target="_blank" rel="noopener noreferrer">
+                                    <article class="news-card">
+                                        <div class="news-meta">
+                                            <span class="news-source">Manus AI</span>
+                                            <span>·</span>
+                                            
+                                                <span>近期</span>
+                                            
+                                        </div>
+                                        <h3 class="news-title">使用 Manus 连接器连接 Meta Ads Manager产品·2026年3月18日</h3>
+                                        <p class="news-summary">本文标题为《使用 Manus 连接器连接 Meta Ads Manager 产品》，发布日期为2026年3月18日，来源于 Manus AI 的最新文章。核心要点包括： 主题：介绍了使用 Manus 连接器与 Meta Ads Manager 产品的关联方式。 来源：文章由 Manus AI 发布，未提供具体实现细节。 该文简要说明了 Manus 连接器在 Meta 广告管理中的应用概念。</p>
+                                    </article>
+                                </a>
+                            
+                        </div>
+                    </section>
+                
+            
         
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">LangChain Blog</span>
-                <span>·</span>
-                <span>Fri, 27 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Agent Evaluation Readiness Checklist</h3>
-            <p class="news-summary">该清单为Agent评估提供了一套实用方法，涵盖了错误分析、数据集构建、评估器设计、离线和在线评估。其目标是帮助用户为Agent的生产环境部署做好准备，确保评估的全面性和有效性。</p>
-            <a href="https://blog.langchain.com/agent-evaluation-readiness-checklist/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Hugging Face Blog</span>
-                <span>·</span>
-                <span>Tue, 24 Mar 2026</span>
-            </div>
-            <h3 class="news-title">A New Framework for Evaluating Voice Agents (EVA)</h3>
-            <p class="news-summary">文章标题介绍了一个新的语音代理评估框架（EVA）。然而，由于未提供文章内容，目前无法对该框架的具体细节、评估方法或其重要性进行总结。</p>
-            <a href="https://huggingface.co/blog/ServiceNow-AI/eva" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">LangChain Blog</span>
-                <span>·</span>
-                <span>Thu, 26 Mar 2026</span>
-            </div>
-            <h3 class="news-title">How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval</h3>
-            <p class="news-summary">Kensho，作为标普全球（S&amp;P Global）的人工智能创新引擎，利用LangGraph构建了一个多智能体框架。该框架名为“Grounding”，旨在解决企业级金融数据检索碎片化的问题。它提供了一个统一的智能体访问层，从而实现了可信赖的金融数据检索。</p>
-            <a href="https://blog.langchain.com/customers-kensho/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">LangChain Blog</span>
-                <span>·</span>
-                <span>Thu, 26 Mar 2026</span>
-            </div>
-            <h3 class="news-title">How we build evals for Deep Agents</h3>
-            <p class="news-summary">这篇文章介绍了如何为深度智能体构建评估体系。核心在于评估应直接衡量智能体的关键行为，通过数据收集、指标创建和有针对性的实验来提高智能体的准确性和可靠性。这些评估方法对于塑造智能体行为至关重要。</p>
-            <a href="https://blog.langchain.com/how-we-build-evals-for-deep-agents/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">One Useful Thing</span>
-                <span>·</span>
-                <span>Wed, 18 Feb 2026</span>
-            </div>
-            <h3 class="news-title">A Guide to Which AI to Use in the Agentic Era</h3>
-            <p class="news-summary">在代理时代，人工智能的应用已超越了传统的聊天机器人。这篇文章旨在指导读者如何在当前多样化的人工智能工具中，选择最适合自身需求的AI解决方案。</p>
-            <a href="https://www.oneusefulthing.org/p/a-guide-to-which-ai-to-use-in-the" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">One Useful Thing</span>
-                <span>·</span>
-                <span>Tue, 27 Jan 2026</span>
-            </div>
-            <h3 class="news-title">Management as AI superpower</h3>
-            <p class="news-summary">“Management as AI superpower”这一概念指出，在充满AI代理的世界中，有效的管理将成为一项强大的能力。文章核心在于探讨如何通过管理来适应和驾驭AI代理，从而在新的环境中蓬勃发展。</p>
-            <a href="https://www.oneusefulthing.org/p/management-as-ai-superpower" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Import AI</span>
-                <span>·</span>
-                <span>Mon, 09 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Import AI 448: AI R&amp;D; Bytedance&#x27;s CUDA-writing agent; on-device satellite AI</h3>
-            <p class="news-summary">这篇文章（Import AI第448期）主要报道了AI技术在多领域的最新研发进展，包括字节跳动开发出能编写CUDA代码的智能体，以及在卫星设备端直接运行AI的技术。同时，文章通过对比当前的乌克兰无人机战争，深刻探讨并预测了未来首场重大“AI战争”可能爆发的时间。</p>
-            <a href="https://importai.substack.com/p/import-ai-448-ai-r-and-d-bytedances" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Latent Space</span>
-                <span>·</span>
-                <span>Fri, 27 Mar 2026</span>
-            </div>
-            <h3 class="news-title">[AINews] Everything is CLI</h3>
-            <p class="news-summary">标题“[AINews] Everything is CLI”和文章内容均指出，随着AI代理的兴起，将命令行界面（CLI）应用于几乎所有领域的趋势日益增长。这反映了开发者们对高效、可脚本化和自动化工作流的重视，使CLI成为与AI代理交互和管理任务的关键工具。</p>
-            <a href="https://www.latent.space/p/ainews-everything-is-cli" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Pragmatic Engineer</span>
-                <span>·</span>
-                <span>Thu, 19 Mar 2026</span>
-            </div>
-            <h3 class="news-title">The Pulse: Is the FDE role becoming less desirable?</h3>
-            <p class="news-summary">根据标题和内容，这期“The Pulse”探讨了FDE（前端开发工程师）职位吸引力下降的趋势。此外，文章还关注了AI代理生成的拉取请求给大型开源项目带来的困扰、OpenAI收购uv的创建者，以及Cursor突然提价引起企业客户不满等行业动态。</p>
-            <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-is-the-fde-role-becoming" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        </div>
-    </section>
-    
-    <section class="section">
-        <div class="section-header">
-            <h2 class="section-title">AI 编程工具</h2>
-            <span class="section-count">6 条</span>
-        </div>
-        <div class="news-list">
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Last Week in AI</span>
-                <span>·</span>
-                <span>Mon, 23 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Last Week in AI #339 - DLSS 5, OpenAI Superapp, MiniMax M2.7</h3>
-            <p class="news-summary">DLSS 5 looks like a real-time generative AI filter for video games, OpenAI Reportedly Pivoting to a Focus on Business and Productivity Only, and more!...</p>
-            <a href="https://lastweekin.ai/p/last-week-in-ai-339-dlss-5-openai" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">OpenAI News</span>
-                <span>·</span>
-                <span>Wed, 25 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Inside our approach to the Model Spec</h3>
-            <p class="news-summary">Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advanc...</p>
-            <a href="https://openai.com/index/our-approach-to-the-model-spec" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">GitHub Trending</span>
-                <span>·</span>
-                <span></span>
-            </div>
-            <h3 class="news-title">hacksider/Deep-Live-Cam</h3>
-            <p class="news-summary">&lt;p&gt;real time face swap and one-click video deepfake with only a single image&lt;/p&gt;&lt;hr&gt;&lt;h1 align=&quot;center&quot;&gt;Deep-Live-Cam 2.1&lt;/h1&gt; &lt;p align=&quot;center&quot;&gt; Real-...</p>
-            <a href="https://github.com/hacksider/Deep-Live-Cam" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Alignment Forum</span>
-                <span>·</span>
-                <span>Thu, 26 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Test your best methods on our hard CoT interp tasks</h3>
-            <p class="news-summary">Authors: Daria Ivanova, Riya Tyagi, Josh Engels, Neel Nanda Daria and Riya are co-first authors. This work was done during Neel Nanda’s MATS 9.0. Clau...</p>
-            <a href="https://www.alignmentforum.org/posts/tDJWZLQNN7poqCwKa/test-your-best-methods-on-our-hard-cot-interp-tasks" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Stanford AI Lab</span>
-                <span>·</span>
-                <span>Wed, 25 May 2022</span>
-            </div>
-            <h3 class="news-title">Stanford AI Lab Papers and Talks at ACL 2022</h3>
-            <p class="news-summary">&lt;p&gt;&lt;img class=&quot;postimage_75&quot; src=&quot;/blog/assets/img/posts/2022-05-25-acl-2022/logo.png&quot; /&gt;&lt;/p&gt; &lt;p&gt;The &lt;a href=&quot;https://www.2022.aclweb.org/&quot;&gt;60th Annua...</p>
-            <a href="/blog/acl-2022/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Stanford AI Lab</span>
-                <span>·</span>
-                <span>Mon, 25 Apr 2022</span>
-            </div>
-            <h3 class="news-title">Stanford AI Lab Papers and Talks at ICLR 2022</h3>
-            <p class="news-summary">&lt;p&gt;&lt;img class=&quot;postimage_75&quot; src=&quot;/blog/assets/img/posts/2022-04-25-iclr-2022/logo.png&quot; /&gt;&lt;/p&gt; &lt;p&gt;The &lt;a href=&quot;https://iclr.cc&quot;&gt;International Conferen...</p>
-            <a href="/blog/iclr-2022/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        </div>
-    </section>
-    
-    <section class="section">
-        <div class="section-header">
-            <h2 class="section-title">产品与工程</h2>
-            <span class="section-count">2 条</span>
-        </div>
-        <div class="news-list">
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">OpenAI News</span>
-                <span>·</span>
-                <span>Fri, 27 Mar 2026</span>
-            </div>
-            <h3 class="news-title">STADLER reshapes knowledge work at a 230-year-old company</h3>
-            <p class="news-summary">Learn how STADLER uses ChatGPT to transform knowledge work, saving time and accelerating productivity across 650 employees....</p>
-            <a href="https://openai.com/index/stadler" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Google AI Blog</span>
-                <span>·</span>
-                <span>Thu, 26 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Gemini 3.1 Flash Live: Making audio AI more natural and reliable</h3>
-            <p class="news-summary">&lt;img src=&quot;https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3.1-flash-live_blog_head.max-600x600.format-webp.webp&quot;&gt;Gemini 3.1 Fla...</p>
-            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        </div>
-    </section>
-    
-    <section class="section">
-        <div class="section-header">
-            <h2 class="section-title">其他动态</h2>
-            <span class="section-count">10 条</span>
-        </div>
-        <div class="news-list">
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Latent Space</span>
-                <span>·</span>
-                <span>Thu, 26 Mar 2026</span>
-            </div>
-            <h3 class="news-title">[AINews] The Biggest Claude Launch of All Time</h3>
-            <p class="news-summary">We thought about this carefully before choosing hyperbole; but it is warranted....</p>
-            <a href="https://www.latent.space/p/ainews-the-biggest-claude-launch" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Stratechery</span>
-                <span>·</span>
-                <span>Wed, 25 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Arm Launches Own CPU, Arm&#x27;s Motivation, Constraints and Systems</h3>
-            <p class="news-summary">Arm is selling its own chips, not just licensing IP. It&#x27;s a big change compared to Arm&#x27;s history, but not surprising given how computing is evolving....</p>
-            <a href="https://stratechery.com/2026/arm-launches-own-cpu-arms-motivation-constraints-and-systems/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Stephen Wolfram</span>
-                <span>·</span>
-                <span>Wed, 04 Feb 2026</span>
-            </div>
-            <h3 class="news-title">What Ultimately Is There? Metaphysics and the Ruliad</h3>
-            <p class="news-summary">The Wolfram Institute recently received a grant from the Templeton World Charity Foundation for “Computational Metaphysics”. I wrote this piece in par...</p>
-            <a href="https://writings.stephenwolfram.com/2026/02/what-ultimately-is-there-metaphysics-and-the-ruliad/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Google AI Blog</span>
-                <span>·</span>
-                <span>Thu, 26 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Watch James Manyika talk AI and creativity with LL COOL J.</h3>
-            <p class="news-summary">&lt;img src=&quot;https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Approved_thumbnail_with_logo.max-600x600.format-webp.webp&quot;&gt;In the latest epi...</p>
-            <a href="https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Google AI Blog</span>
-                <span>·</span>
-                <span>Thu, 26 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Transform your headphones into a live personal translator on iOS.</h3>
-            <p class="news-summary">&lt;img src=&quot;https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Static-InterstitialscreenJapane.max-600x600.format-webp.webp&quot;&gt;Google Transla...</p>
-            <a href="https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Hugging Face Blog</span>
-                <span>·</span>
-                <span>Fri, 27 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Liberate your OpenClaw</h3>
-            <p class="news-summary">...</p>
-            <a href="https://huggingface.co/blog/liberate-your-openclaw" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Hugging Face Blog</span>
-                <span>·</span>
-                <span>Fri, 20 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Build a Domain-Specific Embedding Model in Under a Day</h3>
-            <p class="news-summary">...</p>
-            <a href="https://huggingface.co/blog/nvidia/domain-specific-embedding-finetune" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Stanford AI Lab</span>
-                <span>·</span>
-                <span>Tue, 31 May 2022</span>
-            </div>
-            <h3 class="news-title">LinkBERT: Improving Language Model Training with Document Link</h3>
-            <p class="news-summary">&lt;h3 id=&quot;language-model-pretraining&quot;&gt;&lt;strong&gt;Language Model Pretraining&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Language models (LMs), like BERT &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-n...</p>
-            <a href="/blog/linkbert/" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">One Useful Thing</span>
-                <span>·</span>
-                <span>Thu, 12 Mar 2026</span>
-            </div>
-            <h3 class="news-title">The Shape of the Thing</h3>
-            <p class="news-summary">Where we are right now, and what likely happens next...</p>
-            <a href="https://www.oneusefulthing.org/p/the-shape-of-the-thing" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        
-        <article class="news-card">
-            <div class="news-meta">
-                <span class="news-source">Import AI</span>
-                <span>·</span>
-                <span>Mon, 23 Mar 2026</span>
-            </div>
-            <h3 class="news-title">Import AI 450: China&#x27;s electronic warfare model; traumatized LLMs; and a scaling law for cyberattacks</h3>
-            <p class="news-summary">How will timeless minds value time?...</p>
-            <a href="https://importai.substack.com/p/import-ai-450-chinas-electronic-warfare" class="news-link" target="_blank">阅读原文 →</a>
-        </article>
-        </div>
-    </section>
-    
     </main>
-    <footer>
-        <div class="container">
-            <p>更新时间: 2026-03-28 21:27</p>
-        </div>
-    </footer>
 </body>
 </html>
